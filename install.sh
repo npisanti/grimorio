@@ -9,10 +9,12 @@ cp ~/dotfiles/confs/tint2rc ~/.config/tint2
 cp ~/dotfiles/confs/conkyrc ~/.conkyrc
 cp ~/dotfiles/confs/gdbinit ~/.gdbinit 
 cp ~/dotfiles/confs/bashrc ~/.bashrc 
-cp ~/dotfiles/confs/thunar.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml 
 cp ~/dotfiles/confs/mimeapps.list ~/.local/share/applications/mimeapps.list 
 cp ~/dotfiles/confs/dmenu-bind.sh ~/.config/dmenu/dmenu-bind.sh 
 cp -ar ~/dotfiles/confs/geany ~/.config/
+
+xfconf-query --channel thunar --property /misc-remember-geometry  --create --type bool --set false
+cp ~/dotfiles/confs/thunar.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml 
 
 # restoring bins
 echo "restoring bins"

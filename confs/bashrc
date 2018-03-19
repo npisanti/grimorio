@@ -88,6 +88,11 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=00;31:warning=00;33:note=00;36:caret=00;32:locus=01:quote=01'
 
+
+# http://linux-sxs.org/housekeeping/lscolors.html
+export LS_COLORS='di=33:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=32:*.rpm=90' 
+
+
 # some more ls aliases
 #alias ll='ls -l'
 #alias la='ls -A'

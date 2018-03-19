@@ -17,8 +17,8 @@
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
   <property name="last-statusbar-visible" type="bool" value="true"/>
   <property name="last-view" type="string" value="ThunarCompactView"/>
-  <property name="last-window-height" type="int" value="546"/>
-  <property name="last-window-width" type="int" value="708"/>
+  <property name="last-window-height" type="int" value="720"/>
+  <property name="last-window-width" type="int" value="640"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="misc-volume-management" type="bool" value="true"/>
   <property name="misc-case-sensitive" type="bool" value="false"/>
@@ -26,7 +26,7 @@
   <property name="misc-folders-first" type="bool" value="true"/>
   <property name="misc-horizontal-wheel-navigates" type="bool" value="false"/>
   <property name="misc-recursive-permissions" type="string" value="THUNAR_RECURSIVE_PERMISSIONS_ASK"/>
-  <property name="misc-remember-geometry" type="bool" value="true"/>
+  <property name="misc-remember-geometry" type="bool" value="false"/>
   <property name="misc-show-about-templates" type="bool" value="true"/>
   <property name="misc-single-click" type="bool" value="true"/>
   <property name="misc-single-click-timeout" type="uint" value="500"/>
