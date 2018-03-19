@@ -1,0 +1,4 @@
+Edit /etc/lightdm/lightdm.conf by adding:
+
+xserver-command=X -bs -core -nocursor
+

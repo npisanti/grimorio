@@ -1,0 +1,9 @@
+
+
+git clone https://github.com/jagracar/ofxGrafica.git
+
+git clone https://github.com/soixantecircuits/ofxSocketIO
+
+git clone https://github.com/bakercp/ofxDlib.git
+
+git clone https://github.com/numediart/ofxMotionMachine.git

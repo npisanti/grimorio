@@ -1,0 +1,3 @@
+
+sudo iw reg set BO
+sudo iwconfig wlan1 txpower 25

@@ -1,0 +1,6 @@
+
+unplug headphone / ext. speakers
+start pulse audio
+pavucontrol -- > output devices ---> analog etc.. -->set to speakers
+pavucontrol -- > input devices ---> raise volume
+start skype

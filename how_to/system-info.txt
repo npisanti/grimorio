@@ -1,0 +1,22 @@
+
+
+//Hard Disk temperature (e.g. /sdb )
+sudo hddtemp /dev/sdb
+
+//cpu temp (after running sensors-detect)
+sensors 
+//also 
+cat /sys/class/thermal/thermal_zone1/temp 
+
+
+//many info such sensors
+acpi -V
+
+
+//to know model and cpu specs
+lscpu
+
+
+//to review startup log 
+dmesg
+dmesg | grep ERROR

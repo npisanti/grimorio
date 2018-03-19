@@ -1,0 +1,37 @@
+
+
+sudo apt-get install wiringpi python3-gpiozero i2c-tools
+
+
+// --------------------------- CLI --------------------------------------------
+
+// --------- pins -------------
+pinout
+
+
+// ------------ i2c ------------
+sudo i2cdetect -y 0
+//or
+sudo i2cdetect -y 1
+
+man i2cset # for help
+man i2cget # for help
+man i2cdump # for help
+
+
+// pigpio
+http://abyz.me.uk/rpi/pigpio/cif.html
+// pigpio interface
+
+
+
+// -------------- spi ---------------
+
+// download spincl
+http://ipsolutionscorp.com/raspberry-pi-spi-utility/
+// then
+ln -s /home/pi/spincl/spincl spincl
+
+// oppure
+https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/README.md
+(also for checking the modes for wiringPiSPISetupMode)

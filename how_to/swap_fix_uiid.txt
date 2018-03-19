@@ -1,0 +1,11 @@
+// do
+ls -al /dev/disk/by-uuid
+
+//Find the right UUID - change /etc/fstab, save and do
+
+sudo swapon -a
+
+
+// for fixing usb table
+// edit the /etc/fstab on the drive using the uuid
+// you can get on gparted using "information" in the left click menu

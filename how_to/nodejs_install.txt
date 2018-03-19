@@ -1,0 +1,15 @@
+
+sudo apt-get install nodejs npm nodejs-legacy
+
+sudo mkdir /usr/local/lib/node_modules
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+
+npm install npm -g
+
+// for mongo db ( local, add -g for global install ) 
+npm install mongodb
+
+// for an http server
+sudo npm install -g http-server
+// now when you want to serve a folder go to it and then
+http-server

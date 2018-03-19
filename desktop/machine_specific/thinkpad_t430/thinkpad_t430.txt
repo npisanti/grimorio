@@ -1,0 +1,24 @@
+
+
+sudo apt-get install linux-headers-$(uname -r)
+
+
+git clone https://github.com/FreedomBen/rtl8188ce-linux-driver.git
+cd rtl8188ce-linux-driver
+sudo su 
+make
+make install
+
+
+sudo iw reg set BO
+sudo iwconfig wlan1 txpower 30
+
+//test
+iwconfig wlan1
+
+
+// ------------------------- OR -------------------------------------
+
+sudo geany /etc/modprobe.d/rtl8192ce.conf 
+// copy this:
+options rtl8192ce swenc=1 ips=0 fwlps=0

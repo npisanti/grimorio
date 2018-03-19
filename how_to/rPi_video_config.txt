@@ -1,0 +1,19 @@
+
+
+# optoma pico rPi setup
+hdmi_safe=1
+hdmi_group=2
+hdmi_mode=4
+
+
+# Normal NTSC
+sdtv_mode=0  
+
+# Japanese version of NTSC – no pedestal
+sdtv_mode=1    
+
+# Normal PAL ( Europe standard ) 
+sdtv_mode=2 
+
+# Brazilian version of PAL – 525/60 rather than 625/50, different subcarrier
+sdtv_mode=3    

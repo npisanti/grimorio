@@ -1,0 +1,10 @@
+
+	//CHROOTKIT
+
+sudo chkrootkit
+
+	//RKHUNTER
+
+sudo rkhunter --update
+sudo rkhunter --propupd
+sudo rkhunter --check

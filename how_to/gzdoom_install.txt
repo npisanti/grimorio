@@ -1,0 +1,48 @@
+
+// ---------------------------------------
+sudo apt-get install build-essential zlib1g-dev libsdl1.2-dev libsdl2-dev libjpeg-dev nasm tar libbz2-dev libgtk2.0-dev cmake git libfluidsynth-dev libgme-dev libopenal-dev timidity libgl1-mesa-dev libglew-dev
+
+
+// ---------------------------------------
+cd ~/apps
+mkdir gzdoom_build
+cd gzdoom_build
+git clone git://github.com/coelckers/gzdoom.git
+mkdir -pv gzdoom/build
+
+// then follow the instructions 
+https://zdoom.org/wiki/Compile_GZDoom_on_Linux
+
+
+// ---------------------------------------------------
+copy the build folder to ~/apps/gzdoom
+
+// ---------------------------- CONFIG -------------------------
+geany .config/gzdoom/gzdoom.ini 
+
+// add this
+Path=$HOME/wads
+// change those
+fullscreen=true
+vid_defheight=1080
+vid_defwidth=1920
+
+// for making soundtrack work
+sudo apt-get install fluid-soundfont-gm
+// now you can select fluidsynth from the sound options midi menu
+
+
+// ------------------------ LOAD CUSTOM WADS ------------------------
+// Used for loading custom PWADs (mods) (remember you have to select a wad after that)
+-file ~/path/to/your.wad
+
+//Loads up custom IWADs (games) .
+./gzdoom -iwad ~/path/to/your.wad
+
+// it is also useful to set up .wad to be opened with the gzdoom path and -file
+
+./gzdoom -iwad ~/wads/doom2.wad -file ~/wads/brutaldoom/brutalv20b.pk3
+
+// loads BrutalDoom and custom map
+./gzdoom -iwad ~/wads/doom2.wad -file ~/wads/brutaldoom/brutalv20b.pk3 -file ~/wads/DARKEN/DARKEN.WAD
+

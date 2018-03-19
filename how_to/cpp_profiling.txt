@@ -1,0 +1,13 @@
+// quick start
+valgrind --tool=callgrind --tool=cachegrind ./app-to-profile
+
+
+//profile with callgrind
+valgrind --tool=callgrind --cache-sim=yes --branch-sim=yes build/yourbuildname 
+kcachegrind youroutputfile.pidnum &
+
+//memory leak
+valgrind --tool=memcheck build/yourbuildname 
+
+
+

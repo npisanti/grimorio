@@ -1,0 +1,33 @@
+
+
+SDK install:
+    Android SDK Build-Tools 22
+    Android 4.2.2 (API 17)
+
+
+// remember that the NDK is a self-extracting archive
+chmod +x android-ndk-r10e-linux-x86_64.bin 
+./android-ndk-r10e-linux-x86_64.bin
+
+
+// activate dev options
+(tap 7 times on build number)
+// activate usb debugging on the devices
+// test with 
+
+adb devices
+>> List of devices attached 
+>> e563b2bf	device
+
+
+
+// before launching every project: --------------------------------------
+
+left click on project >> proprierties >> android >> set project build target to 4.2.2
+
+// if there are errors in problems
+FUCKING DELETE THEM AND REBUILD!!!
+
+
+// ---------------
+left click >> open module settings >> set api level to 17

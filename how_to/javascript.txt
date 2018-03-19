@@ -1,0 +1,136 @@
+
+
+Variables declaration
+    - var has scope in the context where declared and can be hoisted
+    - let has block scope
+    - const is a constant value
+    - you can know if something is undefined:  (something === undefined)
+    
+    - for converting strings to number: parseInt( s, 10 ) and parseFloat( s )
+
+    - Array have .length proprierty
+    - Array are object, and the contiguity of data is not assured
+    - for a more performing array use TypedArray
+    
+    - those value evaluate as false:
+        false
+        undefined
+        null
+        0
+        NaN
+        the empty string ("")
+
+    - switch statement can also be used with strings
+    
+    - you can throw any object/type as exception and use try...catch...[finally] to catch exceptions
+
+    - there is a Promise object for asyncronous and deferred operations (check it later)
+
+    - for (let i=0; i< max; i++) { }
+    - for ( x of obj ) { } // just iterate on iterable variables, don't use for ( let x in obj )
+      also check if x is really a variable of obj
+            var x;
+            for (x in obj) {
+                if (obj.hasOwnProperty(x)) {
+                    ...
+                }
+            }
+    
+    - while and do/while and break are the same of c and c++
+
+
+    FUCTIONS
+    - functions are declared like this ( function declaration are hoisted )
+        function yourFunctionName( argName1, argName2, ...){ }
+    - types are passed by value, object by reference
+    - lambda functions are available ( function expression works bad with hoisting )
+        var square = function(number) { return number * number };
+        var x = square(4) // x gets the value 16
+    - a fuction can take another function as argument, in this case lambdas are particularly useful
+    - closure are possible, check "nested functions and closures"
+    - inside a function you can use arguments[i] to access the arguments, so you can use variable argument size.
+        + you can also use fuction ( a, b, ...argsListName ) and then access the last element with argsListName (rest parameters)
+    - you can set default parameters as in c++
+    - ARROW FUNCTIONS
+        var a2 = a.map(function(s){ return s.length });
+        var a3 = a.map( s => s.length );
+    - DEFAULT FUCTIONS
+            eval()
+            uneval() 
+            isFinite()
+            isNaN()
+            parseFloat()
+            parseInt()
+            decodeURI()
+            decodeURIComponent()
+            encodeURI()
+            encodeURIComponent()
+            unescape() 
+
+
+    OPERATORS
+        - better to use strict equality and strict diseguality 
+            ===
+            !==
+        - all the numbers are double
+        - you can use Math fuctions like Math.sin(x) or Math.cos( x * Math.PI )
+        - typeof() returns a string with the type of variable
+        - void operator: specifies an expression to be evaluated without returning a value.
+        - in operator: returns true if the specified property is in the specified object.
+        -  instanceof operator: returns true if the specified object is of the specified object type. 
+        
+        - Here are the falsy values:
+                false
+                null
+                undefined
+                The empty string ''
+                The number 0
+                The number NaN
+        
+        
+        
+    // OBJECTS
+    
+    // object literals
+    
+    var empty_object = {};
+    
+    var stooge = {
+        "first-name": "Jerome",
+        "last-name": "Howard"
+    };
+    // or
+    var stooge = {
+        firstName: "Jerome",
+        lastName: "Howard"
+    };    
+        
+    --- in javascript objects are passed by reference!
+    
+    // One way to minimize the use of global variables is to create a single global variable
+    // for your application:
+    
+        var MYAPP = {};
+
+    // That variable then becomes the container for your application:
+
+        MYAPP.stooge = {
+            firstName: "Joe",
+            lastName: "Howard"
+        };
+    
+    
+    function TestObject() {
+      this.a = "uno";
+      this.b = 2;
+      this.hello = function (){
+          console.log("testing hello function " + this.a);
+      }
+    }
+    var test = new TestObject();
+    test.hello();    
+        
+        
+    CODE ON RUNTIME
+    eval()
+    Function constructor

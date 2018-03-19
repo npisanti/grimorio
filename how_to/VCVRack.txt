@@ -1,0 +1,18 @@
+
+git clone https://github.com/VCVRack/Rack.git
+cd Rack
+git checkout v0.4.0
+git submodule update --init --recursive
+make -j dep
+make -j4
+
+cd plugins 
+git clone https://github.com/VCVRack/Fundamental.git
+cd Fundamental
+git checkout v0.4.0
+git submodule update --init --recursive
+make -j4
+
+git clone https://github.com/VCVRack/AudibleInstruments.git
+https://github.com/VCVRack/ESeries.git
+https://github.com/VCVRack/Befaco.git

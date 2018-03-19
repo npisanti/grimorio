@@ -1,0 +1,427 @@
+
+//---------------------BUNSEN LABS INSTALL WALKTHROUGH-------------------------
+
+
+---- Install Distro -----------------------------------------------------------
+// at the moment i'm using BunsenLabs Linux
+
+// make partition table work for the current distro
+// scheme (MBR):
+    /boot     512Mb
+    /         20+ Gb
+    /swap     = RAM x 1.5
+    /home     remaining
+
+//Install Distro
+
+
+//if during setup i need italian keyboard
+setxkbmap it
+
+
+// first time Bunsen setup:
+	- add multimedia repos	
+	- bunsen printer support
+	- libreoffice 
+ 	- dev packages
+		- vcs
+		- bunsen-meta-ssh
+// or do it manually
+sudo apt-get install bunsen-meta-libreoffice bunsen-meta-printer-support bunsen-meta-ssh
+
+
+// edit /etc/apt/sources.list
+// add
+deb http://www.deb-multimedia.org jessie main
+// then
+apt-get install deb-multimedia-keyring
+y
+sudo apt-get install build-essentials git 
+// it is also needed for smxi
+
+
+//Install liquorix Kernel and graphic drivers with smxi 
+# as root (sudo su -) , run the following command
+sudo su -
+cd /usr/local/bin && wget -Nc smxi.org/smxi.zip && unzip smxi.zip && smxi
+
+
+// make wi-fi work
+
+
+// if you don't want submenus
+sudo nano /etc/default/grub
+// add
+GRUB_DISABLE_SUBMENU=y
+GRUB_DEFAULT=0
+// also from GRUB_CMDLINE_LINUX_DEFAULT= remove "quiet splash" 
+// for not having the splash screen anymore but cool linux kernel messages
+
+//then
+sudo update-grub
+
+
+// reconfigure keyboard and add Ctr+Alt+Backspace as shortcut to quit X.org
+dpkg-reconfigure keyboard-configuration
+
+
+// set autologin (right click menu--->system--->login settings)
+autologin-user=<YOUR USER>
+autologin-user-timeout=0
+
+
+// edit ssh configs
+sudo geany /etc/ssh/sshd_config 
+// set 
+PermitRootLogin no
+// maybe is even better to disable the server
+sudo systemctl disable ssh
+
+
+// detect sensors 
+sudo sensors-detect
+
+
+// ALSO
+mkdir ~/mnt/ssh
+
+
+
+--------------------------- Video Drivers -------------------------------------
+// check the driver is in use
+sudo lspci -vnn | grep VGA -A 12
+// check x is using it
+glxinfo | grep OpenGL
+// check you can get oGL on X
+cat /var/log/Xorg.0.log | grep DRI
+
+
+---- get the best out of intel drivers -----------------
+// add latest drivers... first
+    sudo geany /etc/apt/sources.list
+// then add this line    
+    deb http://ftp.debian.org/debian jessie-backports main
+// and then
+sudo apt-get update
+sudo apt-get -t jessie-backports install xserver-xorg-video-intel
+
+
+// also for avoiding screen tearing 
+sudo geany /usr/share/X11/xorg.conf.d/20-intel.conf 
+// then set to 
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver      "intel"
+   Option      "AccelMethod"  "sna"
+   Option      "TearFree" "true"
+EndSection
+
+
+// also edit compton config and set
+vsync = "opengl";
+
+
+
+--- librekinect ---------------------------------------------------------------
+// with kernel 3.17+ it is already in the kernel 
+sudo nano /etc/modprobe.d/kinect-depth.conf 
+// add
+options gspca_kinect depth_mode=1
+
+
+
+------- .dotfiles -------------------------------------------------------------
+
+cd ~
+git clone https://github.com/npisanti/dotfiles
+cd dotfiles
+sh install.sh
+
+
+  
+//------------------- set up git-----------------------------------------------
+git config --global user.name "yourname yoursurname"
+git config --global user.email your@email.com
+git config --global core.editor geany
+
+
+
+---------------------- real time audio tuning and first things ----------------
+
+sudo apt-get install qjackctl aconnectgui jack-midi-clock 
+
+
+// OPTIONAL: TO DISABLE PULSEAUDIO AUTOSPAWN
+sudo geany /etc/pulse/client.conf
+//set into conf file 
+autospawn = no
+// to totally deactivate:
+sudo mv /etc/xdg/autostart/pulseaudio.desktop /etc/xdg/autostart/pulseaudio.desktop.disabled
+
+
+//set default alsa card
+sudo geany /usr/share/alsa/alsa.conf 
+//set the number of a card you can see on alsamixer, for example 1 (the second)
+defaults.ctl.card 1
+defaults.pcm.card 1
+
+
+// jack setup, set server prefix
+pasuspender -- jackd
+
+
+//configure realtime scheduling
+// from http://jackaudio.org/faq/linux_rt_config.html
+sudo geany /etc/security/limits.conf
+//add these lines
+@realtime   -  rtprio     99
+@realtime   -  memlock    unlimited
+//then add user to realtime group
+sudo groupadd realtime
+sudo usermod -a -G realtime yourUserID
+
+
+//in jack controls setup, set "realtime" to checked and "priority" to 89
+//check that jack is running with high priority:
+ps -Leo class,comm,rtprio | grep jack
+//also in setup->display uncheck "blink indicator"
+
+
+//Test audio with examples/sound/audioOutputExample
+//sometime you have to add
+soundStream.setDeviceID(#workingdeviceid);
+//but deactivate it when testing with jack
+
+// probably you need to run this to fix oF rtAudio again if cannot fine rtaudio:
+sudo apt-get install librtaudio5 librtaudio-dev 
+
+
+//if you need virtual midi ports:
+sudo modprobe snd-virmidi
+
+//test midi with
+amidi -l 
+amidi -p hw:x,0,0 -d
+
+
+
+
+
+// -------------------------openFrameworks ------------------------------------
+sudo apt-get install geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui
+
+//get and install openframeworks dependencies and codecs
+
+// set to clang
+geany ~/oF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk
+// and then at the end 
+PLATFORM_CXX = clang++ -B/usr/lib/gold-ld
+
+//compile open frameworks and test graphics
+
+// make a simbolic link to the oF version you are using
+ln -s ~/of_v0.9.8_linux64_release/ ~/oF
+
+// add to ~/.bashrc
+export PG_OF_PATH=/home/nick/oF
+export OF_ROOT=/home/nick/oF
+
+
+
+
+
+
+//--------------------------step 3 main programs and frameworks------------------------------
+
+sudo apt-get install gimp grafx2 aseprite inkscape xsane thunderbird shutter solvespace freecad
+//set up mails in thunderbird
+
+sudo apt-get install chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay screenfetch moc moc-ffmpeg-plugin winff lame sox cmatrix printer-driver-all input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 xdiskusage seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson photoprint fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients 
+
+sudo apt-get install kcachegrind krita kdenlive
+
+sudo apt-get install puredata gem pd-arraysize pd-aubio pd-beatpipe pd-bsaylor pd-comport cyclist pd-cyclone pd-ggee pd-hid pd-iemlib pd-iemmatrix pd-iemnet pd-jmmmp pd-libdir pd-lua pd-motex pd-pddp pd-pdstring pd-purepd pd-readanysf pd-unauthorized pd-vbap pd-wiimote pd-zexy puredata-import
+
+sudo apt-get install audacity paulstretch jack-capture multimedia-audio-plugins multimedia-timestretching ladish hydrogen libfftw3-bin libfftw3-dev zita-rev1 zynaddsubfx-dssi qtractor vkeybd zam-plugins jamin jkmeter
+
+// install kicad from backports
+sudo apt-get -t jessie-backports install kicad
+
+// install fing
+https://www.fingbox.com/download
+sudo dpkg -i overlook-fing-3.0.deb
+
+// install create_ap
+git clone https://github.com/oblique/create_ap.git
+cd create_ap
+sudo make install
+
+
+
+---------------------------- disabling things----------------------------------
+sudo apt-get remove at-spi2-core 
+
+//deactivate nm-applet and lightdm screen locker
+sudo mv /etc/xdg/autostart/nm-applet.desktop /etc/xdg/autostart/nm-applet.desktop.off 
+sudo mv /etc/xdg/autostart/light-locker.desktop /etc/xdg/autostart/light-locker.desktop.off 
+
+// if you have timidity++
+sudo systemctl disable timidity.service
+
+// if you have mosquitto / mysql / apache
+systemctl disable apache2
+systemctl disable mysql
+systemctl disable mosquitto
+
+
+
+-------------------------- minor customizations -------------------------------
+
+// change console font
+sudo dpkg-reconfigure console-setup
+
+// change appearence icons to Flattr, theme to Bunsen, fonts to terminus 9
+
+// change default text editor in debian alternatives
+home/username/bin/darkgeany
+
+// setup volume up and down and mute scripts ---------------
+// check right line with 
+pactl list | sed -n 178p
+// and set right index 0-1-2
+
+
+
+---- Chromium -----------------------------------------------------------------
+//copy scripts to ~/bin
+
+
+sudo apt-get install chromium
+
+// chromium configs
+    // add dark horizon theme
+    // add Disconnect extension
+    // add Adblock Plus extension
+    // add Nanny for Google Chrome extension
+    // go to 
+        chrome://flags/
+        // and enable override software rendering list
+
+
+
+---- Arduino ------------------------------------------------------------------
+//get arduino IDE
+//update arduino.sh path
+// Get libraries from IDE
+    + MIDIUSB
+    + Capacitive Sensor
+sudo apt-get install dfu-programmer 
+
+get ATTINY boards 
+cd ~/Arduino/
+mkdir hardware 
+cd hardware
+git clone https://github.com/SpenceKonde/ATTinyCore
+
+//add your userid to tty and dialout groups
+sudo usermod -a -G tty yourusername
+sudo usermod -a -G dialout yourusername
+
+// if you want to make arduino micro work
+sudo apt-get remove modemmanager
+// or (before starting arduino IDE) 
+sudo killall ModemManager 
+
+// make a symbolic link to arduino, e.g.
+ln -s ~/apps/arduino-1.8.3/arduino ~/bin/arduino
+
+// open from preferences the preferences.txt file, edit when the IDE is closed
+editor.antialias=false
+editor.font=Terminus (TTF),plain,16
+
+
+
+---- glslViewer --------------------------------------------------------------- 
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install libglfw3-dev git-core
+
+cd ~/apps
+git clone http://github.com/patriciogonzalezvivo/glslViewer
+cd glslViewer
+make
+sudo make install
+
+
+// make a symbolic link 
+ln -s ~/apps/glslViewer/bin/glslViewer glsl
+
+
+
+---- Processing ----------------------------------------------------------------
+get the app from the website
+
+- sketch -> import library -> add library
+        - Fontastic
+        
+- enable android mode
+- sketch -> import library -> add library
+        - Ketai
+
+// make a symbolic link to processing, e.g.
+ln -s ~/apps/processing-3.3.7/processing ~/bin/processing
+
+
+
+---- Fritzing -----------------------------------------------------------------
+get the app from the website
+
+// make a symbolic link to fritzing, e.g.
+ln -s ~/apps/fritzing-0.9.3b.linux.AMD64/Fritzing ~/bin/fritzing
+
+
+
+--------------------------- minimal working repos -----------------------------
+cd ~/dotfiles
+sh clone_repos.sh
+
+
+
+---- DOCS----------------------------------------------------------------------
+//get cppreference offline doc -------
+http://en.cppreference.com/w/Cppreference:Archives
+
+// get ofBook pdf build
+https://github.com/openframeworks/ofBook/releases
+
+
+
+---- Steam --------------------------------------------------------------------
+//add multiarch for steam
+sudo dpkg --add-architecture i386
+sudo apt-get update
+
+//install steam
+sudo apt-get install steam libtxc-dxtn-s2tc0 libtxc-dxtn-s2tc0:i386
+// extra packages are for some textures fixes
+
+
+
+---- Skype --------------------------------------------------------------------
+search skypeforlinux beta
+
+
+
+---- Telegram -----------------------------------------------------------------
+//get from https://tdesktop.com/linux
+wteg https://tdesktop.com/linux
+tar -xJvf tsetup*******
+//get correct path for telegram.sh
+
+
+
+---- JUCE ---------------------------------------------------------------------
+//get Juce
+http://www.juce.com/download
+//get correct path for introjucer.sh
+sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev libasound2-dev libfreetype6-dev libxrandr-dev libxinerama-dev libxcursor-dev libcurl4-gnutls-dev

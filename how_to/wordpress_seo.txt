@@ -1,0 +1,60 @@
+
++ create a GoogleMail account (and corresponding Google Account)
+
+
++ create a Google Analytics account
+    https://analytics.google.com/analytics/web/provision/?authuser=0#provision/SignUp/
+    (JUST REGISTER)
+
+
++ install "Google Analytics Dashboard for WP" plugin
+    - download and install plugin
+    - authorize plugin
+        - click "Authorize Plugin"
+        - click "Get Access Code"
+        - click "Allow"
+        - copy the code and paste it in the previous tab
+        - click "Save Access Code"
+
+
++ install "Yoast SEO" plugin
+    https://yoast.com/wordpress/plugins/seo/
+    + register to Google Search Console   
+        - add property with website
+            ??? verify property by uploading file
+    + authorize Search Console on Yoast SEO
+    + connect Yoast to Google Search Console
+        + webmaster tool, click on google search console, select html tag, copy only code in content="code"
+    + in "feature" enable "Advanced Settings Pages" and save 
+    + add yoast breadcumbs
+        https://kb.yoast.com/kb/implement-wordpress-seo-breadcrumbs/
+        - appearance --> editor
+        + if you need it, modify the theme to display breadcumbs as hidden
+            <div style="display:none"></div>
+        + usually is just this added to the end of header.php
+            <div style="display:none">
+                <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                yoast_breadcrumb('
+                <p id="breadcrumbs">','</p>
+                ');
+                }
+                ?>
+            </div>
+
+    
++ link Google Analytics and Google Search Console
+https://www.google.com/webmasters/tools/analytics-property-selection?utm_medium=incoming-link&utm_campaign=HelpCenter
+
+
+- create all the social network pages and put a link to the website, also add to SEO-->Social
+    + google plus
+        https://business.google.com/add/info
+    + youtube
+        also verify with message
+    + facebook
+    + twitter
+    + instagram 
+
++ submit a sitemap to google (when the site is ready)
+    - G Search Console ---> messages ---> improve search presence ---> submit a sitemap   

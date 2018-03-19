@@ -1,0 +1,18 @@
+
+cp -ar /home/nick/oF/apps/np-sketches/ ~/gdrive/code_backups/backup_files/sketches
+cd ~/gdrive/code_backups/backup_files/sketches
+
+for d in */ ; do
+    echo "$d"
+    cd "$d"
+        if [ -d "bin" ]; then
+            cd "bin/"
+            rm *
+            rm -rf libs
+            cd ..
+        fi
+        if [ -d "obj" ]; then
+            rm -rf obj
+        fi
+    cd ..
+done

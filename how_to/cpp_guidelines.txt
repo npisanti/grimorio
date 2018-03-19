@@ -1,0 +1,48 @@
+
+//FORMAT
+- use 8 real spaces tab. As Linus said, max 3 level of indentation in your functions
+
+- enum are named as enumName_t
+
+- parethesis are used like      this(){
+                                        //sometime is better to put some space before the code block
+                                }
+
+- use spaces to add clarity to arhytmetic operations, sometimes you can aggregate var*literal
+                x = ( (y * 0.5f) + (z*2.0f + k) );
+
+- functionsNames start with lower case and are camelCased
+
+- class name are CamelCased and start with a CapitalLetter
+
+- order class interface like this
+        1. list of friend classes
+        2. public methods
+        3. public variables
+        4. protected methods
+        5. protected variables
+        6. private methods 
+        7. private variables
+        
+-       void    alignFunctions();
+        float   andVariableNames;
+        int     likeThis;
+        
+
+//CODE
+
+- don't use STL. If you really need it use std::vector, and call .reserve(n) to reserve space for some elements
+
+- really, really don't use boost
+
+- when it's possible pass arguments as const reference & 
+
+- double check that functions always return a value, sometime the compiler is too permissive
+
+- use static const variables instead of #define
+
+- always make class methods ‘const’ when they do not modify any class variables.
+
+- function overloading should be avoided in most cases. (explicitly named functions tend to be less prone to programmer error and inadvertent calls to functions due to wrong data types being passed in as arguments. )
+
+- when it is needed and it is possible use rule-of-zero instead of rule-of-five

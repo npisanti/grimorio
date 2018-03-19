@@ -1,0 +1,6 @@
+
+move saved "it" file to
+
+/usr/share/X11/xkb/symbols
+
+it's the place where all the custom keystrokes are

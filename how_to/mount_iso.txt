@@ -1,0 +1,14 @@
+This is the traditional way for those who like using the command line interface. Fast and easy. Just open a terminal or konsole and type:
+
+su -
+mkdir ~/temp
+mount -o loop -t iso9660 /path/to/test.iso ~/temp
+
+Now the iso files will be stored in the ~/temp dir. Just remember to change /path/to/test.iso to where you have the .iso file and ~/temp to the directory you want to have it mounted.
+
+To unmount the cd/dvd image type:
+
+su -
+umount ~/temp
+
+Note: Ubuntu users should use sudo before the commands. su - command isn't needed in this case.

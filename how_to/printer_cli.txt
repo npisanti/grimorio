@@ -1,0 +1,7 @@
+
+lpstat -p -d
+lp -d Stylus-C46 file.txt
+lpr -P Stylus-C46 file.txt
+lpq
+lprm
+

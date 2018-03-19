@@ -1,0 +1,5 @@
+//set default alsa card
+sudo geany /usr/share/alsa/alsa.conf 
+//set the number of a card you can see on alsamixer, for example
+defaults.ctl.card 1
+defaults.pcm.card 1

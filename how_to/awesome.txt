@@ -1,0 +1,8 @@
+
+
+// processing glitch codec
+git clone https://github.com/GlitchCodec/GLIC
+( run GLIC.pde )
+
+// more fritzing parts including a red zener diode (5.1v)
+git clone https://github.com/lambert/fritzing-parts

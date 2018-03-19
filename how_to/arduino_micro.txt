@@ -1,0 +1,29 @@
+
+// ----------------- SHORT WAY ------------------------------------------------
+
+// before using an arduino micro or similar 
+sudo killall ModemManager
+
+
+
+// ------------------ LONG WAY ------------------------------------------------
+
+//do this
+lsusb 
+//check vendor and product id 2a03:8037
+
+//do this
+sudo geany /etc/udev/rules.d/77-arduino.rules 
+
+//copy this
+ATTRS{idVendor}=="2a03", ATTRS{idProduct}=="8036", ENV{ID_MM_DEVICE_IGNORE}="1"
+ATTRS{idVendor}=="2a03", ATTRS{idProduct}=="8037", ENV{ID_MM_DEVICE_IGNORE}="1"
+ATTRS{idVendor}=="1b4f", ATTRS{idProduct}=="9205", ENV{ID_MM_DEVICE_IGNORE}="1"
+ATTRS{idVendor}=="1b4f", ATTRS{idProduct}=="9206", ENV{ID_MM_DEVICE_IGNORE}="1"
+
+//and then reload rules
+sudo udevadm trigger
+
+//if this doesnt work
+sudo apt-get remove modemmanager
+

@@ -1,0 +1,22 @@
+
+download go 1.8
+tar -C /usr/local -xzf go1.8.linux-amd64.tar.gz
+
+mkdir ~/godir
+
+
+//add to .bashrc
+export GOPATH=$HOME/godir
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
+
+
+
+// then reboot
+
+// then 
+go get -u github.com/odeke-em/drive/drive-google
+
+// then 
+drive-google init ~/gdrive
+cd ~/gdrive

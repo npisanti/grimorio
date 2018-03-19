@@ -1,0 +1,9 @@
+
+pwd         
+    // get current path
+
+basename    
+    // take a path as string input and strip everything but the name of the last folder
+
+clang++ -fsyntax-only -std=c++14 -Wpedantic %f          
+    // just check the syntax without building

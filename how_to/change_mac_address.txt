@@ -1,0 +1,3 @@
+On Debian, Ubuntu, and similar systems, place the following in the appropriate section of /etc/network/interfaces (within an iface stanza, e.g., right after the gateway line) so that the MAC address is set when the network device is started:
+
+hwaddress ether 02:01:02:03:04:08

@@ -1,0 +1,105 @@
+
+// ------------------------------- ADDONS -------------------------------------
+
+git clone https://github.com/npisanti/np-junkrepo.git
+cd ~/oF/addons/np-junkrepo
+sh clone_addons.sh 
+
+// will clone:
+git clone https://github.com/danomatika/ofxMidi.git
+git clone https://github.com/npisanti/ofxSIMDFloats.git
+git clone https://github.com/npisanti/ofxPDSP.git
+git clone https://github.com/paulobarcelos/ofxHomography.git
+git clone https://github.com/vanderlin/ofxBox2d.git
+git clone https://github.com/kylemcdonald/ofxCv.git
+git clone https://github.com/npisanti/ofxGuiPresetSelector.git
+git clone https://github.com/dzlonline/ofxBiquadFilter.git
+git clone https://github.com/npisanti/ofxRPiezos.git
+git clone https://github.com/kashimAstro/ofxGPIO.git
+git clone https://github.com/kylemcdonald/ofxFaceTracker.git 
+git clone https://github.com/2bbb/ofxPubSubOsc.git
+git clone https://github.com/npisanti/np-cvthings.git	
+git clone https://github.com/kylemcdonald/ofxDmx.git
+git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
+git clone https://github.com/npisanti/ofxMorphImage.git
+
+
+// next to use ----------------------------------------------------------------
+git clone https://github.com/ofTheo/ofxFern.git
+git clone https://github.com/sebleedelisle/ofxLaser.git
+git clone https://github.com/jvcleave/ofxImGui.git
+
+git clone https://github.com/robotconscience/ofxLibwebsockets.git
+git clone https://github.com/DHaylock/ofxOPC.git
+
+
+// MAKE THIS WORK -------------------------------------------------------------
+https://github.com/YCAMInterlab/ofxTimeline
+
+https://github.com/bangnoise/ofxHapPlayer.git
+    git branch libavformat  // it works on ubuntu, test debian
+    sudo apt-get install libsnappy-dev libdispatch-dev libavformat-dev
+
+
+// test with oF 0.10 ----------------------------------------------------------
+
+git clone https://github.com/frauzufall/ofx2DMapping
+    git clone https://github.com/frauzufall/ofxSortableList.git
+
+
+git clone https://github.com/frauzufall/ofxGuiExtended.git
+git clone https://github.com/fx-lange/ofxInputField.git
+git clone https://github.com/roymacdonald/ofxGuiPlus
+
+
+// extra ------------------------------------------------------------------------------
+
+git clone https://github.com/mfargo/ofxFilterLibrary.git
+git clone https://github.com/brinoausrino/ofxOrnament.git
+git clone https://github.com/brinoausrino/ofxPointilize.git
+git clone https://github.com/memo/ofxMSATensorFlow.git
+git clone https://github.com/armadillu/ofxSimpleHttp.git
+git clone https://github.com/jefftimesten/ofxJSON.git
+git clone https://github.com/satcy/ofxSvgSaver.git
+git clone https://github.com/tobiaszimmer/ofxHersheyFont.git
+
+git clone https://github.com/Akira-Hayasaka/ofxInkSim.git
+
+git clone https://github.com/braitsch/ofxDatGui.git
+git clone https://github.com/braitsch/ofxModal.git
+git clone https://github.com/leozimmerman/ofxAudioAnalyzer.git
+
+git clone https://github.com/kylemcdonald/ofxCcv.git
+
+git clone https://github.com/obviousjim/ofxDelaunay.git    
+
+// gesture recognition
+git clone https://github.com/nickgillian/ofxGrt.git
+
+git clone https://github.com/paulvollmer/ofxCsv.git
+git clone https://github.com/bakercp/ofxOAuth.git
+git clone https://github.com/s373/ofxAChaosLib.git
+
+git clone https://github.com/kashimAstro/ofx2Deferred.git
+git clone https://github.com/neilmendoza/ofxRules.git
+git clone https://github.com/tiagosr/ofxShadertoy.git
+git clone https://github.com/moostrik/ofxFlowTools.git
+git clone https://github.com/patriciogonzalezvivo/ofxFX.git
+git clone https://github.com/bakercp/ofxSpatialHash.git
+
+git clone https://github.com/Flightphase/ofxFTGL.git
+
+git clone https://github.com/s373/ofxDna.git
+git clone https://github.com/tgfrerer/ofxSkeleton.git
+
+git clone https://github.com/kylemcdonald/ofxTiming.git
+
+git clone https://github.com/genekogan/ofxLeapMotion2.git    
+git clone https://github.com/gameoverhack/ofxOpenNI.git
+
+
+// extra rPi ---------------------------------------------------------------------------------
+git clone https://github.com/kashimAstro/ofxTFTTouch.git
+git clone https://github.com/jvcleave/ofxOMXPlayer.git
+git clone https://github.com/patriciogonzalezvivo/ofxThermalPrinter.git
+

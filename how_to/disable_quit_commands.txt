@@ -1,0 +1,16 @@
+
+# this will deactivate CTRL+C
+stty intr undef 
+
+# this will deactivate CTRL+Z
+trap -- '' TSTP
+
+#put your code here
+
+# this will reactivate CTRL+Z
+trap TSPT
+
+
+
+// if you need to deactivate esc inside ofApp.cpp
+    ofSetEscapeQuitsApp( false );

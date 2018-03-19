@@ -1,0 +1,11 @@
+
+sudo apt-get install alsa-tools-gui 
+
+hdajackretask 
+
+tick "show unconnected pins"
+0x1a ---> tick "override" ---> Microphone
+
+gnu+P (pavucontrol)
+from input select "Microphone" (not "Internal Microphone")
+(sometimes you have to reselect "Microphone" when using a cellphone)

@@ -1,0 +1,25 @@
+
+cd ~/oF/apps
+
+
+// MY APPs---------------------------------------------------------------------
+
+git clone https://github.com/npisanti/np-artefatti.git
+git clone https://gitlab.com/npisanti/np-sketches.git
+
+
+    
+// EXAMPLE LIST!!--------------------------------------------------------------
+
+cd oF/apps
+
+git clone https://github.com/firmread/NatureOfCode.git
+git clone https://github.com/ofZach/VAW_workshop.git
+git clone https://github.com/andreasmuller/NoiseWorkshop.git
+git clone https://github.com/arturoc/openFrameworksDemos.git
+
+mkdir sfjmt
+cd sfjmt
+git clone https://github.com/sfjmt/CalcExampleIntersection3DPointWith3DPlaneMultiple.git
+git clone https://github.com/sfjmt/CalcExampleIntersection3DPointWith3DPlaneMultiple.git
+git clone https://github.com/sfjmt/MovingHeadObject.git

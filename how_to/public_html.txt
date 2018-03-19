@@ -1,0 +1,31 @@
+
+
+
+
+
+sudo a2enmod userdir
+// then 
+sudo geany /etc/apache2/mods-enabled/userdir.conf 
+
+// like this
+
+
+<IfModule mod_userdir.c>
+        UserDir public_html
+        UserDir disabled root
+
+        <Directory /home/*/public_html>
+                AllowOverride All
+                Options MultiViews Indexes SymLinksIfOwnerMatch
+                <Limit GET POST OPTIONS>
+                        Require all granted
+                </Limit>
+                <LimitExcept GET POST OPTIONS>
+                        Require all denied
+                </LimitExcept>
+        </Directory>
+</IfModule>
+
+
+// then change folder group
+sudo chgrp www-data /home/<username>/public_html

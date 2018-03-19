@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal">
+			<action name="Execute">
+				<command>
+                    x-terminal-emulator
+                </command>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<command>
+                    x-www-browser
+                </command>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<command>
+                    bl-file-manager
+                </command>
+			</action>
+		</item>
+		<item label="Text Editor">
+			<action name="Execute">
+				<command>darkgeany</command>
+			</action>
+		</item>
+		<separator/>
+		<menu id="root-menu-823532" label="Coding">
+			<item label="Geany Editor">
+				<action name="Execute">
+					<command>darkgeany</command>
+				</action>
+			</item>
+			<item label="Processing IDE">
+				<action name="Execute">
+					<command>processing</command>
+				</action>
+			</item>
+			<item label="Arduino IDE">
+				<action name="Execute">
+					<command>arduino</command>
+				</action>
+			</item>
+			<item label="Etcher">
+				<action name="Execute">
+					<command>/home/nick/apps/etcher-1.2.0-x86_64.AppImage</command>
+				</action>
+			</item>
+			<item label="Fritzing">
+				<action name="Execute">
+					<command>fritzing</command>
+				</action>
+			</item>
+			<item label="octave">
+				<action name="Execute">
+					<command>octave --force-gui</command>
+				</action>
+			</item>
+			<item label="i-score">
+				<action name="Execute">
+					<command>~/apps/i-score-v1.0.0-b14-amd64.AppImage 
+</command>
+				</action>
+			</item>
+			<item label="Android Eclipse oF">
+				<action name="Execute">
+					<command>/home/nick/android_tools/eclipse/eclipse</command>
+				</action>
+			</item>
+			<item label="Kcachegrind">
+				<action name="Execute">
+					<command>kcachegrind</command>
+				</action>
+			</item>
+			<item label="Doxygen Wizard">
+				<action name="Execute">
+					<command>doxywizard</command>
+				</action>
+			</item>
+			<item label="Universal Indent GUI">
+				<action name="Execute">
+					<command>universalindentgui</command>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-925651" label="Audio">
+			<item label="Ardour 5">
+				<action name="Execute">
+					<command>~/ardour/gtk2_ardour/ardev</command>
+				</action>
+			</item>
+			<item label="Audacity">
+				<action name="Execute">
+					<command>audacity</command>
+				</action>
+			</item>
+			<item label="Pure Data">
+				<action name="Execute">
+					<command>puredata</command>
+				</action>
+			</item>
+			<item label="VCV Rack">
+				<action name="Execute">
+					<command>VCVRack.sh</command>
+				</action>
+			</item>
+			<item label="paulstretch">
+				<action name="Execute">
+					<command>paulstretch</command>
+				</action>
+			</item>
+			<item label="Jack Controls">
+				<action name="Execute">
+					<command>qjackctl</command>
+				</action>
+			</item>
+			<item label="ALSAMixer">
+				<action name="Execute">
+					<command>x-terminal-emulator -T 'alsamixer' -e alsamixer</command>
+				</action>
+			</item>
+			<item label="Pulse Audio Controls">
+				<action name="Execute">
+					<command>pavucontrol</command>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-85632" label="Graphics">
+			<item label="Gimp">
+				<action name="Execute">
+					<command>gimp</command>
+				</action>
+			</item>
+			<item label="KDenLive">
+				<action name="Execute">
+					<command>kdenlive</command>
+				</action>
+			</item>
+			<item label="Inkscape">
+				<action name="Execute">
+					<command>inkscape</command>
+				</action>
+			</item>
+			<item label="Blender">
+				<action name="Execute">
+					<command>~/apps/blender-2.78c-linux-glibc219-x86_64/blender</command>
+				</action>
+			</item>
+			<item label="print Images">
+				<action name="Execute">
+					<command>photoprint</command>
+				</action>
+			</item>
+			<item label="aseprite">
+				<action name="Execute">
+					<command>aseprite</command>
+				</action>
+			</item>
+			<item label="GrafX2">
+				<action name="Execute">
+					<command>grafx2</command>
+				</action>
+			</item>
+			<item label="Solvespace">
+				<action name="Execute">
+					<command>solvespace</command>
+				</action>
+			</item>
+			<item label="FreeCAD">
+				<action name="Execute">
+					<command>freecad</command>
+				</action>
+			</item>
+			<item label="Krita">
+				<action name="Execute">
+					<command>krita</command>
+				</action>
+			</item>
+			<item label="Fontforge">
+				<action name="Execute">
+					<command>fontforge</command>
+				</action>
+			</item>
+		</menu>
+		<menu id="network" label="Network">
+			<item label="Network Manager TUI">
+				<action name="Execute">
+					<command>x-terminal-emulator -T 'Network Manager' -e nmtui</command>
+				</action>
+			</item>
+			<item label="activate wifi">
+				<action name="Execute">
+					<command>nmcli r wifi on</command>
+				</action>
+			</item>
+			<item label="deactivate wi-fi">
+				<action name="Execute">
+					<command>nmcli r wifi off</command>
+				</action>
+			</item>
+			<separator/>
+			<item label="Filezilla FTP Client">
+				<action name="Execute">
+					<command>filezilla</command>
+				</action>
+			</item>
+			<item label="Transmission btClient">
+				<action name="Execute">
+					<command>transmission-gtk</command>
+				</action>
+			</item>
+			<item label="HexChat IRC Client">
+				<action name="Execute">
+					<command>
+                        hexchat
+                    </command>
+				</action>
+			</item>
+			<item label="Remote Filesystems">
+				<action name="Execute">
+					<command>
+                        gigolo
+                    </command>
+				</action>
+			</item>
+			<menu execute="bl-remote-desktop-pipemenu" id="remotedesktop" label="Remote Desktop"/>
+			<menu execute="bl-sshconfig-pipemenu" id="sshconfig" label="SSH"/>
+			<separator/>
+			<menu execute="bl-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
+		</menu>
+		<menu id="office" label="Office">
+			<item label="Thunderbird Mail">
+				<action name="Execute">
+					<command>thunderbird</command>
+				</action>
+			</item>
+			<item label="Telegram">
+				<action name="Execute">
+					<command>~/apps/Telegram/Telegram</command>
+				</action>
+			</item>
+			<item label="Skype">
+				<action name="Execute">
+					<command>skypeforlinux</command>
+				</action>
+			</item>
+			<item label="LibreOffice Writer">
+				<action name="Execute">
+					<command>lowriter</command>
+				</action>
+			</item>
+			<item label="LibreOffice Calc">
+				<action name="Execute">
+					<command>localc</command>
+				</action>
+			</item>
+			<item label="LibreOffice Draw">
+				<action name="Execute">
+					<command>lodraw</command>
+				</action>
+			</item>
+			<item label="LibreOffice Impress">
+				<action name="Execute">
+					<command>loimpress</command>
+				</action>
+			</item>
+			<item label="LibreOffice Base">
+				<action name="Execute">
+					<command>lobase</command>
+				</action>
+			</item>
+			<item label="XSane Scanning Utiliy">
+				<action name="Execute">
+					<command>xsane</command>
+				</action>
+			</item>
+			<item label="Google Docs">
+				<action name="Execute">
+					<command>
+                        x-www-browser https://drive.google.com/
+                    </command>
+				</action>
+			</item>
+			<item label="Gnumeric Spreadsheet">
+				<action name="Execute">
+					<command>
+                        gnumeric
+                    </command>
+				</action>
+			</item>
+			<item label="Calculator">
+				<action name="Execute">
+					<command>
+                        galculator
+                    </command>
+				</action>
+			</item>
+			<item label="Evince PDF Viewer">
+				<action name="Execute">
+					<command>
+                        evince
+                    </command>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-264844" label="Fun">
+			<item label="Netflix">
+				<action name="Execute">
+					<command>google-chrome</command>
+				</action>
+			</item>
+			<item label="Steam">
+				<action name="Execute">
+					<command>steam</command>
+				</action>
+			</item>
+			<item label="BrutalDoom2">
+				<action name="Execute">
+					<command>/home/nick/gzdoom_build/gzdoom/build/gzdoom -iwad ~/wads/doom2.wad -file ~/wads/brutaldoom/brutalv20b.pk3</command>
+				</action>
+			</item>
+			<item label="BrutalDoom">
+				<action name="Execute">
+					<command>/home/nick/gzdoom_build/gzdoom/build/gzdoom -iwad ~/wads/doom.wad -file ~/wads/brutaldoom/brutalv20b.pk3</command>
+				</action>
+			</item>
+			<item label="Games Folder">
+				<action name="Execute">
+					<command>thunar ~/games</command>
+				</action>
+			</item>
+		</menu>
+		<menu id="accessories" label="Utilities">
+			<item label="Video Transcoder">
+				<action name="Execute">
+					<command>winff</command>
+				</action>
+			</item>
+			<item label="Cam Capture">
+				<action name="Execute">
+					<command>guvcview</command>
+				</action>
+			</item>
+			<item label="Shutter screenshots">
+				<action name="Execute">
+					<command>shutter</command>
+				</action>
+			</item>
+			<item label="Vokoscreen">
+				<action name="Execute">
+					<command>vokoscreen</command>
+				</action>
+			</item>
+			<item label="Combo Jack Fixer">
+				<action name="Execute">
+					<command>hdajackretask</command>
+				</action>
+			</item>
+			<item label="Disk Usage Analyzer">
+				<action name="Execute">
+					<command>xdiskusage</command>
+				</action>
+			</item>
+			<item label="Catfish File Search">
+				<action name="Execute">
+					<command>
+                        catfish
+                    </command>
+				</action>
+			</item>
+			<item label="Archive Manager">
+				<action name="Execute">
+					<command>
+                        file-roller
+                    </command>
+				</action>
+			</item>
+			<item label="Task Manager (htop)">
+				<action name="Execute">
+					<command>x-terminal-emulator -T 'htop task manager' -e htop</command>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu execute="bl-places-pipemenu" id="pipe-placesmenu" label="Places"/>
+		<menu execute="bl-recent-files-pipemenu -rl15" id="pipe-recentfilesmenu" label="Recent Files"/>
+		<separator/>
+		<menu id="preferences" label="Preferences">
+			<menu id="obConfig" label="Openbox">
+				<item label="Edit menu.xml">
+					<action name="Execute">
+						<command>
+                            bl-text-editor ~/.config/openbox/menu.xml
+                        </command>
+					</action>
+				</item>
+				<item label="Edit rc.xml">
+					<action name="Execute">
+						<command>
+                            bl-text-editor ~/.config/openbox/rc.xml
+                        </command>
+					</action>
+				</item>
+				<item label="Edit autostart">
+					<action name="Execute">
+						<command>
+                            bl-text-editor ~/.config/openbox/autostart
+                        </command>
+					</action>
+				</item>
+				<separator/>
+				<item label="GUI Menu Editor">
+					<action name="Execute">
+						<command>
+                            obmenu
+                        </command>
+					</action>
+				</item>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<command>
+                            obconf
+                        </command>
+					</action>
+				</item>
+				<item label="How to Edit Menu">
+					<action name="Execute">
+						<execute>zenity --text-info --title=&quot;How to Edit the Menu&quot; --filename=&quot;/usr/share/bunsen/bunsen-docs/helpfile-menu.txt&quot; --width=900 --height=700</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<menu execute="bl-compositor" id="CompositingPipeMenu" label="Compositor"/>
+			<menu execute="bl-conky-pipemenu" id="pipe-conkymenu" label="Conky"/>
+			<menu execute="bl-tint2-pipemenu" id="pipe-tint2menu" label="Tint2"/>
+			<item label="Appearance">
+				<action name="Execute">
+					<command>
+                        lxappearance
+                    </command>
+				</action>
+			</item>
+			<item label="Choose Wallpaper">
+				<action name="Execute">
+					<command>
+                        nitrogen
+                    </command>
+				</action>
+			</item>
+			<item label="Notifications">
+				<action name="Execute">
+					<command>xfce4-notifyd-config</command>
+				</action>
+			</item>
+			<item label="Power Management">
+				<action name="Execute">
+					<command>xfce4-power-manager-settings</command>
+				</action>
+			</item>
+			<menu id="dmenuconfig" label="dmenu">
+				<item label="Edit Start-up Script">
+					<action name="Execute">
+						<command>
+                            bl-text-editor ~/.config/dmenu/dmenu-bind.sh
+                        </command>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<command>
+                            x-terminal-emulator -T 'man dmenu' -e man dmenu
+                        </command>
+					</action>
+				</item>
+			</menu>
+			<menu id="gmrunconfig" label="gmrun">
+				<item label="Edit Config File">
+					<action name="Execute">
+						<command>
+                            bl-text-editor ~/.gmrunrc
+                        </command>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<command>
+                            x-terminal-emulator -T 'man gmrun' -e man gmrun
+                        </command>
+					</action>
+				</item>
+			</menu>
+			<menu id="DisplaySettings" label="Display">
+				<item label="ARandR Screen Layout Editor">
+					<action name="Execute">
+						<command>
+                            arandr
+                        </command>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man xrandr">
+					<action name="Execute">
+						<command>
+                            x-terminal-emulator -T 'man xrandr' -e man xrandr
+                        </command>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="system" label="System">
+			<menu execute="bl-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
+			<item label="Passwords and Keys">
+				<action name="Execute">
+					<command>seahorse</command>
+				</action>
+			</item>
+			<item label="Synaptic Package Manager">
+				<action name="Execute">
+					<command>
+                        gksudo synaptic
+                    </command>
+				</action>
+			</item>
+			<item label="File Manager as root">
+				<action name="Execute">
+					<command>
+                        gksudo bl-file-manager
+                    </command>
+				</action>
+			</item>
+			<item label="Text Editor as root">
+				<action name="Execute">
+					<command>
+                        gksudo bl-text-editor
+                    </command>
+				</action>
+			</item>
+			<item label="Login Settings">
+				<action name="Execute">
+					<command>gksudo bl-text-editor /etc/lightdm/lightdm.conf</command>
+				</action>
+			</item>
+			<item label="GParted">
+				<action name="Execute">
+					<command>
+                        gksudo gparted
+                    </command>
+				</action>
+			</item>
+			<item label="Edit Debian Alternatives">
+				<action name="Execute">
+					<command>
+                        gksudo galternatives
+                    </command>
+				</action>
+			</item>
+			<separator/>
+			<item label="About Bunsen Alternatives">
+				<action name="Execute">
+					<execute>zenity --text-info --title=&quot;About Bunsen Alternatives&quot; --filename=&quot;/usr/share/bunsen/bunsen-docs/helpfile-bl-alternatives.txt&quot; --width=900 --height=700</execute>
+				</action>
+			</item>
+		</menu>
+		<menu execute="bl-help-pipemenu" id="help" label="Help"/>
+		<separator/>
+		<menu execute="bl-kb-pipemenu" id="keybinds" label="Display Keybinds"/>
+		<separator/>
+		<item label="Lock Screen">
+			<action name="Execute">
+				<command>lock-screen.sh</command>
+			</action>
+		</item>
+		<item label="Exit">
+			<action name="Execute">
+				<command>
+                    bl-exit
+                </command>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

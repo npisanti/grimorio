@@ -1,0 +1,78 @@
+
+
+--------figuring out the interface name--------
+
+		Type 
+	iwconfig
+		You will see a list of interfaces. Ignore all the interfaces that say "no wireless extensions".
+
+		The interface name will be wlan0, wlan2 or ath0 or something like that.
+
+		This document uses the name wlan0 but you should substitute wlan0 for whichever interface your system reports.
+
+
+
+--------adding passwords--------
+
+	$ sudo su
+	# wpa_passphrase SSID PASSPHRASE >> /etc/wpa_supplicant.conf
+		Make sure to use >> and not > or else you will delete all your wireless passwords! It's a good idea to make a backup occasionally:
+
+sudo cp /etc/wpa_supplicant.conf{,.backup}
+
+
+
+--------run wpa_supplicant--------
+--------scanning for access points--------
+
+	$ sudo iw dev wlan0 scan | grep SSID
+	    SSID: MEO-876078
+	    SSID: Thomson249040
+	    SSID: MEO-089464
+	    SSID: Solmar - Guests
+	    SSID: SINDICADO-NACIONAL
+	    SSID: Solmar
+
+
+
+--------connecting to an access point--------
+
+		To connect to an access point called SSID, do:
+
+	$ sudo iw dev wlan0 connect -w SSID
+
+		see if you're connected to an access point
+
+		Use iwconfig:
+
+	$ iwconfig wlan0
+
+		When you're connected, you will see something like:
+
+	wlan0     IEEE 802.11abgn  ESSID:"Thomson249040"  
+	          Mode:Managed  Frequency:2.412 GHz  Access Point: 00:24:17:44:35:28   
+	          Bit Rate=48 Mb/s   Tx-Power=19 dBm   
+	          Retry limit:231   RTS thr:off   Fragment thr:off
+	          Power Management:off
+	          Link Quality=46/70  Signal level=-64 dBm  
+	          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+	          Tx excessive retries:170  Invalid misc:134   Missed beacon:0
+	getting an IP address
+
+		Most of the time you'll just need to do:
+
+	sudo dhclient wlan0
+		but sometimes you will get the message:
+
+	RTNETLINK answers: File exists
+		In that case, release the dhcp lease first with -r and then get a lease:
+
+	$ sudo dhclient -r wlan0
+	$ sudo dhclient wlan0
+		Once dhclient finishes, you're online!
+
+
+
+--------disconnecting--------
+
+	sudo iw dev wlan0 disconnect

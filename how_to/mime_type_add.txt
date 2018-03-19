@@ -1,0 +1,55 @@
+
+// using arduino .ino as example
+
+geany ino.xml
+
+// then write in the file:
+
+<?xml version="1.0"?>
+ <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="application/arduino">  
+   <glob pattern="*.ino"/>
+  </mime-type>
+ </mime-info>
+
+// then 
+
+xdg-mime install --novendor ino.xml
+
+
+// also (to simlink the old location to the new)
+cd ~/.local/share/applications
+cp mimeapps.list mimeapps.list.backup
+ls -s ~/.config/mimeapps.list mimeapps.list
+
+
+
+// ---------------------------- WIP METHOD ---------------------------------
+
+//test with 
+xdg-mime query filetype filename.xyz
+xdg-open filename.xyz
+
+sudo geany /etc/mime.types
+
+//add
+application/qtcreator				qbs
+// (notice four tabs)
+
+
+// from the mime folder
+sudo cp -av *.xml /usr/share/mime/application
+// then 
+sudo update-mime-database /usr/share/mime
+
+// add desktop entry to 
+/usr/share/applications
+
+
+// edit
+~/.config/mimeapps.list 
+// and add the mime associations
+
+// ------------------------------------------------
+
+

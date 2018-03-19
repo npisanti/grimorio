@@ -1,0 +1,87 @@
+
+
+// first install lamp
+
+// ----------------- CREATE DATABASE ------------------------------------------
+
+mysql -u root -p
+
+mysql> CREATE DATABASE IF NOT EXISTS wordpress;
+mysql> CREATE USER caezsar@localhost IDENTIFIED BY "your_password_here";
+mysql> GRANT ALL PRIVILEGES ON wordpress.* TO caezsar@localhost;
+mysql> FLUSH PRIVILEGES;
+mysql> quit
+
+
+// ---------------------- WORDPRESS -------------------------------------------
+
+/get the latest:
+
+wget http://wordpress.org/latest.tar.gz
+tar xvzf latest.tar.gz
+
+//then move the wordprss folder into your html directory
+// if your directory isn't in the home 
+sudo chmod -R 755 your_directory
+
+// move template and plugins to wp-content/themes and wp-content/plugins
+
+// change ownership of directories to the webserver
+chown -R www-data:www-data your-wordpress-directory
+
+// then navigate to the directory, for example
+http://localhost/nick/wpfolder
+// and configure wp
+
+
+// --------------------------- TEMPLATE ---------------------------------------
+
+// manual:
+// copy the folder in 
+wpfolder/wp-content/themes/
+
+
+
+//-----------------------------MEMOs-------------------------------------------
+// use multi wp with same databes : change wp-config.php
+// change
+$table_prefix = 'wp_'; 
+
+
+
+
+// ------------------------ PLUGIN UPDATE FIX ------------------
+
+// on localhost add to wp-config.php
+define('FS_METHOD', 'direct');
+
+
+// -------------- CHECKLIST ------------
+    - deactivate comments for posts
+
+
+
+
+// ------------- WP CLI : http://wp-cli.org/ -----------------
+
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+php wp-cli.phar --info
+
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
+
+cd ~/.config
+https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
+
+nano ~/.bashrc
+// add
+source /home/$USER/.config/wp-completion.bash
+
+
+
+// ------------- ACTIVATE SSH from CPANEL -----------------------
+
+cPanel -> Advanced Section -> SSH/Shell Access
+
+// for the IP:
+https://www.whatismyip.com/

@@ -1,0 +1,33 @@
+
+// ADD WPA key
+
+sudo iw dev wlan0 scan | grep SSID
+
+sudo su 
+cd /path/to/rpiMedia/etc/wpa_supplicant
+wpa_passphrase ESSID PASSPHRASE >> wpa_supplicant.conf 
+
+// ADD file for installation
+
+
+// remove usb wifi
+
+
+// from the laptop 
+
+// connect cable to laptop
+
+
+sudo ifconfig eth0 169.254.0.1
+
+ssh pi@169.254.0.2
+
+
+// add usb wifi
+
+
+// for wpa supplicant with no password 
+network={
+    ssid="MYSSID"
+    key_mgmt=NONE
+}

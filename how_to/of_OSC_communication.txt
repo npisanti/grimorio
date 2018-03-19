@@ -1,0 +1,34 @@
+
+// WIRELESS -------------------------------------------------
+
+// first you need to create an accesso point
+
+sudo create_ap -n --no-virt wlan0 APESSID APPASSPHRASE
+// and then connect the client to the access point
+
+// the you have to discover the IP address of the access point host
+// from the client:
+ip addr show
+// then look at the first "inet " 
+// use the same address, but with .1 as the last number to get the host IP
+
+
+// rPI -------------------------------------------------
+rpi_prepare_eth0.sh
+rpi_connect.sh
+// for the rpi the IP is statically set to 169.254.0.2
+// for the desktop the IP is statically set to 169.254.0.1
+
+
+// COMMON ----------------------------------------------
+// configure the OSC senders to use that IP as hostname
+// configure the OSC senders out ports and the OSC receivers input ports to the same number
+
+
+// USING A ROUTER ------------------------------------------
+// connect all the unit to the same router
+// then
+sudo fing
+// discover the IPs of all the unit, 
+// and configure the senders to send the messages to the right IP
+// (also remembert to set the right ports)

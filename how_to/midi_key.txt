@@ -1,0 +1,6 @@
+
+// sometimes to activate midi keys
+sudo nano /etc/modules
+
+//add this
+snd_seq_midi

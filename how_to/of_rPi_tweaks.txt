@@ -1,0 +1,11 @@
+// to avoid addon recompiling triggering, all the addon has to have the same CFLAGS
+// so modify ofxSIMDFloats addons_config.mk decommenting the flags like this
+linuxarmv6l:
+        # ofxSIMDFloats is not useful without NEON, this flags are for running it on a raspbian rpi2
+        #ADDON_CFLAGS = -mfpu=neon -mfloat-abi=hard -ftree-vectorize
+// THEN
+nano libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk 
+// change 
+PLATFORM_CFLAGS += -mfpu=vfp
+// to
+PLATFORM_CFLAGS += -mfpu=neon

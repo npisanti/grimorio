@@ -1,0 +1,30 @@
+
+
+// from the rpi ------------------------
+
+sudo ifconfig eth0 169.254.0.2
+// or
+// add at the end of /boot/cmdline.txt
+ip=169.254.0.2
+
+
+
+// from the laptop ---------------------
+
+// connect cable from rPi
+// remove usb-wifi from rPi
+// disconnect cable from laptop
+// boot rPi
+// connect cable to laptop
+
+// configure wired ip
+sudo ifconfig eth0 169.254.0.1
+
+// ssh into pi
+ssh pi@169.254.0.2
+
+// or for x forwarding
+ssh -Y pi@169.254.0.2
+
+
+// if needed connect usb-wifi to rPi

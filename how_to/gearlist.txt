@@ -1,0 +1,80 @@
+
+ZAINO
+    - Thinkpad T430 + alimentatore
+    - Cuffie
+    - speaker JBL
+    - Alimentatore Anker 2po/4A + cavo usb 3m
+    - Olympus LS5 + induttanza
+    - Novation Launch Control
+
+PERIFERICHE
+    - Kinect 1414
+    - prolunga usb con repeater 10m
+    - cavo rca3 <---> 3.5mm cuffie+mic
+    - cavo ethernet corto
+    - mouse Logitech M90 + tappetino
+    - powerbank
+    - Simbionte
+    - rPi 3
+    - rPi 2
+    - rPi 2 + display
+    - rpi zero w x2
+    - rPi piezo shield 
+        + 10 piezos cables
+    - rPi adafruit cap shield
+        + bare conductive paint
+        + alligator clips
+    - schedine rPi + WiFi usb
+    - alimentatore 5po/10A Anker
+    - Thrustmaster Dual Analog 4
+    - cavi micro usb 25cm x4
+
+PICO PROIETTORE OPTOMA PK320 
+    + display port m <---> HDMI f
+    + mini HDMI m <---> HDMI f
+    + HDMI f <---> HDMI f
+    + adattatore picoProiettore ---> asta mic
+
++ treppiedi cellulare
++ prolunga & spina a 3
+
+-------------------------------------------------------------------------------
+
+EXTRA
+    - Benq GW2270H 21.5'' monitor
+    - Scarlet 2i4 + cavo usb
+    - TP-LINK ROUTER
+    - NUC 5i7
+    - Keyboard
+    - Korg microKey25
+    - metro 5m
+    - alimentatore 5-12v x2
+    - webcam HD
+        - audio splitter 3.5mm x5
+
+
+EMBEDDED / MICROCONTROLLORI
+    - arduino micro x3
+    - arduino Leonardo
+    - ATTiny85 x5
+    - mosfet module x6
+    - cacciaviti e tronchesina
+    - breadboards
+    - screw terminals 
+    - resistors
+    - capacitors
+    - diodes
+    - transistors TIP120 x4
+    - optocouplers 4N35 x8
+    - mosfet 
+    - rPi display 
+    - 5v amps x9
+    - MCP3008 x 2
+    - leds assortiti
+    - jumpers assortiti 
+    - sensori assortiti
+    - cavo micro usb 25cm
+    - RELAY MODULEs
+        + 4 relay module x2
+        + 8 relay module x2
+        + 8 cut cables

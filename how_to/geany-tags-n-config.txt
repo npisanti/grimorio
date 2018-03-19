@@ -1,0 +1,8 @@
+find -type f -name "*.h" -print0 | xargs -0 geany -gP tagfilename.cpp.tags
+
+
+//gcc static check
+gcc -fsyntax-only -std=c++11 -Wpedantic %f
+
+//cpp check
+cppcheck %f

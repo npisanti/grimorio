@@ -1,0 +1,7 @@
+
+    // change config.make
+PROJECT_LDFLAGS = ../../../addons/ofxLeapMotion2/libs/lib/linux/libLeap.so
+PROJECT_LDFLAGS += -Wl,-rpath=../../../addons/ofxLeapMotion2/libs/lib/linux
+
+
+    // compile with make and then execute with ./bin/foldername

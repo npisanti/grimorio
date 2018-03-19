@@ -1,0 +1,7 @@
+
+// to unbrick 
+1) select "blink" example on arduino IDE
+2) CTRL+U to upload
+3) hurry! press 2 time reset on the arduino micro to put in bootloader mode
+
+

@@ -1,0 +1,26 @@
+
+// into cPanel, go to ssh and generate key
+// for getting your ip use https://www.whatismyip.com/
+// or
+curl ipinfo.io/ip
+
+nano key.txt 
+// and paste the private key data
+
+// then 
+sudo chmod 600 key.txt 
+ssh-add key.txt
+
+
+ssh USER@HOST_NAME -pPORT
+
+for example
+ssh footvoll@it22.siteground.eu -p 18765
+
+
+// to copy over ssh
+sudo scp -i ~/your/path/to/key.txt -P 18765 /your/path/to.file USER@HOSTNAME:/home/USER
+// for example
+sudo scp -i ~/desktop/footvolleyrimini/key.txt -P 18765 test.html footvoll@it22.siteground.eu:/home/footvoll
+// to copy a folder use -r
+sudo scp -r -i ~/desktop/footvolleyrimini/key.txt -P 18765 testfolder footvoll@it22.siteground.eu:/home/footvoll

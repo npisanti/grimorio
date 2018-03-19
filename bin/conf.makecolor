@@ -1,0 +1,15 @@
+# errors
+regexp=error
+colours=red
+=======
+#warnings
+regexp=warning
+colours=yellow
+=======
+#compiling
+regexp=Compiling
+colours=cyan
+=======
+#linking
+regexp=Linking
+colours=cyan

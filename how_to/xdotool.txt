@@ -1,0 +1,8 @@
+
+// to move the mouse 
+xdotool mousemove_relative -- 20 20
+
+// to click 
+xdotool click 1
+xdotool click 2
+xdotool click 3

@@ -1,0 +1,9 @@
+
+// to draw smoothed lines you have to enable smoothing / antialiasing
+// and then increase line size:
+ofEnableAntiAliasing(); 
+ofEnableSmoothing();
+ofSetLineWidth( 1.4f );
+
+// if you want to use this on fbos, you have to allocate the fbo enabling multisampling
+fbo.allocate( w, h, GL_RGBA, 4 );

@@ -1,0 +1,9 @@
+
+//get input with 
+sudo lsinput
+
+//and then
+sudo mtdev-test /dev/input/event9
+
+
+sudo apt-get install libinput5

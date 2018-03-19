@@ -1,0 +1,13 @@
+
+cd ~/.vim/bundle
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+download prebuild clang lib http://llvm.org/releases/download.html
+    put the unpacked file to ~/ycm_temp/llvm_root_dir (with bin include, etc right inside the folder)
+sudo apt-get install python-dev python3-dev
+cd ~
+mkdir ycm_build
+cd ycm_build
+cmake -G "Unix Makefiles" -DPATH_TO_LLVM_ROOT=~/ycm_temp/llvm_root_dir . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+cmake --build . --target ycm_core --config Release

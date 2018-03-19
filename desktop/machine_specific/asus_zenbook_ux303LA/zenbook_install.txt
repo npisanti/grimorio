@@ -1,0 +1,92 @@
+
+
+// boot options----------------------------------------------------------------
+
+sudo geany /etc/default/grup
+//then change
+GRUB_CMDLINE_LINUX_DEFAULT="i915.semaphores=1 acpi_backlight=video acpi_osi=" 
+//then 
+sudo update-grub
+
+// testing for xorg crash
+i915.semaphores=1
+
+// intel fixes ---------------------------------------------------------
+
+// add latest drivers... first
+    sudo geany /etc/apt/sources.list
+// add this line    
+    deb http://ftp.debian.org/debian jessie-backports main
+// and then
+sudo apt-get update
+sudo apt-get -t jessie-backports install xserver-xorg-video-intel
+
+// also for avoid screen tearing
+sudo geany /usr/share/X11/xorg.conf.d/20-intel.conf 
+// then set to 
+Section "Device"
+   Identifier  "Intel Graphics"
+   Driver      "intel"
+   Option      "AccelMethod"  "sna"
+   Option      "TearFree" "true"
+EndSection
+
+// also edit compton config and set
+vsync = "opengl";
+
+
+// make volume keys work -------------------------------------------------------
+
+geany .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-mixer.xml 
+// then set the sound-card line
+  <property name="sound-card" type="string" value="HDAIntelPCHAlsamixer"/>
+
+
+//EXTRA for power saving--------------------------------------------------------
+
+sudo apt-get install laptop-mode-tools
+
+// LAPTOP MODE CONF
+sudo geany /etc/laptop-mode/laptop-mode.conf
+// paste
+# CPU FREQUENCY ZENBOOK
+CONTROL_CPU_FREQUENCY=1
+BATT_CPU_MAXFREQ=fastest
+BATT_CPU_MINFREQ=slowest
+BATT_CPU_GOVERNOR=powersave
+BATT_CPU_IGNORE_NICE_LOAD=1
+LM_AC_CPU_MAXFREQ=fastest
+LM_AC_CPU_MINFREQ=slowest
+LM_AC_CPU_GOVERNOR=performance
+LM_AC_CPU_IGNORE_NICE_LOAD=1
+NOLM_AC_CPU_MAXFREQ=fastest
+NOLM_AC_CPU_MINFREQ=slowest
+NOLM_AC_CPU_GOVERNOR=performance
+NOLM_AC_CPU_IGNORE_NICE_LOAD=0
+CONTROL_CPU_THROTTLING=0
+
+
+// COLOR profiling -------------------------------------------------------------
+
+//rememert to save the color profile from windows!!!
+// go in the color profile path, then 
+sudo cp UX303LA_8086_AE0D1361.icm /usr/share/color/icc/
+
+// then install xcalib
+sudo apt-get install xcalib
+// at startup, add to autostart
+xcalib -d :0 /usr/share/color/icc/UX303LA_8086_AE0D1361.icm 
+
+
+// mapping monitor touch to laptop screen in multihead setup
+xinput --map-to-output 10 eDP1 
+
+
+// MODULES -------------------------------------------------------
+sudo geany /etc/modules-load.d/modules.conf
+
+coretemp
+snd_seq_midi
+asus-nb-wmi
+
+

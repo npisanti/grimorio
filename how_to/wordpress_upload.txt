@@ -1,0 +1,55 @@
+
+
+// ------------------ 1 - DATABASE EXPORT -------------------------------------
+
+// go to 
+http://localhost/phpmyadmin/
+
+// dbname ---> export ---> custom --->  set compression to none
+                                        
+                                        set "structure and data" 
+                                        
+                                        tick:
+                                            Add DROP TABLE / VIEW / PROCEDURE / FUNCTION statement
+                                            IF NOT EXISTS
+                                            AUTO_INCREMENT
+                                            Enclose table and column names with backquotes
+                                        
+                                        click "GO"
+                                
+// then open the file with an editor and replace all the occurrence of
+http://localhost/user/site
+// with 
+http://yourlivesite.com
+
+// -------------------- 2 - WORDPRESS UPLOAD ----------------------------------
+
+fire up filezilla and copy the wp folder inside the public_html folder of the hosting
+
+
+
+// -------------------- 3 - CREATE NEW DATABASE on live site ------------------
+
+// general
+go to cPanel ---> phpMyAdmin
+databases --- > create 
+
+// on siteground
+cPanel->MySQL Databases --- > create 
+
+// -------------------- 4 - IMPORT DATABASE------------------------------------
+
+go to cPanel ---> phpMyAdmin
+select database
+
+
+// -------------------- 5 - EDIT wp_config.php --------------------------------
+// and set those variables
+
+define('DB_NAME', 'live_db_name');
+
+/** MySQL database username */
+define('DB_USER', 'live_db_user');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'live_db_user_password!');

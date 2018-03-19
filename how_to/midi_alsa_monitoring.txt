@@ -1,0 +1,20 @@
+
+// 1-list midi devices
+amidi -l 
+
+//example output:
+Dir Device    Name
+IO  hw:1,0,0  microKEY-25 MIDI 1
+
+//in this case we'd like to monitor the microkey so:
+amidi -p hw:1,0,0 -d
+
+//if you need virtual midi ports for aconnectgui
+sudo modprobe snd-virmidi
+
+// all the midi sent to the virtual devices input can be seen with 
+amidi -p hw:x,0 -d
+// where x is the virtual midi port id
+
+//to disconnect everything from aconnect
+aconnect -x

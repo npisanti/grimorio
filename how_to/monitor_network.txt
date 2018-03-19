@@ -1,0 +1,14 @@
+
+//check ip traffic
+sudo iptraf
+
+//check bandwidth used by processes
+sudo nethogs
+
+
+//Pktstat displays all the active connections in real time, and the speed at which data is being transferred through them
+sudo pktstat -i wlan0 -nt
+
+//Netwatch is part of the netdiag collection of tools, and it too displays the connections between local host and other remote hosts, and the speed at which data is transferring on each connection.
+
+sudo netwatch -e wlan0 -nt

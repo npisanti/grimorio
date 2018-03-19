@@ -1,0 +1,3 @@
+sudo geany /var/log/Xorg.0.log.old
+sudo geany /var/log/messages
+sudo geany /var/log/syslog

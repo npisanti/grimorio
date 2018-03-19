@@ -1,0 +1,3 @@
+
+// convert in place, all black to transparent
+mogrify -transparent black *

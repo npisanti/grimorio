@@ -1,0 +1,19 @@
+
+// BUILDING ARDOUR 5 -------------------------------
+cd apps
+// make a folder for ardour, then
+git clone git://github.com/Ardour/ardour.git
+
+// install dependencies
+sudo apt-get install libglibmm-2.4-dev libcurl4-gnutls-dev liblo-dev libtag1-dev vamp-plugin-sdk librubberband-dev libaubio-dev liblrdf0-dev libsamplerate0-dev lv2-dev libserd-dev libsord-dev libsratom-dev liblilv-dev libgtkmm-2.4-dev libarchive-dev 
+
+// configure build
+./waf configure
+
+//build
+./waf
+
+// run
+./gtk2_ardour/ardev 
+
+// now modify ~/bin/ardour5.sh with the correct path

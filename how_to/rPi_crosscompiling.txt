@@ -1,0 +1,10 @@
+
+// make a rpi dir and clone toolchain
+
+mkdir rpi
+
+cd rpi 
+
+git clone git://github.com/raspberrypi/tools.git
+
+cd ~/rpi/tools/arm-bcm2708

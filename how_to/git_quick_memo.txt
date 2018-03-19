@@ -1,0 +1,53 @@
+
+// create a repo --------------------
+
+//to init a repo 
+git init
+
+//then set up a .gitignore file, and then
+git add *
+git commit -m 'first commit'
+
+// create a repo on github and then 
+// set an origin
+git remote add origin https://github.com/npisanti/yourRepoName.git
+
+// then git push origin master
+// ----------------------------------------
+
+
+//to see the status
+git status
+
+//to remove a file
+git rm
+
+// to commit files already in the repo list
+git commit -a -m 'your message'
+
+// add a tag (for example v0.3.4)
+git tag v0.3.4
+
+//check origins
+git remote -v
+
+//to push you repo 
+git push -u origin master
+
+//to restore from origin
+git fetch origin
+git reset --hard origin/master
+
+
+
+// fetching original repo from a fork ------------------------
+// add upstream
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+
+// for oF
+git remote add upstream https://github.com/openframeworks/openFrameworks.git
+
+// fetch repo
+git fetch upstream
+git checkout selectedbranch
+git merge upstream/selectedbranch

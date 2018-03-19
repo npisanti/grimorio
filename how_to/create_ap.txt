@@ -1,0 +1,33 @@
+
+sudo apt-get install util-linux procps hostapd iproute2 iw dnsmasq iptables haveged
+
+
+git clone https://github.com/oblique/create_ap.git
+cd create_ap
+sudo make install
+
+
+// for just accessing the other machine
+sudo create_ap -n --no-virt wlan0 AP_ESSID APPASSPHRASE
+
+
+// ---------------- FOR SETTING UP AUTOSTART ----------------------------------
+
+
+// create AP-autostart.sh script
+
+#!/bin/bash
+# comment to deactivate startup AP, decomment to activate
+sudo create_ap -n --no-virt wlanX AP_ESSID PASSWORD &
+exit
+
+// give it execution permission
+chmod +x ~/bin/AP-autostart.sh
+
+// add it to rc.local
+sudo geany /etc/rc.local
+sh /home/nick/bin/AP-autostart.sh
+
+
+// to quit connection 
+killall hostapd

@@ -1,0 +1,37 @@
+
+
+sudo apt-get bunsen-meta-lamp
+
+
+//----------------------- ACTIVATE PHPMYADMIN ---------------------------------
+sudo geany /etc/apache2/apache2.conf
+// Add this line at the end:
+Include /etc/phpmyadmin/apache.conf
+
+
+// ---------------------- CONFIG APACHE FOR USER DIRs--------------------------
+sudo geany /etc/apache2/sites-available/000-default.conf 
+
+// change DocumentRoot
+DocumentRoot /var/www
+
+// restart apache2
+sudo systemctl restart apache2.service 
+
+// ---------------------- TEST -----------------------------------------------
+
+// for checking apache2
+http://localhost/html
+
+// for checking user directory
+http://localhost/nick
+
+// for cheching phpmyadmin
+http://localhost/phpmyadmin
+
+
+
+
+// ----------------------- RECONFIGURE -------------------------
+sudo dpkg-reconfigure mysql-server-5.6
+sudo dpkg-reconfigure phpmyadmin

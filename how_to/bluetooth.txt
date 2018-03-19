@@ -1,0 +1,29 @@
+
+//step 1 install bluez
+sudo apt-get install bluez
+
+//step 2 load bt module
+sudo modprobe btusb
+
+//start bluetoothctl
+bluetootctl
+
+//use help for commands, type
+power on
+//for starting bt
+scan on
+//for scanning
+
+//for other infos
+https://wiki.archlinux.org/index.php/Bluetooth
+
+
+//--------------------- you can also use hcitool
+hciconfig dev 
+//shows the devices
+
+sudo hcitool hci0 up 
+//start the device
+
+hcitool scan 
+//scans for devices

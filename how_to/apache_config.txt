@@ -1,0 +1,17 @@
+
+
+Edit the Apache Configuration File (httpd.conf)
+
+sudo subl /usr/local/apache/conf/httpd.conf 
+
+
+
+
+//mysql pw
+root
+
+//phpmyadmin admin pw
+root
+
+//phpmyadmin database server pw
+root

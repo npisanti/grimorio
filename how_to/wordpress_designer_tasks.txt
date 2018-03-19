@@ -1,0 +1,27 @@
+
+
+
+
+// --------- tab ---------------------------
+Site Title = titolo nella tab
+Site Tagline = va sempre a finire nella tag
+Site Icon = square, almeno 512 pixel
+
+
+// ----------- style ----------------
+font = Raleway
+colori/stile per le ancore
+
+
+
+text color
+link color
+link hover color/style
+text selected color 
+menu background color
+menu hover color 
+header color 
+    
+brando: header 1920x700
+
+

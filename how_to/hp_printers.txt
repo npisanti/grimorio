@@ -1,0 +1,30 @@
+
+// from:
+http://hplipopensource.com/hplip-web/install/manual/distros/debian.html
+
+
+sudo apt-get install --force-yes -y avahi-utils cups libcups2 libcups2-dev cups-bsd cups-client libcupsimage2 libcupsimage2-dev libdbus-1-dev g++ ghostscript ghostscript-cups ghostscript-x libssl-dev libjpeg62-turbo-dev libsnmp-dev snmp libc6 libtool libtool-bin libusb-1.0.0-dev make wget python-imaging python-dbus python-gobject python-dev python python-reportlab sane libsane-dev sane-utils xsane
+
+
+// download the tarball
+
+// untar (for example)
+tar xvf hplip-3.17.9.tar.gz
+
+cd hplip-3.17.9
+
+./configure --prefix=/usr --with-hpppddir=/usr/share/ppd/HP --libdir=/usr/lib/x86_64-linux-gnu --enable-qt4 --enable-hpcups-install --enable-cups-drv-install --disable-cups-ppd-install --disable-hpijs-install --disable-foomatic-drv-install --disable-foomatic-ppd-install --disable-foomatic-rip-hplip-install --enable-fax-build --enable-dbus-build --enable-network-build --enable-scan-build --disable-policykit --disable-libusb01_build --disable-udev_sysfs_rules --enable-doc-build
+
+
+// then compile and install
+make
+sudo make install
+
+
+// add user to group
+sudo usermod -a -G lp,lpadmin $USER
+
+
+// ------------ SETUP -------------
+sudo hp-setup
+// and add a printer with the wizard

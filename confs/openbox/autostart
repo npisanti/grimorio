@@ -1,0 +1,88 @@
+## Openbox autostart
+## ====================
+## When you login to your BunsenLabs Openbox session, this autostart script
+## will be executed to set-up your environment and launch any applications
+## you want to run at startup.
+##
+## Note: some programs, such as 'nm-applet' are run via XDG autostart.
+## Run
+## /usr/lib/i386-linux-gnu/openbox-xdg-autostart --list
+## or
+## /usr/lib/x86_64-linux-gnu/openbox-xdg-autostart --list
+## to list any XDG autostarted programs.
+##
+## More information about this can be found at:
+## http://openbox.org/wiki/Help:Autostart
+##
+## If you do something cool with your autostart script and you think others
+## could benefit from your hack, please consider sharing it at:
+## http://forums.bunsenlabs.org (registration required)
+##
+
+## SETTINGS START
+
+## Configure touchpad. See 'man synaptics' for more info.
+synclient VertEdgeScroll=0 HorizEdgeScroll=0 TapButton1=1 VertScrollDelta=130 VertHysteresis=30 2>/dev/null
+
+## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Adjust the values according to your preferances.
+xset r rate 250 25
+
+#sets riit window color
+hsetroot -solid "#000000" &
+
+## Turn on/off system beep.
+xset b off
+
+## Add keyboard mapping.
+#xmodmap -e "keysym Insert = Multi_key"
+
+## SETTINGS END
+
+## GNOME PolicyKit authentication
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+nitrogen --restore &
+
+bl-compositor --start &
+
+## Start the tint2 session (the default tint2 will run if no sessions have been set)
+(sleep 1s; bl-tint2-session) &
+
+## Start the Conky session (the default conkyrc will run if no sessions have been set)
+(sleep 1s; bl-conky-session --autostart) &
+
+## Volume control for systray
+#(sleep 2; volti) &
+
+## Volume keys daemon
+#xfce4-volumed &
+
+## Start Clipboard manager
+(sleep 1; clipit) &
+(sleep 2; pkill clipit) &
+
+## Start Thunar Daemon, if set as bl-file-manager
+if [ "$(readlink -f $(which bl-file-manager))" = "$(which thunar)" ]
+then
+    thunar --daemon &
+fi
+
+#kill unclutter, deactivate for installations
+pkill unclutter
+
+## Enable power management
+xfce4-power-manager &
+
+## Start the battery applet
+##(sleep 2; fdpowermon) &
+
+## Start xscreensaver (light-locker now used by default, run via XDG autostart.)
+#xscreensaver -no-splash &
+
+## bl-welcome - post-installation script, will not run in a live session and
+## only runs once. Safe to remove.
+(sleep 10; bl-welcome --firstrun) &
+
+## bl-fortune - have the system come up with a little adage (not yet enabled)
+#(sleep 120; bl-fortune) &

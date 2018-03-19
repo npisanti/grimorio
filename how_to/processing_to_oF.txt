@@ -1,0 +1,43 @@
+
+function passed by value / reference
+
+
+scopes with ::
+
+
+It's crucial that you remember the semicolon at the end of a C++ class declaration. Failure to include the semicolon will cause a compile-time error, but not at the end of the class declaration. Often the error will be reported in a perfectly viable file, such as in a header file that you included.
+
+
+everytime you use `new` you also have to `delete` somewhere (also constructor / destructors)
+
+
+public / private / protected
+
+
+the symbol NULL is actually an int! This has brought down many a great C++ programmer. The workaround is to explicitly cast NULL to the pointer type you want.
+
+pointers 
+
+& * operators
+
+nella dichiarzione 
+* = puntatore a 
+& = riferimento a
+
+come operatori
+* = contenuto dell'indirizzo        *pNumber
+& = l'indirizzo di                  &number 
+
+nelle funzioni 
+* = come dichiarazione
+& = la variabile è passata per riferimento
+
+
+NULL o nullptr
+
+//-----------------------------------------------------------------------------
+
+
+
+
+

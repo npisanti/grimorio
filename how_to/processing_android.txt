@@ -1,0 +1,13 @@
+
+// on processing, download android mode
+
+// change to it and install sdk
+
+// open processing
+
+// connect device
+
+// allow usb debugging 
+
+// to use OSC:
+pde-->android-->sketch permission--> tick "INTERNET"

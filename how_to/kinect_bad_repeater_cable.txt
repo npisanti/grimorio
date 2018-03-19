@@ -1,0 +1,28 @@
+
+// --------- IF YOU SEE THIS, YOU NEED TO CHANGE YOUR 10m CABLE -----------
+
+
+[Stream 80] Expected 1908 data bytes, but got 948
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+Error in accelerometer reading, libusb_control_transfer returned -4
+USB camera marked dead, stopping streams
+send_cmd: Output control transfer failed (-4)
+write_register: send_cmd() returned -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+iso_callback(): failed to resubmit transfer after successful completion: -4
+send_cmd: Output control transfer failed (-4)
+write_register: send_cmd() returned -4

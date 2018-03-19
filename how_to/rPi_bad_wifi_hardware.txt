@@ -1,0 +1,39 @@
+
+dmesg | grep mmc1
+//Any messages related to mmc1 during boot?
+//There should be. 'mmc1' is the WiFi device, if the kernel can't talk to it it won't work!
+
+
+//----------------------------------------------------------------------------
+
+//Check that the WiFi driver is loading with:
+lsmod | grep brcmfmac
+//you should see something like:
+brcmfmac              186403  0
+brcmutil                5661  1 brcmfmac
+cfg80211              428431  1 brcmfmac
+//If you are not seeing this as well, then either you have a corrupt copy of Raspbian on your SD Card, or bad hardware on your Pi.
+
+
+//----------------------------------------------------------------------------
+
+Although the WiFi and Bluetooth use the same chip (BCM43438 I think) they use different means of communication to talk to the Pi. WiFi uses the SDIO interface while Bluetooth uses a Serial Port interface. This means that one can work without the other.
+
+
+//----------------------------------------------------------------------------
+
+The '/etc/network/interfaces' file should be left in it's default state. Tutorials telling you to modify it are out of date, modifying this file is one of the causes of problems using WiFi on Raspbian Jessie.
+
+
+//----------------------------------------------------------------------------
+
+rfkill list
+
+//should return:
+0: phy0: Wireless LAN
+        Soft blocked: no
+        Hard blocked: no
+1: hci0: Bluetooth
+        Soft blocked: no
+        Hard blocked: no
+//Again, if the Wireless LAN is not showing up, it points to a bad SD Card Image or bad hardware.

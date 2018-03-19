@@ -1,0 +1,23 @@
+
+
+//crunchbang how to disable screen blanking
+
+
+menu-->openbox-->edit autostart
+
+
+//add these
+xset -dpms &
+xset s noblank &
+xset s off &
+
+
+//also 
+xfce4-power-manager-settings 
+
+
+
+
+//EDIT!!!!!!!!
+just go to power preference, disable "monitor power management control"
+in the menu go to settings--->screensaver, disable screen saver

@@ -1,0 +1,104 @@
+
+//------------------- flash image -------------------
+// check drives
+lsblk
+
+//if needed umount
+umount /dev/sdx
+
+//zero out the card
+$ sudo dd bs=4M if=/dev/zero of=/dev/sdx
+
+//flash the image
+$ sudo dd bs=4M if=pathto.img of=/dev/sdx
+
+
+//image backup
+sudo dd bs=4M if=/dev/sdx of=path/to/your.img
+
+
+
+// add at the end of /boot/cmdline.txt
+ip=169.254.0.2
+// remove it when you have done an installation/object 
+// and you want faster boot when not connected to the pc
+
+
+//deactivate blanking when not logged to X.org
+sudo nano /etc/kbd/config
+//set those parameters
+BLANK_TIME=0
+POWERDOWN_TIME=0
+
+// add to /etc/rc.local
+setterm -blank 0 -powerdown 0 -powersave off 
+
+// in .bashrc decomment 
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+
+
+// --------------- raspi config -----------------
+
+
+sudo raspi-config
+---> overclock to rPi2
+---> italian keyboard
+---> boot to user without password
+---> deactivate wait for network 
+---> audio through speakers not hdmi
+---> 128mb to graphics
+
+
+sudo dpkg-reconfigure console-setup
+// set font to terminus
+
+// -------------- apt-get ----------------
+
+sudo apt-get clean
+sudo apt-get update
+sudo apt-get dist-upgrade
+//and test
+
+// ---------------- oF -------------------
+
+//get openframeworks armv6 release
+
+// in oF/addons
+git clone https://github.com/jvcleave/ofxOMXPlayer.git
+git clone https://github.com/kashimAstro/ofxTFTTouch.git
+git clone https://github.com/kashimAstro/ofxGPIO.git
+
+
+cd /home/pi/of_x.x_folder/scripts/linux/debian
+sudo ./install_dependencies.sh
+sudo ./install_codecs.sh
+//and then 
+make Release -j4 -C /home/pi/of_x.x_folder/libs/openFrameworksCompiled/project
+
+//and then compile and test some examples
+make -j4 -s 2>&1
+
+// ----------------- extra -------------------
+
+//add "pi" (or your userid) to tty and dialout groups
+sudo usermod -a -G tty pi
+sudo usermod -a -G dialout pi
+
+sudo apt-get install git
+
+// ------------ save card ------------------
+
+// disable journaling from laptop ( if rPi card is sdb )
+sudo tune2fs -O ^has_journal /dev/sdb2
+
+// then logged into the pi
+sudo apt-get remove dphys-swapfile
+sudo apt-get autoremove
+//also 
+sudo nano /etc/fstab
+//add
+tmpfs /var/tmp tmpfs nodev,nosuid,size=32M 0 0
+tmpfs /var/log tmpfs nodev,nosuid,size=16M 0 0
+
+// also remember to use heatsinks

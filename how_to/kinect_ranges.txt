@@ -1,0 +1,14 @@
+
+KINECT RANGEs
+
+model 1414:
+
+min distance
+    40 cm
+max distance
+    350cm 
+    
+width at max distance 
+    350cm
+    
+the useful area of a kinect range is about a triangle with base 3.5m and height 3.5m

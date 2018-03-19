@@ -1,0 +1,7 @@
+
+sudo apt-get install pulseaudio-module-jack
+
+
+then sudo editing the /etc/pulse/default.pa file to include two lines under the load audio drivers manually section:
+load-module module-jack-sink
+load-module module-jack-source

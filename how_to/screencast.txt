@@ -1,0 +1,20 @@
+
+1) start pulse audio 
+
+2) modify of app, set engine device ID to the right for pulse (usually 4)
+
+3 ) start vokoscreen
+    - set vokoscreen audio to "Monitor of Built-In Analog Stereo"
+    - set video to "Window"
+    - set recording options:
+        - frames to oF frames
+        - avi output
+        - mp3 audio
+        - do not record mouse
+    
+4) start oF app
+
+5) start vokoscreen and select oF app window
+
+6) do you recording and then stop vokoscren
+

@@ -1,0 +1,7 @@
+
+hdmi_drive=1
+
+#optoma pico rPi setup
+#hdmi_safe=1
+#hdmi_group=2
+#hdmi_mode=4

@@ -1,0 +1,64 @@
+
+ ------------------------USERSPACE-------------
+#ADD to fstab 
+sudo geany /etc/fstab
+
+add these lines
+	/dev/sdb1       /home/nick/mnt/usb1     auto    rw,user,noauto  0       0
+	/dev/sdb2       /home/nick/mnt/usb2     auto    rw,user,noauto  0       0
+
+
+#CHECK DISKs ----------
+lsblk
+
+#MOUNT ----------
+mount /dev/sdb1 
+
+#UNMOUNT ----------
+umount /dev/sdb1
+
+
+
+
+------------------------SUPERUSER-------------
+
+#MOUNT
+sudo mount /dev/sdc1 /mnt
+
+#UNMOUNT
+sudo umount /dev/sdc1 /mnt
+or
+sudo umount /mnt
+
+#CHECK DISKS LONG WAY ----------------------------
+
+nick@aleph:~$ fdisk -l
+
+Disk /dev/sdc: 500.1 GB, 500097376256 bytes
+255 heads, 63 sectors/track, 60800 cylinders, total 976752688 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x1ab0bb80
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdc1   *          64   976751999   488375968    7  HPFS/NTFS/exFAT
+
+Disk /dev/sdd: 16.0 GB, 15998099456 bytes
+255 heads, 63 sectors/track, 1944 cylinders, total 31246288 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x2f9d63eb
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdd1            2048    31244287    15621120    7  HPFS/NTFS/exFAT
+
+
+
+// -------------------- MEMO -----------------
+// to disable gvfs
+    sudo apt-get remove gvfs
+// it will remove:
+    gvfs gvfs-backends gvfs-fuse
+

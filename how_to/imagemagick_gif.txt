@@ -1,0 +1,20 @@
+
+
+// for making a gif, 40 ms delay 
+convert -delay 40 -loop 0 *.jpg output.gif
+
+// for making that gif boomeranging
+convert -coalesce output.gif -delete -1 -delete 0 -reverse -coalesce output.gif -loop 0 boomerang.gif
+
+
+mogrify -rotate "-90>" *.JPG
+mogrify -resize 480x720 *.JPG
+convert -delay 12 -loop 0 *.JPG output.gif
+convert -coalesce output.gif -delete -1 -delete 0 -reverse -coalesce output.gif -loop 0 boomerang.gif
+
+// slow down
+convert -delay 10x100 your.gif your_slow.gif
+
+// change delay (to 20ms)
+convert -delay 20 animation.gif animation.gif
+

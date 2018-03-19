@@ -1,0 +1,20 @@
+
+
+//be sure to activate usb tethering on the device before the network manager starts
+//(settings ---> wireless & networks---> more ---> tethering & portable hotspot ---> USB tethering)
+
+//then configure usb tethering with stating IP to conform processing sketch's IP
+
+	ifconfig -v usb0  192.168.42.5 netmask 255.255.255.0 broadcast 192.168.42.255
+
+//check with 
+
+	ifconfig usb0
+
+//result should be this:
+
+usb0      Link encap:Ethernet  HWaddr 82:0a:37:f3:f9:bd  
+          inet addr:192.168.42.5  Bcast:192.168.42.255  Mask:255.255
+
+
+//send osc messages from android to setted IP

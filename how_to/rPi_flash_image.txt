@@ -1,0 +1,16 @@
+
+// check drives
+lsblk
+
+//if needed umount
+umount /dev/sdx
+
+//zero out the card
+$ sudo dd bs=4M if=/dev/zero of=/dev/sdx
+
+//flash the image
+$ sudo dd bs=4M if=pathto.img of=/dev/sdx
+
+
+//image backup
+sudo dd bs=4M if=/dev/sdx of=path/to/your.img

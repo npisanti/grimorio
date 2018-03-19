@@ -1,0 +1,25 @@
+[Default Applications]
+image/gif=bl-image-viewer.desktop
+image/jpeg=bl-image-viewer.desktop
+image/png=bl-image-viewer.desktop
+image/svg+xml=bl-image-viewer.desktop
+text/plain=bl-text-editor.desktop
+text/html=bl-text-editor.desktop
+application/xml=bl-text-editor.desktop
+application/javascript=bl-text-editor.desktop
+x-directory/normal=bl-file-manager.desktop
+x-directory/gnome-default-handler=bl-file-manager.desktop
+inode/directory=bl-file-manager.desktop
+audio/mpeg=bl-media-player.desktop
+audio/mp4=bl-media-player.desktop
+audio/x-wav=bl-media-player.desktop
+audio/aac=bl-media-player.desktop
+video/webm=bl-media-player.desktop
+video/x-ms-asf=bl-media-player.desktop
+video/x-theora+ogg=bl-media-player.desktop
+application/x-deb=gdebi.desktop
+x-scheme-handler/tg=telegramdesktop.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=exo-mail-reader.desktop
+

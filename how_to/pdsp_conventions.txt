@@ -1,0 +1,20 @@
+
+/**
+@brief you can set the brief here, for the class it will be shown also in the index
+This is the long description, say what you want
+@param[in] param_in_name Here you can set the description
+@param[out] param_out_name Here you can set the description
+*/
+
+Units/Patchables public interface----------------------
+
+    Patchable& in_ methods
+    Patchable& out_ methods
+
+    Patchable& set methods ( set defaults, so works when there is no patching)
+
+    float meter_ methods (thread safe)
+
+    use #ifdef PDSP_USE_SIMD to guard simd sections
+
+    clip critical input ranges

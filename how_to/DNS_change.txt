@@ -1,0 +1,20 @@
+Changing your DNS
+There’s one more thing you can do to obfuscate yourself, but I don’t recommend doing this option unless you know what this is actually about. Basically by default your internet service provider is also your DNS source, you can see this in the resolv configuration file, check it by entering 
+
+cat /etc/resolv.conf
+
+The nameserver usually points to localhost or your router, which means the connection will be directed to your ISP from the router. If you don’t want to have any footprints at your ISP that points to you, your location and your activities, you can replace this with the IP addresses to other DNS places, such as OpenDNS (their IP’s provided in the link) or any other service that you trust. 
+
+sudo geany /etc/dhcp/dhclient.conf 
+    // change
+#prepend domain-name-servers 127.0.0.1;
+    // to 
+prepend domain-name-servers 208.67.220.220, 208.67.222.222, 192.168.0.1;
+    // ( open dns used )
+
+if you use several IP’s, separate them with a comma followed by space (you can have up to 3 nameservers). I recommend keeping the localhost/router as second or third option. Save and exit, then restart the network manager by entering the command service network-manager restart
+Check again the /etc/resolv.conf file that the changes are correct. Your routers IP should be at the bottom of the list and hence only used if the first one or two options aren’t working.
+But be careful with which custom DNS services you use! Check their reputations, reviews, privacy policies, logging, etc. You don’t want it to be a worse alternative than your ISP! Netherlands and Sweden are usually good places to get such services from, as they have pretty strict privacy and data-releasing laws. OpenDNS also seems to be pretty good.
+By entering all of these settings, I will appear to be from France, surfing with an American internet service provider/DNS, with the rest of the information unknown.
+
+// for more security, search how to crypt dns infos

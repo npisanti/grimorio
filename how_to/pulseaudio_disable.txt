@@ -1,0 +1,25 @@
+
+
+//--------------TO DISABLE -------------------------
+
+sudo geany /etc/pulse/client.conf
+//set into conf file 
+autospawn = no
+daemon-binary = /bin/true
+
+//also deactivate this files 
+sudo mv /etc/xdg/autostart/pulseaudio.desktop /etc/xdg/autostart/pulseaudio.desktop.deactivated
+sudo mv /etc/xdg/autostart/pulseaudio-kde.desktop /etc/xdg/autostart/pulseaudio-kde.desktop.deactivated
+
+
+
+// ------------- to suspend -----------------------
+You can use pasuspender. Try prefixing your wine command with it.
+
+pasuspender -- commandtoexec -arg1 -arg2
+
+//running jack with no pulseaudio
+pasuspender qjackctl
+
+// or directly set it inside qjackctl settings
+pasuspender -- jackd

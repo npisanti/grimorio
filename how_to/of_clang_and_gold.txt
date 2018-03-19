@@ -1,0 +1,3 @@
+geany of_v0.9.3_linux64_release/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk 
+// and then at the end 
+PLATFORM_CXX = clang++ -B/usr/lib/gold-ld

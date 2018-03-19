@@ -1,0 +1,3 @@
+// COMMANDS TO PRODUCE GLITCHY TEXT OUTPUT 
+
+cat /sbin/*

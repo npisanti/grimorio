@@ -1,0 +1,34 @@
+
+// Install 
+//download the sdk and then  
+    sudo dpkg --install Leap-*-x64.deb
+
+//test 
+    sudo leapd
+// sample output
+    Configuration file not found
+    Resetting /var//.Leap Motion/config.json.
+    [Info] WebSocket server started
+    [Info] Secure WebSocket server started
+
+//then connect the leap motion and wait if a firmware update has to be made
+
+    [Info] Leap Motion Controller detected: LP14928537323
+    [Info] Firmware version: 1.3.0
+    [Info] Leap Motion Controller firmware version 1.3.0 is out of date.
+    [Info] Initiating firmware upgrade to version 1.7.0.
+    [Warning] Do not unplug your Leap Motion Controller.
+    [Info] If upgrade fails, please visit http://support.leapmotion.com to troubleshoot.
+    [Info] Firmware update succeeded.
+    [Critical] Unhandled exception: Firmware update succeeded
+    [Critical] Firmware update succeeded
+    [Info] Leap Motion Controller disconnected: LP14928537323
+    [Info] Leap Motion Controller detected: LP14928537323
+    [Info] Firmware is up to date.
+    [Info] Reversed tracking orientation
+    [Info] Tracking optimized for head-mounted device
+    [Info] Tracking optimized for up-facing device
+    [Info] Reversed tracking orientation
+
+// then test with 
+Visualizer

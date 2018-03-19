@@ -1,0 +1,64 @@
+
+
+sudo raspi-config
+---> overclock to rPi2
+---> italian keyboard
+
+
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+sudo apt-get install xorg
+
+sudo apt-get install i3
+
+sudo apt-get install lxterminal
+
+sudo apt-get install geany geany-plugins
+
+sudo apt-get install xdotool unclutter nmon moc moc-ffmpeg-plugin
+
+touch .xinitrc
+//add
+exec i3
+
+//load custom i3status.conf to /etc/i3status.conf
+//load custom config to ~/.i3/config
+
+startx //and test
+
+//get openframeworks 
+cd /home/pi/of_x.x_folder/scripts/linux/debian
+sudo ./install_dependencies.sh
+//and then 
+make Release -j4 -C /home/pi/of_x.x_folder/libs/openFrameworksCompiled/project
+//optional
+sudo ./install_codecs.sh
+//then sudo geany .profile, add this line
+export MAKEFLAGS="-j4 PLATFORM_VARIANT=raspberry2"
+
+// to avoid constant recopiling when using ofxSIMDFloats
+nano home/pi/of_v0.9.7_linuxarmv6l_release/libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk
+    line 96
+    PLATFORM_CFLAGS += -mfpu=neon
+
+
+//and then compile and test some examples
+
+
+sudo apt-get install arduino arduino-core
+
+//add "pi" (or your userid) to tty and dialout groups
+sudo usermod -a -G tty pi
+sudo usermod -a -G dialout pi
+
+
+//deactivate blanking when not logged to X.org
+sudo nano /etc/kbd/config
+//set those parameters
+BLANK_TIME=0
+POWERDOWN_TIME=0
+
+
+//install vlc and codecs
+sudo apt-get install vlc omxplayer x264 libav-tools libavcodec<tab>
