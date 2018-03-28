@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique fonts-inconsolata fonts-f500 fonts-roboto-fontface
+sudo apt-get install xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique fonts-inconsolata fonts-f500 fonts-roboto-fontface fonts-firacode
 
 sudo cp *.ttf /usr/share/fonts/truetype
 sudo cp *.otf /usr/share/fonts/opentype

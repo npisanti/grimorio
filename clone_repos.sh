@@ -30,8 +30,15 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 	git clone https://github.com/npisanti/ofxMorphImage.git
 	
+    git clone https://github.com/npisanti/ofxLaunchControls.git
+    git clone https://github.com/npisanti/ofxDotFrag.git
+    
 fi
 # -----------------------------------------------------------------------------
+
+# scrapbook
+cd ~
+git clone https://github.com/npisanti/np-scrapbook.git
 
 
 # clone my website
@@ -75,8 +82,5 @@ cd osc
 git clone https://github.com/npisanti/np-picap.git
 git clone https://github.com/npisanti/np-pinout.git
 
-
-cd ~
-git clone https://github.com/npisanti/np-scrapbook.git
 
 exit

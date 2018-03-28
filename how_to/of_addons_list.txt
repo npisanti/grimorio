@@ -25,12 +25,12 @@ git clone https://github.com/npisanti/ofxMorphImage.git
 
 
 // next to use ----------------------------------------------------------------
+
 git clone https://github.com/ofTheo/ofxFern.git
 git clone https://github.com/sebleedelisle/ofxLaser.git
 git clone https://github.com/jvcleave/ofxImGui.git
-
 git clone https://github.com/robotconscience/ofxLibwebsockets.git
-git clone https://github.com/DHaylock/ofxOPC.git
+
 
 
 // MAKE THIS WORK -------------------------------------------------------------
@@ -42,6 +42,8 @@ https://github.com/bangnoise/ofxHapPlayer.git
 
 
 // test with oF 0.10 ----------------------------------------------------------
+
+git clone https://github.com/bakercp/ofxDlib
 
 git clone https://github.com/frauzufall/ofx2DMapping
     git clone https://github.com/frauzufall/ofxSortableList.git
@@ -55,6 +57,7 @@ git clone https://github.com/roymacdonald/ofxGuiPlus
 // extra ------------------------------------------------------------------------------
 
 git clone https://github.com/mfargo/ofxFilterLibrary.git
+git clone https://github.com/DHaylock/ofxOPC.git
 git clone https://github.com/brinoausrino/ofxOrnament.git
 git clone https://github.com/brinoausrino/ofxPointilize.git
 git clone https://github.com/memo/ofxMSATensorFlow.git
