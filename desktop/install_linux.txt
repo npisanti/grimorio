@@ -1,7 +1,4 @@
 
-//---------------------BUNSEN LABS INSTALL WALKTHROUGH-------------------------
-
-
 ---- Install Distro -----------------------------------------------------------
 // at the moment i'm using BunsenLabs Linux
 

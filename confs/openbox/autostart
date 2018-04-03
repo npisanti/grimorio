@@ -1,4 +1,4 @@
-## Openbox autostart
+m## Openbox autostart
 ## ====================
 ## When you login to your BunsenLabs Openbox session, this autostart script
 ## will be executed to set-up your environment and launch any applications
@@ -44,45 +44,20 @@ xset b off
 
 nitrogen --restore &
 
-bl-compositor --start &
+(sleep 1s; compton & )
 
 ## Start the tint2 session (the default tint2 will run if no sessions have been set)
-(sleep 1s; bl-tint2-session) &
+(sleep 1s; tint2 -c ~/.config/tint2) & 
 
 ## Start the Conky session (the default conkyrc will run if no sessions have been set)
-(sleep 1s; bl-conky-session --autostart) &
+(sleep 1s; conky ) &
 
-## Volume control for systray
-#(sleep 2; volti) &
-
-## Volume keys daemon
-#xfce4-volumed &
-
-## Start Clipboard manager
-(sleep 1; clipit) &
-(sleep 2; pkill clipit) &
-
-## Start Thunar Daemon, if set as bl-file-manager
-if [ "$(readlink -f $(which bl-file-manager))" = "$(which thunar)" ]
-then
-    thunar --daemon &
-fi
+# starts thunar daemon
+thunar --daemon &
 
 #kill unclutter, deactivate for installations
-pkill unclutter
+#pkill unclutter
 
 ## Enable power management
 xfce4-power-manager &
 
-## Start the battery applet
-##(sleep 2; fdpowermon) &
-
-## Start xscreensaver (light-locker now used by default, run via XDG autostart.)
-#xscreensaver -no-splash &
-
-## bl-welcome - post-installation script, will not run in a live session and
-## only runs once. Safe to remove.
-(sleep 10; bl-welcome --firstrun) &
-
-## bl-fortune - have the system come up with a little adage (not yet enabled)
-#(sleep 120; bl-fortune) &

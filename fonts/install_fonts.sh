@@ -11,7 +11,7 @@ sudo mkfontdir
 sudo fc-cache
 sudo xset fp rehash
 
-sudo cd /usr/share/fonts/opentype
+cd /usr/share/fonts/opentype
 sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache

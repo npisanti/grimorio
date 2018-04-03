@@ -1,37 +1,35 @@
 [global_config]
+  handle_size = 1
+  suppress_multiple_term_dialog = True
+  title_inactive_bg_color = "#000000"
   title_receive_bg_color = "#082a3f"
   title_transmit_bg_color = "#000000"
-  suppress_multiple_term_dialog = True
-  handle_size = 1
-  title_inactive_bg_color = "#000000"
 [keybindings]
   hide_window = <Shift><Control>a
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    palette = "#073642:#b4120d:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#e3541f:#586e75:#657b83:#839496:#6c71c4:#4db6b6:#fdf6e3"
-    use_system_font = False
-    background_darkness = 0.82
-    urgent_bell = True
-    background_type = transparent
-    scrollback_lines = 5000
-    cursor_color = "#d8d8d8"
-    foreground_color = "#cccccc"
-    background_image = None
-    scroll_on_output = False
-    show_titlebar = False
-    cursor_shape = ibeam
-    color_scheme = custom
-    font = Terminus 15
-    allow_bold = False
-    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_darkness = 0.82
+    background_type = transparent
+    color_scheme = custom
+    cursor_color = "#d8d8d8"
+    cursor_shape = ibeam
+    font = Terminus 15
+    foreground_color = "#cccccc"
+    palette = "#073642:#b4120d:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#e3541f:#586e75:#657b83:#839496:#6c71c4:#4db6b6:#fdf6e3"
+    scrollback_infinite = True
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    urgent_bell = True
+    use_system_font = False
