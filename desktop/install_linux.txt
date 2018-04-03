@@ -19,17 +19,6 @@
 setxkbmap it
 
 
-// first time Bunsen setup:
-	- add multimedia repos	
-	- bunsen printer support
-	- libreoffice 
- 	- dev packages
-		- vcs
-		- bunsen-meta-ssh
-// or do it manually
-sudo apt-get install bunsen-meta-libreoffice bunsen-meta-printer-support bunsen-meta-ssh
-
-
 // edit /etc/apt/sources.list
 // add
 deb http://www.deb-multimedia.org jessie main
@@ -49,41 +38,9 @@ cd /usr/local/bin && wget -Nc smxi.org/smxi.zip && unzip smxi.zip && smxi
 // make wi-fi work
 
 
-// if you don't want submenus
-sudo nano /etc/default/grub
-// add
-GRUB_DISABLE_SUBMENU=y
-GRUB_DEFAULT=0
-// also from GRUB_CMDLINE_LINUX_DEFAULT= remove "quiet splash" 
-// for not having the splash screen anymore but cool linux kernel messages
 
-//then
-sudo update-grub
-
-
-// reconfigure keyboard and add Ctr+Alt+Backspace as shortcut to quit X.org
-dpkg-reconfigure keyboard-configuration
-
-
-// set autologin (right click menu--->system--->login settings)
-autologin-user=<YOUR USER>
-autologin-user-timeout=0
-
-
-// edit ssh configs
-sudo geany /etc/ssh/sshd_config 
-// set 
-PermitRootLogin no
-// maybe is even better to disable the server
-sudo systemctl disable ssh
-
-
-// detect sensors 
-sudo sensors-detect
-
-
-// ALSO
-mkdir ~/mnt/ssh
+// trying without those
+#sudo apt-get install gnome-keyring libpam-gnome-keyring network-manager-gnome
 
 
 
@@ -105,28 +62,15 @@ cat /var/log/Xorg.0.log | grep DRI
 sudo apt-get update
 sudo apt-get -t jessie-backports install xserver-xorg-video-intel
 
-
-// also for avoiding screen tearing 
-sudo geany /usr/share/X11/xorg.conf.d/20-intel.conf 
-// then set to 
-Section "Device"
-   Identifier  "Intel Graphics"
-   Driver      "intel"
-   Option      "AccelMethod"  "sna"
-   Option      "TearFree" "true"
-EndSection
+// then the x11 file and compton file is already in the dotfiles
 
 
-// also edit compton config and set
-vsync = "opengl";
+--- 1.1.1.1 DNS ------------now automatic--------------------------------------
 
-
-
---- librekinect ---------------------------------------------------------------
-// with kernel 3.17+ it is already in the kernel 
-sudo nano /etc/modprobe.d/kinect-depth.conf 
-// add
-options gspca_kinect depth_mode=1
+// sudo nano /etc/resolv.conf
+# cloudflare IPv4 nameservers: 
+nameserver 1.1.1.1
+nameserver 1.0.0.1
 
 
 
@@ -205,10 +149,10 @@ amidi -p hw:x,0,0 -d
 
 
 
-
-
 // -------------------------openFrameworks ------------------------------------
 sudo apt-get install geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui
+
+ 
 
 //get and install openframeworks dependencies and codecs
 
@@ -228,15 +172,12 @@ export OF_ROOT=/home/nick/oF
 
 
 
-
-
-
 //--------------------------step 3 main programs and frameworks------------------------------
 
-sudo apt-get install gimp grafx2 aseprite inkscape xsane thunderbird shutter solvespace freecad
+sudo apt-get install gimp grafx2 aseprite inkscape xsane thunderbird shutter solvespace libreoffice libreoffice-gtk
 //set up mails in thunderbird
 
-sudo apt-get install chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay screenfetch moc moc-ffmpeg-plugin winff lame sox cmatrix printer-driver-all input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 xdiskusage seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson photoprint fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients 
+sudo apt-get install chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay screenfetch moc moc-ffmpeg-plugin winff lame sox cmatrix printer-driver-all input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 xdiskusage seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson photoprint fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients lamp
 
 sudo apt-get install kcachegrind krita kdenlive
 
@@ -247,9 +188,6 @@ sudo apt-get install audacity paulstretch jack-capture multimedia-audio-plugins 
 // install kicad from backports
 sudo apt-get -t jessie-backports install kicad
 
-// install fing
-https://www.fingbox.com/download
-sudo dpkg -i overlook-fing-3.0.deb
 
 // install create_ap
 git clone https://github.com/oblique/create_ap.git
@@ -257,9 +195,13 @@ cd create_ap
 sudo make install
 
 
+// install fing
+https://www.fingbox.com/download
+sudo dpkg -i overlook-fing-3.0.deb
+
+
 
 ---------------------------- disabling things----------------------------------
-sudo apt-get remove at-spi2-core 
 
 //deactivate nm-applet and lightdm screen locker
 sudo mv /etc/xdg/autostart/nm-applet.desktop /etc/xdg/autostart/nm-applet.desktop.off 
@@ -272,7 +214,7 @@ sudo systemctl disable timidity.service
 systemctl disable apache2
 systemctl disable mysql
 systemctl disable mosquitto
-
+sudo systemctl disable ssh
 
 
 -------------------------- minor customizations -------------------------------
