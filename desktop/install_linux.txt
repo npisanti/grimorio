@@ -92,9 +92,6 @@ git config --global core.editor geany
 
 ---------------------- real time audio tuning and first things ----------------
 
-sudo apt-get install qjackctl aconnectgui jack-midi-clock 
-
-
 // OPTIONAL: TO DISABLE PULSEAUDIO AUTOSPAWN
 sudo geany /etc/pulse/client.conf
 //set into conf file 
@@ -136,7 +133,7 @@ ps -Leo class,comm,rtprio | grep jack
 soundStream.setDeviceID(#workingdeviceid);
 //but deactivate it when testing with jack
 
-// probably you need to run this to fix oF rtAudio again if cannot fine rtaudio:
+// probably you need to run this to fix oF rtAudio again if cannot find rtaudio:
 sudo apt-get install librtaudio5 librtaudio-dev 
 
 
@@ -150,9 +147,6 @@ amidi -p hw:x,0,0 -d
 
 
 // -------------------------openFrameworks ------------------------------------
-sudo apt-get install geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui
-
- 
 
 //get and install openframeworks dependencies and codecs
 
@@ -186,7 +180,7 @@ sudo apt-get install puredata gem pd-arraysize pd-aubio pd-beatpipe pd-bsaylor p
 sudo apt-get install audacity paulstretch jack-capture multimedia-audio-plugins multimedia-timestretching ladish hydrogen libfftw3-bin libfftw3-dev zita-rev1 zynaddsubfx-dssi qtractor vkeybd zam-plugins jamin jkmeter
 
 // install kicad from backports
-sudo apt-get -t jessie-backports install kicad
+sudo apt-get -t stretch-backports install kicad
 
 
 // install create_ap
