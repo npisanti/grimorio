@@ -1,4 +1,19 @@
 
+
+su -
+apt-get install sudo git
+reboot
+
+su -
+adduser nick sudo
+reboot
+
+git clone https://github.com/npisanti/dotfiles
+
+
+
+
+
 ---- Install Distro -----------------------------------------------------------
 // at the moment i'm using BunsenLabs Linux
 

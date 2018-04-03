@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "changing atp sources.list"
+sudo cp  ~/dotfiles/extra/base/sources.list /etc/apt/sources.list 
+
+echo "install multimedia keyring"
+sudo apt-get install deb-multimedia-keyring
+
 echo "packages update"
 sudo apt-get update
 sudo apt-get dist-upgrade
@@ -11,14 +17,6 @@ echo "install more base things"
 sudo apt-get install printer-driver-all git geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui qjackctl aconnectgui jack-midi-clock 
 
 #sudo apt-get install librtaudio5 librtaudio-dev 
-
-echo "changing atp sources.list"
-sudo cp  ~/dotfiles/extra/base/sources.list /etc/apt/sources.list 
-
-echo "updating again"
-sudo apt-get install deb-multimedia-keyring
-sudo apt-get update
-sudo apt-get dist-upgrade
 
 echo "installing updated intel drivers"
 sudo apt-get -t stretch-backports install xserver-xorg-video-intel
