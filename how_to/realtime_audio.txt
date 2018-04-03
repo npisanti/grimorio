@@ -1,0 +1,53 @@
+
+// OPTIONAL: TO DISABLE PULSEAUDIO AUTOSPAWN
+sudo geany /etc/pulse/client.conf
+//set into conf file 
+autospawn = no
+// to totally deactivate:
+sudo mv /etc/xdg/autostart/pulseaudio.desktop /etc/xdg/autostart/pulseaudio.desktop.disabled
+
+
+//set default alsa card
+sudo geany /usr/share/alsa/alsa.conf 
+//set the number of a card you can see on alsamixer, for example 1 (the second)
+defaults.ctl.card 1
+defaults.pcm.card 1
+
+
+// jack setup, set server prefix
+pasuspender -- jackd
+
+
+//configure realtime scheduling
+// from http://jackaudio.org/faq/linux_rt_config.html
+sudo geany /etc/security/limits.conf
+//add these lines
+@realtime   -  rtprio     99
+@realtime   -  memlock    unlimited
+//then add user to realtime group
+sudo groupadd realtime
+sudo usermod -a -G realtime yourUserID
+
+
+//in jack controls setup, set "realtime" to checked and "priority" to 89
+//check that jack is running with high priority:
+ps -Leo class,comm,rtprio | grep jack
+//also in setup->display uncheck "blink indicator"
+
+
+//Test audio with examples/sound/audioOutputExample
+//sometime you have to add
+soundStream.setDeviceID(#workingdeviceid);
+//but deactivate it when testing with jack
+
+// probably you need to run this to fix oF rtAudio again if cannot find rtaudio:
+sudo apt-get install librtaudio5 librtaudio-dev 
+
+
+//if you need virtual midi ports:
+sudo modprobe snd-virmidi
+
+//test midi with
+amidi -l 
+amidi -p hw:x,0,0 -d
+

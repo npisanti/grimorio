@@ -47,7 +47,7 @@ nitrogen --restore &
 (sleep 1s; compton & )
 
 ## Start the tint2 session (the default tint2 will run if no sessions have been set)
-(sleep 1s; tint2 -c ~/.config/tint2) & 
+(sleep 1s; tint2 -c ~/.config/tint2rc) & 
 
 ## Start the Conky session (the default conkyrc will run if no sessions have been set)
 (sleep 1s; conky ) &

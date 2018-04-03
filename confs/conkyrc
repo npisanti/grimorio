@@ -175,16 +175,16 @@ Battery:  ${alignr} ${execi 9 acpi -b | awk '{print $3 " " $4}' | sed 's/,//g'}
 #NETWORKS------------------------------------------------------------------------------
 ${alignc}N E T W O R K
 ${hr}
-${if_gw}${if_existing /proc/net/route wlan1}Type: ${alignr}Wireless
-ESSID: ${alignr}${wireless_essid wlan1}
+${if_gw}${if_existing /proc/net/route wlp3s0}Type: ${alignr}Wireless
+ESSID: ${alignr}${wireless_essid wlp3s0}
 #Local IP:${alignr}${addr wlan0}
-Strenght:${alignr}${wireless_link_qual_perc wlan1}%
+Strenght:${alignr}${wireless_link_qual_perc wlp3s0}%
 #UP: ${alignr}${upspeedf wlan0}kb/s
-Download: ${alignr}${downspeedf wlan1}kb/s
-Upload: ${alignr}${upspeedf wlan1}kb/s
-${else}${if_existing /proc/net/route eth0}Type: ${alignr}Wired
-Download: ${alignr}${downspeedf eth0}kb/s
-Upload: ${alignr}${upspeedf eth0}kb/s
+Download: ${alignr}${downspeedf wlp3s0}kb/s
+Upload: ${alignr}${upspeedf wlp3s0}kb/s
+${else}${if_existing /proc/net/route enp0s25}Type: ${alignr}Wired
+Download: ${alignr}${downspeedf enp0s25}kb/s
+Upload: ${alignr}${upspeedf enp0s25}kb/s
 ${else}Not Connected
 ${endif}${endif}
 

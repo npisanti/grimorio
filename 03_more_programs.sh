@@ -41,4 +41,15 @@ sudo make install
 rm ~/bin/glsl 
 ln -s ~/apps/glslViewer/bin/glslViewer ~/bin/glsl
 
+
+echo "installing bunsen themes"
+git clone https://github.com/BunsenLabs/bunsen-themes.git
+mv bunsen-themes/themes/* ~/.themes/
+rm -rf bunsen-themes/
+
+
+echo "installing bl-exit"
+cd ~/apps
+git clone https://github.com/BunsenLabs/bunsen-exit.git
+
 exit

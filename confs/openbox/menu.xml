@@ -577,7 +577,7 @@
 		<item label="Exit">
 			<action name="Execute">
 				<command>
-                    bl-exit
+                    ~/apps/bunsen-exit/bin/bl-exit
                 </command>
 			</action>
 		</item>

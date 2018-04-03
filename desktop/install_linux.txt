@@ -1,17 +1,5 @@
 
 
-su -
-apt-get install sudo git
-reboot
-
-su -
-adduser nick sudo
-reboot
-
-git clone https://github.com/npisanti/dotfiles
-
-
-
 
 
 ---- Install Distro -----------------------------------------------------------
@@ -77,7 +65,7 @@ sudo apt-get -t jessie-backports install xserver-xorg-video-intel
 // then the x11 file and compton file is already in the dotfiles
 
 
---- 1.1.1.1 DNS ------------now automatic--------------------------------------
+--- 1.1.1.1 DNS --------------------------------------------------------------
 
 // sudo nano /etc/resolv.conf
 # cloudflare IPv4 nameservers: 
@@ -85,76 +73,26 @@ nameserver 1.1.1.1
 nameserver 1.0.0.1
 
 
+su -
+apt-get install sudo git
+reboot
+
+su -
+adduser yourUserName sudo
+reboot
+
 
 ------- .dotfiles -------------------------------------------------------------
 
 cd ~
 git clone https://github.com/npisanti/dotfiles
 cd dotfiles
-sh install.sh
 
 
-  
-//------------------- set up git-----------------------------------------------
-git config --global user.name "yourname yoursurname"
-git config --global user.email your@email.com
-git config --global core.editor geany
-
-
-
----------------------- real time audio tuning and first things ----------------
-
-// OPTIONAL: TO DISABLE PULSEAUDIO AUTOSPAWN
-sudo geany /etc/pulse/client.conf
-//set into conf file 
-autospawn = no
-// to totally deactivate:
-sudo mv /etc/xdg/autostart/pulseaudio.desktop /etc/xdg/autostart/pulseaudio.desktop.disabled
-
-
-//set default alsa card
-sudo geany /usr/share/alsa/alsa.conf 
-//set the number of a card you can see on alsamixer, for example 1 (the second)
-defaults.ctl.card 1
-defaults.pcm.card 1
-
-
-// jack setup, set server prefix
-pasuspender -- jackd
-
-
-//configure realtime scheduling
-// from http://jackaudio.org/faq/linux_rt_config.html
-sudo geany /etc/security/limits.conf
-//add these lines
-@realtime   -  rtprio     99
-@realtime   -  memlock    unlimited
-//then add user to realtime group
-sudo groupadd realtime
-sudo usermod -a -G realtime yourUserID
-
-
-//in jack controls setup, set "realtime" to checked and "priority" to 89
-//check that jack is running with high priority:
-ps -Leo class,comm,rtprio | grep jack
-//also in setup->display uncheck "blink indicator"
-
-
-//Test audio with examples/sound/audioOutputExample
-//sometime you have to add
-soundStream.setDeviceID(#workingdeviceid);
-//but deactivate it when testing with jack
-
-// probably you need to run this to fix oF rtAudio again if cannot find rtaudio:
-sudo apt-get install librtaudio5 librtaudio-dev 
-
-
-//if you need virtual midi ports:
-sudo modprobe snd-virmidi
-
-//test midi with
-amidi -l 
-amidi -p hw:x,0,0 -d
+sh 01_system_base.sh 
+sh 02_restore_confs.sh 
+sh 03_more_programs.sh
+sh 04_disabling_things.sh
 
 
 
@@ -178,64 +116,17 @@ export OF_ROOT=/home/nick/oF
 
 
 
-//--------------------------step 3 main programs and frameworks------------------------------
-
-sudo apt-get install gimp grafx2 aseprite inkscape xsane thunderbird shutter solvespace libreoffice libreoffice-gtk
-//set up mails in thunderbird
-
-sudo apt-get install chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay screenfetch moc moc-ffmpeg-plugin winff lame sox cmatrix printer-driver-all input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 xdiskusage seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson photoprint fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients lamp
-
-sudo apt-get install kcachegrind krita kdenlive
-
-sudo apt-get install puredata gem pd-arraysize pd-aubio pd-beatpipe pd-bsaylor pd-comport cyclist pd-cyclone pd-ggee pd-hid pd-iemlib pd-iemmatrix pd-iemnet pd-jmmmp pd-libdir pd-lua pd-motex pd-pddp pd-pdstring pd-purepd pd-readanysf pd-unauthorized pd-vbap pd-wiimote pd-zexy puredata-import
-
-sudo apt-get install audacity paulstretch jack-capture multimedia-audio-plugins multimedia-timestretching ladish hydrogen libfftw3-bin libfftw3-dev zita-rev1 zynaddsubfx-dssi qtractor vkeybd zam-plugins jamin jkmeter
-
-// install kicad from backports
-sudo apt-get -t stretch-backports install kicad
-
-
-// install create_ap
-git clone https://github.com/oblique/create_ap.git
-cd create_ap
-sudo make install
-
-
-// install fing
-https://www.fingbox.com/download
-sudo dpkg -i overlook-fing-3.0.deb
-
-
-
----------------------------- disabling things----------------------------------
-
-//deactivate nm-applet and lightdm screen locker
-sudo mv /etc/xdg/autostart/nm-applet.desktop /etc/xdg/autostart/nm-applet.desktop.off 
-sudo mv /etc/xdg/autostart/light-locker.desktop /etc/xdg/autostart/light-locker.desktop.off 
-
-// if you have timidity++
-sudo systemctl disable timidity.service
-
-// if you have mosquitto / mysql / apache
-systemctl disable apache2
-systemctl disable mysql
-systemctl disable mosquitto
-sudo systemctl disable ssh
-
-
 -------------------------- minor customizations -------------------------------
 
 // change console font
 sudo dpkg-reconfigure console-setup
 
-// change appearence icons to Flattr, theme to Bunsen, fonts to terminus 9
+// change appearence icons to Flattr, theme to Industrial, fonts to terminus 12
 
-// change default text editor in debian alternatives
-home/username/bin/darkgeany
 
 // setup volume up and down and mute scripts ---------------
 // check right line with 
-pactl list | sed -n 178p
+pactl list | sed -n 198p
 // and set right index 0-1-2
 
 
@@ -289,23 +180,6 @@ editor.font=Terminus (TTF),plain,16
 
 
 
----- glslViewer --------------------------------------------------------------- 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install libglfw3-dev git-core
-
-cd ~/apps
-git clone http://github.com/patriciogonzalezvivo/glslViewer
-cd glslViewer
-make
-sudo make install
-
-
-// make a symbolic link 
-ln -s ~/apps/glslViewer/bin/glslViewer glsl
-
-
-
 ---- Processing ----------------------------------------------------------------
 get the app from the website
 
@@ -317,6 +191,7 @@ get the app from the website
         - Ketai
 
 // make a symbolic link to processing, e.g.
+rm ~/bin/processing
 ln -s ~/apps/processing-3.3.7/processing ~/bin/processing
 
 
@@ -326,12 +201,6 @@ get the app from the website
 
 // make a symbolic link to fritzing, e.g.
 ln -s ~/apps/fritzing-0.9.3b.linux.AMD64/Fritzing ~/bin/fritzing
-
-
-
---------------------------- minimal working repos -----------------------------
-cd ~/dotfiles
-sh clone_repos.sh
 
 
 
@@ -357,14 +226,13 @@ sudo apt-get install steam libtxc-dxtn-s2tc0 libtxc-dxtn-s2tc0:i386
 
 ---- Skype --------------------------------------------------------------------
 search skypeforlinux beta
-
+sudo dpkg -i skypeforlinux
 
 
 ---- Telegram -----------------------------------------------------------------
 //get from https://tdesktop.com/linux
-wteg https://tdesktop.com/linux
+go to: https://tdesktop.com/linux
 tar -xJvf tsetup*******
-//get correct path for telegram.sh
 
 
 

@@ -499,7 +499,7 @@
           <enabled>true</enabled>
           <name>Logout</name>
         </startupnotify>
-        <command>bl-exit</command>
+        <command>~/apps/bunsen-exit/bin/bl-exit</command>
       </action>
     </keybind>
     <keybind key="W-Return">
