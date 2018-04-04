@@ -21,22 +21,12 @@ setxkbmap it
 
 // edit /etc/apt/sources.list
 // add
-deb http://www.deb-multimedia.org jessie main
+deb http://www.deb-multimedia.org stretch main
 // then
 apt-get install deb-multimedia-keyring
-y
-sudo apt-get install build-essentials git 
-// it is also needed for smxi
-
-
-//Install liquorix Kernel and graphic drivers with smxi 
-# as root (sudo su -) , run the following command
-sudo su -
-cd /usr/local/bin && wget -Nc smxi.org/smxi.zip && unzip smxi.zip && smxi
 
 
 // make wi-fi work
-
 
 
 // trying without those
@@ -62,15 +52,6 @@ cat /var/log/Xorg.0.log | grep DRI
 sudo apt-get update
 sudo apt-get -t jessie-backports install xserver-xorg-video-intel
 
-// then the x11 file and compton file is already in the dotfiles
-
-
---- 1.1.1.1 DNS --------------------------------------------------------------
-
-// sudo nano /etc/resolv.conf
-# cloudflare IPv4 nameservers: 
-nameserver 1.1.1.1
-nameserver 1.0.0.1
 
 
 su -
@@ -88,41 +69,27 @@ cd ~
 git clone https://github.com/npisanti/dotfiles
 cd dotfiles
 
-
 sh 01_system_base.sh 
 sh 02_restore_confs.sh 
 sh 03_more_programs.sh
 sh 04_disabling_things.sh
-
-
-
-// -------------------------openFrameworks ------------------------------------
-
-//get and install openframeworks dependencies and codecs
-
-// set to clang
-geany ~/oF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk
-// and then at the end 
-PLATFORM_CXX = clang++ -B/usr/lib/gold-ld
-
-//compile open frameworks and test graphics
-
-// make a simbolic link to the oF version you are using
-ln -s ~/of_v0.9.8_linux64_release/ ~/oF
-
-// add to ~/.bashrc
-export PG_OF_PATH=/home/nick/oF
-export OF_ROOT=/home/nick/oF
+sh 05_openframeworks.sh 
+sh 06_clone_repos.sh
+sh 07_audio_extra.sh 
 
 
 
 -------------------------- minor customizations -------------------------------
 
-// change console font
-sudo dpkg-reconfigure console-setup
 
+// set to oF to clang
+geany ~/oF/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk
+// and then at the end 
+PLATFORM_CXX = clang++ -B/usr/lib/gold-ld
+
+
+// with lxappearance
 // change appearence icons to Flattr, theme to Industrial, fonts to terminus 12
-
 
 // setup volume up and down and mute scripts ---------------
 // check right line with 
@@ -131,11 +98,15 @@ pactl list | sed -n 198p
 
 
 
+--- 1.1.1.1 DNS --------------------------------------------------------------
+
+// sudo nano /etc/resolv.conf
+# cloudflare IPv4 nameservers: 
+nameserver 1.1.1.1
+nameserver 1.0.0.1
+
+
 ---- Chromium -----------------------------------------------------------------
-//copy scripts to ~/bin
-
-
-sudo apt-get install chromium
 
 // chromium configs
     // add dark horizon theme
@@ -227,6 +198,7 @@ sudo apt-get install steam libtxc-dxtn-s2tc0 libtxc-dxtn-s2tc0:i386
 ---- Skype --------------------------------------------------------------------
 search skypeforlinux beta
 sudo dpkg -i skypeforlinux
+
 
 
 ---- Telegram -----------------------------------------------------------------

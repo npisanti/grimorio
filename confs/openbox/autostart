@@ -40,7 +40,7 @@ xset b off
 ## SETTINGS END
 
 ## GNOME PolicyKit authentication
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 nitrogen --restore &
 

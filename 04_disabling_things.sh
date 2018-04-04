@@ -9,9 +9,11 @@ echo "disabling some .desktop and services"
 sudo systemctl disable timidity.service
 
 # if you have mosquitto / mysql / apache
-sudo systemctl disable apache2
-sudo systemctl disable mysql
 sudo systemctl disable mosquitto
 sudo systemctl disable ssh
+sudo systemctl disable minissdpd.service
+
+echo "removing at-spi2"
+sudo apt-get remove at-spi2-core 
 
 exit

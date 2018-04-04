@@ -1,10 +1,13 @@
 [global_config]
+  dbus = False
   focus = system
   handle_size = 1
   suppress_multiple_term_dialog = True
+  title_font = Terminus 12
   title_inactive_bg_color = "#000000"
   title_receive_bg_color = "#082a3f"
   title_transmit_bg_color = "#000000"
+  title_use_system_font = False
 [keybindings]
   hide_window = <Shift><Control>a
 [layouts]
