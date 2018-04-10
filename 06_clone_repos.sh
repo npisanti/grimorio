@@ -32,14 +32,16 @@ if  [ "$folder" = "addons" ]; then
 	
     git clone https://github.com/npisanti/ofxLaunchControls.git
     git clone https://github.com/npisanti/ofxDotFrag.git
-    
+
+    ln -s ~/oF/addons/ofxPDSP pdsp
+        
 fi
 # -----------------------------------------------------------------------------
 
 # scrapbook
-cd ~
+cd ~/oF
 git clone https://github.com/npisanti/np-scrapbook.git
-
+ln -s ~/oF/np-scrapbook ~/np-scrapbook
 
 # clone my website
 mkdir ~/htdocs

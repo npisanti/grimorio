@@ -49,8 +49,9 @@ echo "reconfigure keyboard now, use ctrl+alt+delete to terminate x"
 sudo dpkg-reconfigure keyboard-configuration
 
 echo "adding cloudshare DNS to resolv.conf"
-echo "prepend domain-name-servers 1.1.1.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 echo "prepend domain-name-servers 1.0.0.1;" | sudo tee -a /etc/dhcp/dhclient.conf
+echo "prepend domain-name-servers 1.1.1.1;" | sudo tee -a /etc/dhcp/dhclient.conf
+
 
 echo "setting up realtime limits"
 sudo cp ~/dotfiles/extra/base/limits.conf /etc/security/limits.conf  

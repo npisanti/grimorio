@@ -136,3 +136,42 @@ python /home/pi/gpio_shutdown.py &
 (sleep 3; su - pi -c "sh /home/pi/autorun.sh" ) &
 ```   
    
+### openFrameworks (bakercp method 1 (brcm))
+
+Prepare your Raspberry Pi Firmware to use the “Legacy” GL drivers
+`sudo raspi-config`   
+a. Advanced Options > GL Driver > “G3 Legacy” "Original non-GL desktop driver   
+b. Finish and reboot.   
+   
+Download and install openFrameworks (master branch)   
+```console
+cd ~
+git clone --depth=1 https://github.com/openFrameworks/openFrameworks.git
+cd openFrameworks
+sudo ./scripts/linux/debian/install_dependencies.sh
+sudo ./scripts/linux/debian/install_codecs.sh
+./scripts/linux/download_libs.sh
+```
+Modify Your config.linuxarmv6l.default.mk File   
+`nano libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.mk`
+the platform libraries should be like this:
+```
+PLATFORM_LIBRARIES += brcmGLESv2
+PLATFORM_LIBRARIES += brcmEGL
+```
+also in the same file change `vfp` to `neon`, in neon also vfp is active, this is for later with ofxPDSP
+```
+PLATFORM_CFLAGS += -mfpu=neon
+```
+compile by testing an example
+```console
+cd ~/openFrameworks/
+cp scripts/templates/linuxarmv6l/Makefile examples/templates/emptyExample/
+cd examples/templates/emptyExample/
+make -j2 -s
+make run
+```
+
+then install all the addons, and compile the junkrepo and the osc apps
+
+

@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
 # GPIO 21 (pin 40) set up as input. It is pulled up to stop false signals
-GPIO.setup(3, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 print ">>> put a jumper on the 39-40 pins to shutdown <<<"
 # now the program will do nothing until the signal on port 5
@@ -21,6 +21,7 @@ print ">>> put a jumper on the 39-40 pins to shutdown <<<"
 try:
     GPIO.wait_for_edge(21, GPIO.FALLING)
     print "\nFalling edge detected."
+    #subprocess.call(['killall yourAppName'], shell=True)
     subprocess.call(['shutdown -h now "System halted by GPIO action"'], shell=True)
 except KeyboardInterrupt:
     GPIO.cleanup()       # clean up GPIO on CTRL+C exit
