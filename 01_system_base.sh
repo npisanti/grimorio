@@ -18,7 +18,7 @@ echo "installing realtime kernel"
 sudo apt-get install linux-image-4.9.0-5-rt-amd64
 
 echo "install more base things"
-sudo apt-get install printer-driver-all git geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui
+sudo apt-get install printer-driver-all git geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui hplip python3-pyqt5
 
 echo "installing updated intel drivers"
 sudo apt-get -t stretch-backports install xserver-xorg-video-intel

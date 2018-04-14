@@ -33,6 +33,8 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/npisanti/ofxLaunchControls.git
     git clone https://github.com/npisanti/ofxDotFrag.git
 
+    git clone https://github.com/openframeworks/ofxAddonTemplate.git
+
     ln -s ~/oF/addons/ofxPDSP pdsp
         
 fi

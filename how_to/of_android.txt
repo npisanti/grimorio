@@ -27,3 +27,31 @@ https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip
 
 
 
+// -------------- example/new apps ------
+
+copy from empty app then change all the "empty" with your app name:
+
+// in AndroidManifest.xml 
+android:name="cc.openframeworks.empty.OFActivity"
+
+// in res/values/strings.xml:    
+<string name="app_name">empty</string>
+
+
+// change the path
+srcJava/cc/openframeworks/empty/OFActivity.java
+// and then in the OFActivity.java
+
+// add addons to addons.make
+
+
+// if needed 
+rm empty.iml
+rm -rf build
+
+// TO REMOVE THE HEADER BAR
+    geany res/values-v14/styles.xml
+// and then set to .NoActionBar
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style>

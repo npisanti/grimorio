@@ -46,12 +46,17 @@
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>/home/nick/apps/etcher-1.3.1-x86_64.AppImage</command>
+					<command>gksudo /home/nick/apps/etcher-1.3.1-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Fritzing">
 				<action name="Execute">
 					<command>fritzing</command>
+				</action>
+			</item>
+			<item label="Android Studio">
+				<action name="Execute">
+					<execute>~/apps/android-studio/bin/studio.sh</execute>
 				</action>
 			</item>
 			<item label="octave">

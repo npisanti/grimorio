@@ -1,4 +1,18 @@
 
+
+//----------------------- DEBIAN STRETCH ------------------------------------
+
+sudo apt-get install hplip python3-pyqt5
+
+
+sudo hp-setup
+// and add a printer with the wizard
+
+
+
+
+
+//----------------------- DEBIAN JESSIE ------------------------------------
 // from:
 http://hplipopensource.com/hplip-web/install/manual/distros/debian.html
 
