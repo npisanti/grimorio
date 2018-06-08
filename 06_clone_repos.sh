@@ -5,14 +5,20 @@ cd ~/oF/addons
 folder=${PWD##*/} 
 if  [ "$folder" = "addons" ]; then
 
-	git clone https://github.com/danomatika/ofxMidi.git
+	git clone https://github.com/npisanti/ofxMidi.git
 	git clone https://github.com/npisanti/ofxSIMDFloats.git
 	git clone https://github.com/npisanti/ofxPDSP.git
+	git clone https://github.com/npisanti/ofxAudioFile.git
+    
+	git clone https://github.com/npisanti/ofxPDSPPatches.git	
+    git clone https://github.com/nariakiiwatani/ofxWatchFile.git
+
 	git clone https://github.com/paulobarcelos/ofxHomography.git
 
 	git clone https://github.com/vanderlin/ofxBox2d.git
 	git clone https://github.com/kylemcdonald/ofxCv.git
 	git clone https://github.com/npisanti/ofxGuiPresetSelector.git
+    git clone https://github.com/Flightphase/ofxImageSequence.git
 
 	git clone https://github.com/dzlonline/ofxBiquadFilter.git
 	git clone https://github.com/npisanti/ofxRPiezos.git
@@ -24,8 +30,11 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/kylemcdonald/ofxDmx.git
 
 	git clone https://github.com/npisanti/np-cvthings.git	
-	git clone https://github.com/npisanti/np-junkrepo.git	
-	
+	git clone https://github.com/npisanti/np-extra.git	
+    git clone https://github.com/npisanti/np-homography.git
+    git clone https://github.com/npisanti/np-kinectmotion.git
+    git clone https://github.com/npisanti/np-analyzer.git
+    
 	# cloning my forks, more up to date with oF 0.9.x
 	git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 	git clone https://github.com/npisanti/ofxMorphImage.git
@@ -49,6 +58,9 @@ ln -s ~/oF/np-scrapbook ~/np-scrapbook
 mkdir ~/htdocs
 cd ~/htdocs
 git clone https://github.com/npisanti/npisanti-nocms.git
+
+#clone resistor color code tool
+git clone https://github.com/joewalnes/resisto.rs.git
 
 
 # processing

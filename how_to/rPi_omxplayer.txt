@@ -1,0 +1,48 @@
+
+------------ W.I.P. notes on making video work on rpi -------------------------
+
+
+https://forum.openframeworks.cc/t/best-way-to-handle-multiple-instances-of-ofvideoplayer-osx-and-ofxavfvideoplayer/16269
+https://forum.openframeworks.cc/t/videoplayerexample-on-raspberrypi/18525/4
+
+
+
+
+https://superuser.com/questions/624567/how-to-create-a-video-from-images-using-ffmpeg
+
+        ffmpeg -start_number 0 -i 'Composizione_%5d.jpg' -c:v libx264 out.mp4
+        
+        ffmpeg -start_number 0 -i 'Composizione_%5d.jpg' -c:v prores_ks -profile:v 3 -qscale:v 5 out.mov
+
+
+
+
+// for ofxOMXPlayer
+-f m4v -vcodec libx264 -profile:v main -preset:v slow -level 4.2 -refs 2
+
+-vcodec libx264 -profile:v high -preset fast -crf 18 -b-pyramid none 
+    -acodec ac3 -ab 1536k -scodec copy
+
+
+
+
+// this works ------>
+        Stream #0:0(eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, smpte170m/smpte170m/bt709), 320x240, 645 kb/s, 30.10 fps, 30 tbr, 1k tbn, 2k tbc (default)
+                Metadata:
+                  creation_time   : 2015-09-09T17:14:13.000000Z
+                  handler_name    : Apple Alias Data Handler
+                  encoder         : H.264
+
+
+
+
+codecs: https://ubuntuforums.org/showthread.php?t=2167288
+        https://trac.ffmpeg.org/wiki/Encode/VFX
+        https://trac.ffmpeg.org/wiki/Encode/H.264
+        // on rPi remember to set GLES to 2
+                    ofGLESWindowSettings settings;
+                    settings.setGLESVersion(2);
+                    ofCreateWindow(settings);
+                    ofRunApp(new ofApp);        
+        + convert all the videos 
+

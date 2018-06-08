@@ -1,0 +1,17 @@
+
+
+sudo apt-get remove fritzing fritzing-parts
+sudo rm -rf /usr/share/fritzing
+rm -rf ~/.config/Fritzing
+
+sudo apt-get install build-essential git cmake libssl-dev libudev-dev qt5-default libqt5serialport5-dev libqt5svg5-dev libgit2-dev
+
+cd ~/apps
+git clone https://github.com/fritzing/fritzing-app.git
+git clone https://github.com/fritzing/fritzing-parts.git
+
+cd fritzing-app
+qmake
+make 
+sudo make install 
+./Fritzing -parts /home/nick/apps/fritzing-parts

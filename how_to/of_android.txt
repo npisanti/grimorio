@@ -25,8 +25,6 @@ https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip
 
 
 
-
-
 // -------------- example/new apps ------
 
 copy from empty app then change all the "empty" with your app name:

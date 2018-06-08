@@ -39,8 +39,8 @@ ln -s ~/apps/glslViewer/bin/glslViewer ~/bin/glsl
 
 echo "installing etcher"
 cd ~/apps
-wget https://github.com/resin-io/etcher/releases/download/v1.3.1/etcher-1.3.1-x86_64.AppImage
-chmod +x etcher-1.3.1-x86_64.AppImage 
+wget https://github.com/resin-io/etcher/releases/download/v1.3.1/etcher-electron-1.4.4-x86_64.AppImage
+chmod +x etcher-electron-1.4.4-x86_64.AppImage 
 
 echo "installing bunsen themes"
 git clone https://github.com/BunsenLabs/bunsen-themes.git

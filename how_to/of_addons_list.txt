@@ -28,33 +28,24 @@ git clone https://github.com/npisanti/ofxMorphImage.git
 
 git clone https://github.com/ofTheo/ofxFern.git
 git clone https://github.com/sebleedelisle/ofxLaser.git
-git clone https://github.com/jvcleave/ofxImGui.git
 git clone https://github.com/robotconscience/ofxLibwebsockets.git
-
-
+git clone https://github.com/bakercp/ofxDlib
 
 // MAKE THIS WORK -------------------------------------------------------------
-https://github.com/YCAMInterlab/ofxTimeline
 
 https://github.com/bangnoise/ofxHapPlayer.git
     git branch libavformat  // it works on ubuntu, test debian
     sudo apt-get install libsnappy-dev libdispatch-dev libavformat-dev
 
+// on desktop
+git clone https://github.com/patriciogonzalezvivo/ofxThermalPrinter.git
 
-// test with oF 0.10 ----------------------------------------------------------
-
-git clone https://github.com/bakercp/ofxDlib
-
-git clone https://github.com/frauzufall/ofx2DMapping
-    git clone https://github.com/frauzufall/ofxSortableList.git
-
-
-git clone https://github.com/frauzufall/ofxGuiExtended.git
-git clone https://github.com/fx-lange/ofxInputField.git
-git clone https://github.com/roymacdonald/ofxGuiPlus
-
+https://github.com/YCAMInterlab/ofxTimeline
 
 // extra ------------------------------------------------------------------------------
+
+git clone https://github.com/leozimmerman/ofxAudioAnalyzer.git
+
 
 git clone https://github.com/mfargo/ofxFilterLibrary.git
 git clone https://github.com/DHaylock/ofxOPC.git
@@ -70,7 +61,6 @@ git clone https://github.com/Akira-Hayasaka/ofxInkSim.git
 
 git clone https://github.com/braitsch/ofxDatGui.git
 git clone https://github.com/braitsch/ofxModal.git
-git clone https://github.com/leozimmerman/ofxAudioAnalyzer.git
 
 git clone https://github.com/kylemcdonald/ofxCcv.git
 
@@ -104,5 +94,3 @@ git clone https://github.com/gameoverhack/ofxOpenNI.git
 // extra rPi ---------------------------------------------------------------------------------
 git clone https://github.com/kashimAstro/ofxTFTTouch.git
 git clone https://github.com/jvcleave/ofxOMXPlayer.git
-git clone https://github.com/patriciogonzalezvivo/ofxThermalPrinter.git
-
