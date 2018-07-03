@@ -19,6 +19,13 @@ video/x-ms-asf=bl-media-player.desktop
 video/x-theora+ogg=bl-media-player.desktop
 application/x-deb=gdebi.desktop
 x-scheme-handler/tg=telegramdesktop.desktop
+application/x-fritzing-fz=fritzing.desktop
+application/x-fritzing-fzz=fritzing.desktop
+application/x-fritzing-fzp=fritzing.desktop
+application/x-fritzing-fzpz=fritzing.desktop
+application/x-fritzing-fzb=fritzing.desktop
+application/x-fritzing-fzbz=fritzing.desktop
+application/x-fritzing-fzm=fritzing.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=exo-mail-reader.desktop

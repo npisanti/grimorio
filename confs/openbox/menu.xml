@@ -18,7 +18,7 @@
 		<item label="File Manager">
 			<action name="Execute">
 				<command>
-                    bl-file-manager
+                    thunar
                 </command>
 			</action>
 		</item>
@@ -46,12 +46,12 @@
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo /home/nick/apps/etcher-1.3.1-x86_64.AppImage</command>
+					<command>gksudo /home/nick/apps/etcher-electron-1.4.4-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Fritzing">
 				<action name="Execute">
-					<command>fritzing</command>
+					<command>~/apps/fritzing-app/Fritzing -parts /home/nick/apps/fritzing-parts</command>
 				</action>
 			</item>
 			<item label="Android Studio">
@@ -480,7 +480,7 @@
 			<item label="File Manager as root">
 				<action name="Execute">
 					<command>
-                        gksudo bl-file-manager
+                        gksudo thunar
                     </command>
 				</action>
 			</item>
