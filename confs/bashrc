@@ -119,6 +119,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.cargo/bin/
 #export OF_ROOT=/home/nick/oF
 #export PG_OF_PATH=/home/nick/oF
 export GOPATH=$HOME/godir

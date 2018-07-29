@@ -1,0 +1,10 @@
+
+
+// get ossia score releases:
+
+https://github.com/OSSIA/score
+
+
+// get and compile fritzing
+
+// install opencv3 ???

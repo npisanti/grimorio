@@ -59,20 +59,21 @@
 					<execute>~/apps/android-studio/bin/studio.sh</execute>
 				</action>
 			</item>
-			<item label="octave">
-				<action name="Execute">
-					<command>octave --force-gui</command>
-				</action>
-			</item>
-			<item label="i-score">
-				<action name="Execute">
-					<command>~/apps/i-score-v1.0.0-b14-amd64.AppImage 
-</command>
-				</action>
-			</item>
 			<item label="Kcachegrind">
 				<action name="Execute">
 					<command>kcachegrind</command>
+				</action>
+			</item>
+			<item label="ossia score v1">
+				<action name="Execute">
+					<command>~/apps/Score-v1.0.0-b40-amd64.AppImage 
+</command>
+				</action>
+			</item>
+			<item label="ossia score v2a">
+				<action name="Execute">
+					<command>~/apps/Score-v1.0.0-b40-amd64.AppImage 
+</command>
 				</action>
 			</item>
 			<item label="Doxygen Wizard">
@@ -83,6 +84,11 @@
 			<item label="Universal Indent GUI">
 				<action name="Execute">
 					<command>universalindentgui</command>
+				</action>
+			</item>
+			<item label="octave">
+				<action name="Execute">
+					<command>octave --force-gui</command>
 				</action>
 			</item>
 		</menu>
@@ -302,11 +308,6 @@
 			</item>
 		</menu>
 		<menu id="root-menu-264844" label="Fun">
-			<item label="Netflix">
-				<action name="Execute">
-					<command>google-chrome</command>
-				</action>
-			</item>
 			<item label="Steam">
 				<action name="Execute">
 					<command>steam</command>
@@ -320,11 +321,6 @@
 			<item label="BrutalDoom">
 				<action name="Execute">
 					<command>/home/nick/gzdoom_build/gzdoom/build/gzdoom -iwad ~/wads/doom.wad -file ~/wads/brutaldoom/brutalv20b.pk3</command>
-				</action>
-			</item>
-			<item label="Games Folder">
-				<action name="Execute">
-					<command>thunar ~/games</command>
 				</action>
 			</item>
 		</menu>
@@ -352,6 +348,11 @@
 			<item label="Combo Jack Fixer">
 				<action name="Execute">
 					<command>hdajackretask</command>
+				</action>
+			</item>
+			<item label="V4L2 diagnostics">
+				<action name="Execute">
+					<execute>qv4l2</execute>
 				</action>
 			</item>
 			<item label="Disk Usage Analyzer">

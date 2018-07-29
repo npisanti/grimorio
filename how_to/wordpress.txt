@@ -1,16 +1,28 @@
 
-
 // first install lamp
+
+// then -----------------------------------------------------------------------
+
+
+// create user for phpmyadmin
+
+sudo mysql --user=root mysql
+
+// and then input those, change XXXyour_passwordXXX
+CREATE USER 'phpmyadmin'@'localhost' IDENTIFIED BY 'XXXyour_passwordXXX';
+GRANT ALL PRIVILEGES ON *.* TO 'phpmyadmin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 
 // ----------------- CREATE DATABASE ------------------------------------------
 
-mysql -u root -p
+sudo mysql --user=root mysql
 
-mysql> CREATE DATABASE IF NOT EXISTS wordpress;
-mysql> CREATE USER caezsar@localhost IDENTIFIED BY "your_password_here";
-mysql> GRANT ALL PRIVILEGES ON wordpress.* TO caezsar@localhost;
-mysql> FLUSH PRIVILEGES;
-mysql> quit
+CREATE DATABASE IF NOT EXISTS wordpress;
+CREATE USER nick@localhost IDENTIFIED BY "XXXyour_passwordXXX";
+GRANT ALL PRIVILEGES ON wordpress.* TO nick@localhost;
+FLUSH PRIVILEGES;
+quit
 
 
 // ---------------------- WORDPRESS -------------------------------------------
@@ -26,11 +38,14 @@ sudo chmod -R 755 your_directory
 
 // move template and plugins to wp-content/themes and wp-content/plugins
 
+cd wp-content/themes
+git clone https://github.com/joshuaiz/plate.git
+
 // change ownership of directories to the webserver
 chown -R www-data:www-data your-wordpress-directory
 
 // then navigate to the directory, for example
-http://localhost/nick/wpfolder
+http://localhost/nick/wordpress
 // and configure wp
 
 
@@ -85,3 +100,17 @@ cPanel -> Advanced Section -> SSH/Shell Access
 
 // for the IP:
 https://www.whatismyip.com/
+
+
+// ------------------- WORDPRESS ON GITLAB ------------------------------------
+
+
+- The name of the database
+- A user name that has privileges for that database
+- That user’s password
+- The host name for the database – either a website’s URL or an IP address
+
+
+
+1 - set up the database online on arvixe
+2 - 
