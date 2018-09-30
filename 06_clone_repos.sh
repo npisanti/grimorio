@@ -7,19 +7,22 @@ if  [ "$folder" = "addons" ]; then
 
     # cloning my repos
 	git clone https://github.com/npisanti/ofxSIMDFloats.git
-	git clone https://github.com/npisanti/ofxPDSP.git
 	git clone https://github.com/npisanti/ofxAudioFile.git
-	git clone https://github.com/npisanti/ofxPDSPPatches.git	
+	git clone https://github.com/npisanti/ofxPDSP.git
 	git clone https://github.com/npisanti/ofxGuiPresetSelector.git
 	git clone https://github.com/npisanti/ofxRPiezos.git
-	git clone https://github.com/npisanti/np-cvthings.git	
-	git clone https://github.com/npisanti/np-extra.git	
-    git clone https://github.com/npisanti/np-homography.git
-    git clone https://github.com/npisanti/np-kinectmotion.git
-    git clone https://github.com/npisanti/np-analyzer.git	
     git clone https://github.com/npisanti/ofxLaunchControls.git
     git clone https://github.com/npisanti/ofxDotFrag.git
     
+	git clone https://github.com/npisanti/np-extra.git
+    git clone https://github.com/npisanti/np-analyzer.git
+    git clone https://github.com/npisanti/np-patches.git
+    git clone https://github.com/npisanti/np-scenes.git
+    git clone https://github.com/npisanti/np-framework.git
+    git clone https://github.com/npisanti/np-kinectmotion.git
+	git clone https://github.com/npisanti/np-cvthings.git
+
+
 	# cloning my forks, more up to date
 	git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 
@@ -36,14 +39,19 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/openframeworks/ofxAddonTemplate.git
     git clone https://github.com/sebleedelisle/ofxLaser.git
     git clone https://github.com/nickgillian/ofxGrt.git
+    git clone https://github.com/roymacdonald/ofxGLWarper.git
+
+    git clone https://github.com/kylemcdonald/ofxBlur.git
+    
+    git clone https://github.com/orgicus/ofxCvPiCam.git
+    rm -rf ofxCvPiCam/libs/mmal
 
     # i always have those but still have to use it in a project
     git clone https://github.com/microcosm/ofxLayerMask.git
     git clone https://github.com/robotconscience/ofxLibwebsockets
     git clone https://github.com/Flightphase/ofxImageSequence.git
-	git clone https://github.com/vanderlin/ofxBox2d.git
-	git clone https://github.com/kylemcdonald/ofxFaceTracker.git 
-
+	git clone https://github.com/vanderlin/ofxBox2d.git 
+    git clone https://github.com/braitsch/ofxParagraph.git    
 
     ln -s ~/oF/addons/ofxPDSP pdsp
         

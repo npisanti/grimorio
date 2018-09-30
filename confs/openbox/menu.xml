@@ -160,6 +160,11 @@
 					<command>aseprite</command>
 				</action>
 			</item>
+			<item label="petmate">
+				<action name="Execute">
+					<execute>petmate</execute>
+				</action>
+			</item>
 			<item label="GrafX2">
 				<action name="Execute">
 					<command>grafx2</command>

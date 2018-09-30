@@ -8,3 +8,13 @@ https://github.com/OSSIA/score
 // get and compile fritzing
 
 // install opencv3 ???
+
+
+// install petmate
+https://nurpax.github.io/petmate/
+
+// install remarkable 
+https://remarkableapp.github.io/linux/download.html
+
+// or get Typora
+https://typora.io/

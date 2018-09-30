@@ -29,6 +29,7 @@ in .bashrc decomment
 >deactivate wait for network  
 >audio through speakers not hdmi  
 >128mb to graphics
+>interfacing options-->P6 Serial ---> Disable shell / enable serial
 
 (optional)  
 `sudo dpkg-reconfigure console-setup`  

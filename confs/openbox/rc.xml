@@ -574,13 +574,6 @@
         <y>50%</y>
       </action>
     </keybind>
-    <!-- CRAZY SHIT -->
-    <keybind key="W-space">
-      <action name="Execute">
-        <command>gw_desktop_strobo.sh</command>
-      </action>
-    </keybind>
-    <!-- mouse control -->
     <keybind key="W-6">
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
@@ -597,6 +590,24 @@
         <width>65%</width>
         <x>0</x>
         <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-8">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>75%</height>
+        <x>0</x>
+        <y>0</y>
+      </action>
+    </keybind>
+    <keybind key="W-9">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <width>50%</width>
+        <height>25%</height>
+        <x>0</x>
+        <y>75%</y>
       </action>
     </keybind>
   </keyboard>

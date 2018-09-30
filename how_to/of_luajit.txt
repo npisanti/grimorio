@@ -1,0 +1,15 @@
+
+
+sudo apt-get install lua5.1 luajit liblua5.1-0-dev libluajit-5.1-dev 
+
+
+// to the addon_config.mk:
+
+
+linux64:
+	#ADDON_CFLAGS += -DLUA_USE_LINUX
+	ADDON_PKG_CONFIG_LIBRARIES += luajit
+	ADDON_SOURCES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_INCLUDES_EXCLUDE += src/bindings/ios/% src/bindings/linuxarm/%
+	ADDON_SOURCES_EXCLUDE += libs/%
+	ADDON_INCLUDES_EXCLUDE += libs/%

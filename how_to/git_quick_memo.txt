@@ -39,6 +39,9 @@ git fetch origin
 git reset --hard origin/master
 
 
+// create branch 
+git checkout -b yourbranchname
+
 
 // fetching original repo from a fork ------------------------
 // add upstream
