@@ -1,6 +1,6 @@
 # For commands above TEXT check:
 # http://conky.sourceforge.net/config_settings.html
-#
+
 # For commands available below TEXT check:
 # http://conky.sourceforge.net/variables.html
 
@@ -145,6 +145,9 @@ double_buffer yes
 #### ${font Liberation Mono:bold:size=10}${alignc}${execpi 600 $HOME/.config/conky/scripts/bunsenweather.sh}
 update_interval 1
 
+# an interface is up only if it has an address
+if_up_strictness address
+
 TEXT
 ${color}${alignc}S Y S T E M   I N F O
 ${hr}
@@ -175,18 +178,18 @@ Battery:  ${alignr} ${execi 9 acpi -b | awk '{print $3 " " $4}' | sed 's/,//g'}
 #NETWORKS------------------------------------------------------------------------------
 ${alignc}N E T W O R K
 ${hr}
-${if_gw}${if_existing /proc/net/route wlp3s0}Type: ${alignr}Wireless
+${if_gw}${if_up wlp3s0}Type: ${alignr}Wireless
 ESSID: ${alignr}${wireless_essid wlp3s0}
 #Local IP:${alignr}${addr wlan0}
 Strenght:${alignr}${wireless_link_qual_perc wlp3s0}%
 #UP: ${alignr}${upspeedf wlan0}kb/s
 Download: ${alignr}${downspeedf wlp3s0}kb/s
 Upload: ${alignr}${upspeedf wlp3s0}kb/s
-${else}${if_existing /proc/net/route enp0s25}Type: ${alignr}Wired
+${else}${if_up enp0s25}Type: ${alignr}Wired
 Download: ${alignr}${downspeedf enp0s25}kb/s
 Upload: ${alignr}${upspeedf enp0s25}kb/s
 ${else}Not Connected
-${endif}${endif}
+${endif}${endif}${endif}
 
 #BATTERY------------------------------------------------------------------------------
 #${alignc}B A T T E R Y

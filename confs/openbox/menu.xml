@@ -248,6 +248,11 @@
 					<command>~/apps/Telegram/Telegram</command>
 				</action>
 			</item>
+			<item label="caprine Messenger">
+				<action name="Execute">
+					<command>~/apps/caprine-2.18.0-x86_64.AppImage</command>
+				</action>
+			</item>
 			<item label="Skype">
 				<action name="Execute">
 					<command>skypeforlinux</command>

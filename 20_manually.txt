@@ -1,20 +1,16 @@
 
 
 // get ossia score releases:
-
 https://github.com/OSSIA/score
 
 
 // get and compile fritzing
 
-// install opencv3 ???
+
+// get caprine messenger 
+https://sindresorhus.com/caprine/
 
 
 // install petmate
 https://nurpax.github.io/petmate/
 
-// install remarkable 
-https://remarkableapp.github.io/linux/download.html
-
-// or get Typora
-https://typora.io/
