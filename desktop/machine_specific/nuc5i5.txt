@@ -1,11 +1,5 @@
 
 
-sudo nano /etc/modprobe.d/iwlwifi.conf
-//add
-options iwlwifi 11n_disable=1
-
-download iwlwifi-7265D-12.ucode from wireless.kernel.org 
-and copy to /lib/firmware/
 
 //todo:
 check “fast tsc calibration failed”
@@ -18,6 +12,3 @@ sudo modprobe snd_seq_midi
 sudo nano /etc/modules-load.d/modules.conf
 //add line
 snd_seq_midi
-
-//install xorg video drivers from backport
-apt-get -t jessie-backports install xserver-xorg-video-intel
