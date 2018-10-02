@@ -84,7 +84,7 @@ git clone https://github.com/lambert/fritzing-parts
 # oF examples and np-clayblocks
 cd ~/oF/apps
 
-git clone https://github.com/npisanti/np-clayblocks.git
+git clone https://github.com/npisanti/clayblocks.git
 
 git clone https://github.com/firmread/NatureOfCode.git
 git clone https://github.com/ofZach/VAW_workshop.git
