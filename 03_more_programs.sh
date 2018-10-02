@@ -31,7 +31,6 @@ git clone https://github.com/oblique/create_ap.git
 cd create_ap
 sudo make install
 
-
 echo "installing glslViewer"
 sudo apt-get install libglfw3-dev git-core libglu1-mesa-dev libxinerama-dev libxcursor-dev libxi-dev python-setuptools
 cd ~/apps
@@ -41,21 +40,6 @@ make
 sudo make install
 rm ~/bin/glsl 
 ln -s ~/apps/glslViewer/bin/glslViewer ~/bin/glsl
-
-echo "installing etcher"
-cd ~/apps
-wget https://github.com/resin-io/etcher/releases/download/v1.4.4/etcher-electron-1.4.4-x86_64.AppImage
-chmod +x etcher-electron-1.4.4-x86_64.AppImage 
-
-echo "installing bunsen themes"
-git clone https://github.com/BunsenLabs/bunsen-themes.git
-mv bunsen-themes/themes/* ~/.themes/
-rm -rf bunsen-themes/
-
-echo "installing bl-exit"
-cd ~/apps
-git clone https://github.com/BunsenLabs/bunsen-exit.git
-
 
 echo "python colorsampler"
 sudo apt-get install python-pyside python-pyperclip

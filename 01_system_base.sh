@@ -79,4 +79,16 @@ git config --global user.name "Nicola Pisanti"
 git config --global user.email nicola@npisanti.com
 git config --global core.editor geany
 
+mkdir ~/apps
+
+echo "installing bunsen themes"
+git clone https://github.com/BunsenLabs/bunsen-themes.git
+mv bunsen-themes/themes/* ~/.themes/
+rm -rf bunsen-themes/
+
+echo "installing bl-exit"
+cd ~/apps
+git clone https://github.com/BunsenLabs/bunsen-exit.git
+
+
 exit
