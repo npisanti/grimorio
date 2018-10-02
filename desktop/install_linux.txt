@@ -18,6 +18,25 @@
 //if during setup i need italian keyboard
 setxkbmap it
 
+// ------------------- sudo and git ---------------------------------
+
+su -
+apt-get install sudo git
+reboot
+
+su -
+adduser yourUserName sudo
+reboot
+
+
+git clone https://github.com/npisanti/dotfiles.git
+
+sh 01_system_base.sh
+
+etc etc ...
+
+// ------------------------------------------------------------------
+
 
 // edit /etc/apt/sources.list
 // add
@@ -53,14 +72,6 @@ sudo apt-get update
 sudo apt-get -t jessie-backports install xserver-xorg-video-intel
 
 
-
-su -
-apt-get install sudo git
-reboot
-
-su -
-adduser yourUserName sudo
-reboot
 
 
 ------- .dotfiles -------------------------------------------------------------

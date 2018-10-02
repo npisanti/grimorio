@@ -5,7 +5,7 @@ echo "restoring confs"
 cp -ar ~/dotfiles/confs/Black-Framework ~/.themes/ 
 cp -ar ~/dotfiles/confs/terminator ~/.config/
 cp -ar ~/dotfiles/confs/openbox ~/.config
-cp ~/dotfiles/confs/tint2rc ~/.config/tint2
+cp ~/dotfiles/confs/tint2rc ~/.config/tint2rc
 cp ~/dotfiles/confs/conkyrc ~/.conkyrc
 cp ~/dotfiles/confs/gdbinit ~/.gdbinit
 cp ~/dotfiles/confs/compton.conf ~/.config/compton.conf 

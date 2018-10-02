@@ -1,4 +1,4 @@
 #!/bin/bash
-cd ~/apps/Rack
+cd ~/software/Rack
 make run
 exit

@@ -1,6 +1,10 @@
 #!/bin/bash
 
 
+echo "installing fonts (requires sudo password)"
+cd ~/dotfiles/fonts
+sh install_fonts.sh
+
 echo "installing programs..."
 
 mkdir ~/apps

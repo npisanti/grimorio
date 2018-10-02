@@ -36,22 +36,22 @@
 			</item>
 			<item label="Processing IDE">
 				<action name="Execute">
-					<command>processing</command>
+					<command>~/bundle/processing-3.3.7/processing</command>
 				</action>
 			</item>
 			<item label="Arduino IDE">
 				<action name="Execute">
-					<command>arduino</command>
+					<command>~/bundle/arduino-1.8.5</command>
 				</action>
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo /home/nick/apps/etcher-electron-1.4.4-x86_64.AppImage</command>
+					<command>gksudo ~/bundle/etcher-electron-1.4.4-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Fritzing">
 				<action name="Execute">
-					<command>~/apps/fritzing-app/Fritzing -parts /home/nick/apps/fritzing-parts</command>
+					<command>~/bundle/fritzing-app/Fritzing -parts ~/bundle/fritzing-parts</command>
 				</action>
 			</item>
 			<item label="Android Studio">
@@ -66,13 +66,13 @@
 			</item>
 			<item label="ossia score v1">
 				<action name="Execute">
-					<command>~/apps/Score-v1.0.0-b40-amd64.AppImage 
+					<command>~/bundle/Score-v1.0.0-b40-amd64.AppImage 
 </command>
 				</action>
 			</item>
 			<item label="ossia score v2a">
 				<action name="Execute">
-					<command>~/apps/Score-v1.0.0-b40-amd64.AppImage 
+					<command>~/bundle/Score-v1.0.0-b40-amd64.AppImage 
 </command>
 				</action>
 			</item>
@@ -142,7 +142,7 @@
 			</item>
 			<item label="colorsampler.py">
 				<action name="Execute">
-					<execute>python ~/apps/colorsampler/colorsampler.py</execute>
+					<execute>python ~/bundle/colorsampler/colorsampler.py</execute>
 				</action>
 			</item>
 			<item label="Inkscape">
@@ -152,7 +152,7 @@
 			</item>
 			<item label="Blender">
 				<action name="Execute">
-					<command>~/apps/blender-2.78c-linux-glibc219-x86_64/blender</command>
+					<command>~/bundle/blender-2.78c-linux-glibc219-x86_64/blender</command>
 				</action>
 			</item>
 			<item label="aseprite">
@@ -245,12 +245,12 @@
 			</item>
 			<item label="Telegram">
 				<action name="Execute">
-					<command>~/apps/Telegram/Telegram</command>
+					<command>~/bundle/Telegram/Telegram</command>
 				</action>
 			</item>
 			<item label="caprine Messenger">
 				<action name="Execute">
-					<command>~/apps/caprine-2.18.0-x86_64.AppImage</command>
+					<command>~/bundle/caprine-2.18.0-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Skype">
@@ -531,7 +531,7 @@
 		<item label="Exit">
 			<action name="Execute">
 				<command>
-                    ~/apps/bunsen-exit/bin/bl-exit
+                    ~/bundle/bunsen-exit/bin/bl-exit
                 </command>
 			</action>
 		</item>

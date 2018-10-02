@@ -74,10 +74,6 @@ mkdir ~/.icons
 cd ~/.icons
 git clone https://github.com/EmptyStackExn/mono-dark-flattr-icons.git
 
-echo "installing fonts (requires sudo password)"
-cd ~/dotfiles/fonts
-sh install_fonts.sh
-
 echo "git config"
 git config --global user.name "Nicola Pisanti"
 git config --global user.email nicola@npisanti.com
