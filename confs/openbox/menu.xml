@@ -105,7 +105,7 @@
 			</item>
 			<item label="VCV Rack">
 				<action name="Execute">
-					<command>VCVRack.sh</command>
+					<command>~/bundle/rack.sh</command>
 				</action>
 			</item>
 			<item label="paulstretch">
@@ -152,17 +152,12 @@
 			</item>
 			<item label="Blender">
 				<action name="Execute">
-					<command>~/bundle/blender-2.78c-linux-glibc219-x86_64/blender</command>
+					<command>~/bundle/blender-2.79b-linux-glibc219-x86_64/blender</command>
 				</action>
 			</item>
 			<item label="aseprite">
 				<action name="Execute">
 					<command>aseprite</command>
-				</action>
-			</item>
-			<item label="petmate">
-				<action name="Execute">
-					<execute>petmate</execute>
 				</action>
 			</item>
 			<item label="GrafX2">
@@ -531,7 +526,7 @@
 		<item label="Exit">
 			<action name="Execute">
 				<command>
-                    ~/bundle/bunsen-exit/bin/bl-exit
+                    ~/apps/bunsen-exit/bin/bl-exit
                 </command>
 			</action>
 		</item>
