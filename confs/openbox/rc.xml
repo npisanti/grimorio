@@ -404,9 +404,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>false</enabled>
-          <name>Firefox</name>
+          <name>Web Browser</name>
         </startupnotify>
-        <command>~/bundle/firefox/firefox</command>
+        <command>x-www-browser</command>
       </action>
     </keybind>
     <keybind key="W-l">

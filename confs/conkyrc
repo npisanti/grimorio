@@ -178,13 +178,13 @@ Battery:  ${alignr} ${execi 9 acpi -b | awk '{print $3 " " $4}' | sed 's/,//g'}
 #NETWORKS------------------------------------------------------------------------------
 ${alignc}N E T W O R K
 ${hr}
-${if_gw}${if_up wlp3s0}Type: ${alignr}Wireless
-ESSID: ${alignr}${wireless_essid wlp3s0}
+${if_gw}${if_up wlp2s0}Type: ${alignr}Wireless
+ESSID: ${alignr}${wireless_essid wlp2s0}
 #Local IP:${alignr}${addr wlan0}
-Strenght:${alignr}${wireless_link_qual_perc wlp3s0}%
+Strenght:${alignr}${wireless_link_qual_perc wlp2s0}%
 #UP: ${alignr}${upspeedf wlan0}kb/s
-Download: ${alignr}${downspeedf wlp3s0}kb/s
-Upload: ${alignr}${upspeedf wlp3s0}kb/s
+Download: ${alignr}${downspeedf wlp2s0}kb/s
+Upload: ${alignr}${upspeedf wlp2s0}kb/s
 ${else}${if_up enp0s25}Type: ${alignr}Wired
 Download: ${alignr}${downspeedf enp0s25}kb/s
 Upload: ${alignr}${upspeedf enp0s25}kb/s

@@ -13,6 +13,7 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/npisanti/ofxRPiezos.git
     git clone https://github.com/npisanti/ofxLaunchControls.git
     git clone https://github.com/npisanti/ofxDotFrag.git
+    git clone https://github.com/npisanti/ofxFixture.git
     
 	git clone https://github.com/npisanti/np-extra.git
     git clone https://github.com/npisanti/np-analyzer.git
