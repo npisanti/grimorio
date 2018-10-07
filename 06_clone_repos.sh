@@ -22,6 +22,7 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/npisanti/np-framework.git
     git clone https://github.com/npisanti/np-kinectmotion.git
 	git clone https://github.com/npisanti/np-cvthings.git
+    git clone https://github.com/npisanti/np-receivers.git
 
 
 	# cloning my forks, more up to date
