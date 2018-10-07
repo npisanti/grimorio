@@ -1,9 +1,9 @@
 #!/bin/bash
 
-
-echo "installing fonts (requires sudo password)"
-cd ~/dotfiles/fonts
-sh install_fonts.sh
+echo "git config"
+git config --global user.name "Nicola Pisanti"
+git config --global user.email nicola@npisanti.com
+git config --global core.editor geany
 
 echo "installing programs..."
 
@@ -12,18 +12,15 @@ mkdir ~/apps
 sudo apt-get update
 sudo apt-get dist-upgrade
 
-sudo apt-get install gimp grafx2 aseprite inkscape xsane thunderbird shutter solvespace libreoffice libreoffice-gtk chromium
-echo "... remember to set up mails in thunderbird"
+sudo apt-get -y install aseprite shutter solvespace grafx2 chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay moc moc-ffmpeg-plugin winff lame sox cmatrix input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients build-essential xclip qv4l2 v4l-utils swig
 
-sudo apt-get install chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay screenfetch moc moc-ffmpeg-plugin winff lame sox cmatrix printer-driver-all input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 xdiskusage seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients build-essential xclip neofetch qv4l2 v4l-utils swig paulstretch
-
-sudo apt-get install kcachegrind krita kdenlive audacity paulstretch 
+sudo apt-get -y install kcachegrind krita kdenlive audacity paulstretch 
 
 echo "installing kicad from backports"
 sudo apt-get -t stretch-backports install kicad
 
 echo "installing jack utils"
-sudo apt-get install qjackctl aconnectgui jack-midi-clock jack-capture
+sudo apt-get -y install qjackctl aconnectgui jack-midi-clock jack-capture
 
 echo "installing create_ap"
 cd ~/apps
@@ -45,5 +42,17 @@ echo "python colorsampler"
 sudo apt-get install python-pyside python-pyperclip
 cd ~/apps
 git clone https://github.com/cblgh/colorsampler.git
+
+
+echo "installing more fonts (requires sudo password)"
+
+cd ~/dotfiles/fonts
+
+sh install_ttf.sh repo
+sh install_ttf.sh raleway
+sh install_ttf.sh archivo
+sh install_ttf.sh terminus-ttf-4.46.0
+
+sh install_otf.sh titillium
 
 exit

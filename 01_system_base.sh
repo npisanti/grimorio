@@ -5,20 +5,17 @@ sudo cp  ~/dotfiles/extra/base/sources.list /etc/apt/sources.list
 sudo apt-get update
 
 echo "install multimedia keyring"
-sudo apt-get install deb-multimedia-keyring
+sudo apt-get -y install deb-multimedia-keyring
 
 echo "packages update"
 sudo apt-get update
 sudo apt-get dist-upgrade
 
-echo "installing a pseudo-crunchbang system"
-sudo apt-get install alsa-utils amd64-microcode anacron apt-transport-https apt-xapian-index aptitude arandr arj bash-completion btrfs-tools catfish chntpw clipit compton conky-all cpufrequtils curl crda dmz-cursor-theme dosfstools efibootmgr eject enchant evince fbxkb feh file-roller filezilla firefox-esr firmware-b43-installer firmware-b43legacy-installer firmware-linux firmware-ralink firmware-iwlwifi firmware-realtek fonts-cantarell fonts-dejavu fonts-droid-fallback fonts-inconsolata fonts-liberation ftp fuse galculator galternatives gdebi geany ghostscript gigolo gksu gmrun gnumeric gparted gsimplecal gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-pulseaudio gvfs gvfs-backends gvfs-fuse hardinfo hdparm hddtemp hexchat htop hwdata i965-va-driver intel-microcode lame libnotify-bin lightdm lm-sensors locales lsb-release lxappearance lzop mirage mlocate modemmanager network-manager nitrogen ntfs-3g ntp obconf obmenu openbox openssh-client p7zip-full pavucontrol pciutils pcmciautils policykit-1-gnome pulseaudio python-keybinder python-notify python-xdg rfkill rpl rsync rzip scrot smartmontools suckless-tools sudo synaptic terminator thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tint2 transmission-gtk ttf-mscorefonts-installer unace unalz unar unrar unzip update-inetd usb-modeswitch usbutils user-setup uuid-runtime va-driver-all vdpau-va-driver vlc vlc-plugin-notify xdg-user-dirs xdg-utils xfburn xfce4-notifyd xfce4-power-manager xfce4-screenshooter xinput xorg xsel xz-utils yad zip make acpi tree fonts-stix fonts-lmodern
+echo "installing some kind of crunchbang system"
+sudo apt-get -y install alsa-utils amd64-microcode anacron apt-transport-https apt-xapian-index aptitude arandr arj bash-completion btrfs-tools catfish chntpw clipit compton conky-all cpufrequtils curl crda dmz-cursor-theme dosfstools efibootmgr eject enchant evince fbxkb feh file-roller firmware-b43-installer firmware-b43legacy-installer firmware-linux firmware-ralink firmware-iwlwifi firmware-realtek fonts-cantarell fonts-dejavu fonts-droid-fallback fonts-inconsolata fonts-liberation ftp fuse galculator galternatives gdebi geany ghostscript gigolo gksu gmrun gnumeric gparted gsimplecal gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-pulseaudio gvfs gvfs-backends gvfs-fuse hardinfo hdparm hddtemp hexchat htop hwdata i965-va-driver intel-microcode lame libnotify-bin lightdm lm-sensors locales lsb-release lxappearance lzop mirage mlocate modemmanager network-manager nitrogen ntfs-3g ntp obconf obmenu openbox openssh-client p7zip-full pavucontrol pciutils pcmciautils policykit-1-gnome pulseaudio python-keybinder python-notify python-xdg rfkill rpl rsync rzip scrot smartmontools suckless-tools sudo synaptic terminator thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tint2 transmission-gtk ttf-mscorefonts-installer unace unalz unar unrar unzip update-inetd usb-modeswitch usbutils user-setup uuid-runtime va-driver-all vdpau-va-driver vlc vlc-plugin-notify xdg-user-dirs xdg-utils xfburn xfce4-notifyd xfce4-power-manager xfce4-screenshooter xinput xorg xsel xz-utils yad zip make acpi tree fonts-stix fonts-lmodern fonts-roboto xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique fonts-inconsolata fonts-f500 fonts-roboto-fontface fonts-firacode fonts-open-sans  printer-driver-all filezilla firefox-esr libreoffice libreoffice-gtk gimp inkscape xsane thunderbird neofetch git geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui hplip python3-pyqt5 xdiskusage
 
 echo "installing realtime kernel"
 sudo apt-get install linux-image-4.9.0-8-rt-amd64
-
-echo "install more base things"
-sudo apt-get install printer-driver-all git geany-plugins cppcheck cloc valgrind grc clang doxygen doxygen-doc doxygen-gui universalindentgui hplip python3-pyqt5
 
 echo "installing updated intel drivers"
 sudo apt-get -t stretch-backports install xserver-xorg-video-intel
@@ -73,11 +70,6 @@ echo "installing icons"
 mkdir ~/.icons
 cd ~/.icons
 git clone https://github.com/EmptyStackExn/mono-dark-flattr-icons.git
-
-echo "git config"
-git config --global user.name "Nicola Pisanti"
-git config --global user.email nicola@npisanti.com
-git config --global core.editor geany
 
 mkdir ~/apps
 
