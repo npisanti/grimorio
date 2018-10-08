@@ -24,14 +24,14 @@
 		</item>
 		<item label="Text Editor">
 			<action name="Execute">
-				<command>darkgeany</command>
+				<command>code</command>
 			</action>
 		</item>
 		<separator/>
 		<menu id="root-menu-823532" label="Coding">
-			<item label="Geany Editor">
+			<item label="Visual Studio Code">
 				<action name="Execute">
-					<command>darkgeany</command>
+					<command>code</command>
 				</action>
 			</item>
 			<item label="Processing IDE">

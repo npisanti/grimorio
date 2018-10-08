@@ -16,6 +16,8 @@ cp ~/dotfiles/confs/mimeapps.list ~/.local/share/applications/mimeapps.list
 cp -ar ~/dotfiles/confs/geany ~/.config/
 mkdir -p ~/.config/rncbc.org/
 cp ~/dotfiles/confs/QjackCtl.conf  ~/.config/rncbc.org/QjackCtl.conf 
+cp  -ar ~/dotfiles/confs/vscode.json ~/.config/Code/User/settings.json 
+
 
 xfconf-query --channel thunar --property /misc-remember-geometry  --create --type bool --set false
 mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml/

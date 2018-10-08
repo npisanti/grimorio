@@ -1,0 +1,14 @@
+
+sudo geany /usr/share/code/resources/app/out/vs/workbench/workbench.main.css
+
+// add to the end 
+
+.monaco-workbench .tabs-container .tab * {
+	font-family: 'Terminus \(TTF\)', 'Inconsolata', monospace;
+	font-size : 15px;
+}
+
+.monaco-workbench .explorer-viewlet * {
+	font-family: 'Terminus \(TTF\)', 'Inconsolata', monospace;
+	font-size : 12px;
+}

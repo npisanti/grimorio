@@ -18,5 +18,6 @@ cp ~/.local/share/applications/mimeapps.list ~/dotfiles/confs/mimeapps.list
 cp ~/.config/rncbc.org/QjackCtl.conf ~/dotfiles/confs/
 cp -ar ~/.config/geany/ ~/dotfiles/confs/
 rm ~/dotfiles/confs/geany/geany_socket_*
+cp ~/.config/Code/User/settings.json ~/dotfiles/confs/vscode.json
 
 exit

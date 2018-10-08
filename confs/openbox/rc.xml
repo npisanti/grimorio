@@ -442,7 +442,7 @@
           <enabled>false</enabled>
           <name>Editor</name>
         </startupnotify>
-        <command>darkgeany</command>
+        <command>code</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -938,6 +938,9 @@
   <applications>
     <!-- remove decorations -->
     <application name="geany">
+      <decor>no</decor>
+    </application>
+    <application name="code">
       <decor>no</decor>
     </application>
     <application role="browser">

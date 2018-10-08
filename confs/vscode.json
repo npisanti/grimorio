@@ -1,0 +1,42 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Verdandi Alter",
+    "editor.wordWrapColumn": 100,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Terminus \\(TTF\\)', 'Inconsolata'",
+    "editor.rulers": [80],
+    "terminal.integrated.fontWeightBold": "normal",
+    "terminal.integrated.fontSize": 15,
+    "window.zoomLevel": 1,
+    "workbench.activityBar.visible": false,
+    "extensions.autoCheckUpdates": false,
+    "workbench.iconTheme": null,
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": false,
+
+    "workbench.colorCustomizations": {
+        "editor.background": "#111"
+    },
+
+    "editor.tokenColorCustomizations": {
+        "comments": "#666",
+        
+        "numbers": "#B45B0D",
+
+        "keywords": "#fb4b38",
+        "types": "#E3241F",
+        
+        "strings": "#F0784B",
+        
+        "variables": "#fff",
+
+        "functions": "#fb4b38"
+
+    }
+}
