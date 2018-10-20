@@ -2,7 +2,7 @@
 
 # oF addons -------------------------------------------------------------------
 cd ~/oF/addons
-folder=${PWD##*/} 
+folder=${PWD##*/}
 if  [ "$folder" = "addons" ]; then
 
     # cloning my repos
@@ -14,7 +14,7 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/npisanti/ofxLaunchControls.git
     git clone https://github.com/npisanti/ofxDotFrag.git
     git clone https://github.com/npisanti/ofxFixture.git
-    
+
 	git clone https://github.com/npisanti/np-extra.git
     git clone https://github.com/npisanti/np-analyzer.git
     git clone https://github.com/npisanti/np-patches.git
@@ -29,7 +29,7 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 
 
-    # cloning essentials addon that i have used 
+    # cloning essentials addon that i have used
 	git clone https://github.com/danomatika/ofxMidi.git
     git clone https://github.com/nariakiiwatani/ofxWatchFile.git
 	git clone https://github.com/paulobarcelos/ofxHomography.git
@@ -44,21 +44,21 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/roymacdonald/ofxGLWarper.git
 
     git clone https://github.com/kylemcdonald/ofxBlur.git
-    
+
     git clone https://github.com/orgicus/ofxCvPiCam.git
     rm -rf ofxCvPiCam/libs/mmal
 
     # i always have those but still have to use it in a project
-    git clone https://github.com/microcosm/ofxLayerMask.git
+    git clone https://github.com/satoruhiga/ofxNanoVG.git
     git clone https://github.com/robotconscience/ofxLibwebsockets
     git clone https://github.com/Flightphase/ofxImageSequence.git
-	git clone https://github.com/vanderlin/ofxBox2d.git 
-    git clone https://github.com/braitsch/ofxParagraph.git    
+	git clone https://github.com/vanderlin/ofxBox2d.git
+    git clone https://github.com/braitsch/ofxParagraph.git
     git clone https://github.com/arturoc/ofxEasing.git
 
 
     ln -s ~/oF/addons/ofxPDSP pdsp
-        
+
 fi
 # -----------------------------------------------------------------------------
 

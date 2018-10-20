@@ -2,13 +2,11 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Verdandi Alter",
-    "editor.wordWrapColumn": 100,
+    "workbench.colorTheme": "Twilight",
     "editor.fontSize": 15,
     "editor.fontFamily": "'Terminus \\(TTF\\)', 'Inconsolata'",
     "editor.rulers": [80],
     "terminal.integrated.fontWeightBold": "normal",
-    "terminal.integrated.fontSize": 15,
     "window.zoomLevel": 1,
     "workbench.activityBar.visible": false,
     "extensions.autoCheckUpdates": false,
@@ -21,22 +19,59 @@
     "breadcrumbs.enabled": false,
 
     "workbench.colorCustomizations": {
-        "editor.background": "#111"
+        "editor.background": "#111",
+        "editorCursor.foreground": "#fff",
+        "gitDecoration.modifiedResourceForeground": "#F0784B",
+        "gitDecoration.untrackedResourceForeground": "#666",
+        "editorOverviewRuler.modifiedForeground": "#b45b0dc0",
+        "editorGutter.modifiedBackground": "#b45b0dc0",
+        "editorOverviewRuler.addedForeground": "#41b11fc0",
+        "editorGutter.addedBackground": "#41b11fc0",
+        "editorOverviewRuler.deletedForeground": "#666666c0",
+        "sideBar.background": "#191010",
+        "tab.inactiveBackground": "#191010",
+        "tab.border": "#111"
+
     },
 
     "editor.tokenColorCustomizations": {
         "comments": "#666",
-        
+
         "numbers": "#B45B0D",
 
-        "keywords": "#fb4b38",
+        "keywords": "#E3241F",
+
         "types": "#E3241F",
-        
+
         "strings": "#F0784B",
-        
+
         "variables": "#fff",
 
-        "functions": "#fb4b38"
+        "functions": "#fb4b38",
 
-    }
+        "textMateRules": [
+            {
+                "scope": "keyword",
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "entity.name.function",
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+
+
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "workbench.enableExperiments": false,
+    "editor.wordWrap": "on",
+    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "editor.detectIndentation": false,
+    "terminal.integrated.fontSize": 12
 }
