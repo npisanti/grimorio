@@ -357,9 +357,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>false</enabled>
-          <name>Terminal</name>
+          <name>TODO</name>
         </startupnotify>
-        <command>x-terminal-emulator --geometry 480x320+0+0</command>
+        <command>todo.sh</command>
       </action>
     </keybind>
     <keybind key="W-s">

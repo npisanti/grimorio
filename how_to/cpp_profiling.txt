@@ -4,10 +4,32 @@ valgrind --tool=callgrind --tool=cachegrind ./app-to-profile
 
 //profile with callgrind
 valgrind --tool=callgrind --cache-sim=yes --branch-sim=yes build/yourbuildname 
-kcachegrind youroutputfile.pidnum &
+
+kcachegrind profileoutputfile.pidnum &
 
 //memory leak
 valgrind --tool=memcheck build/yourbuildname 
 
 
+// --------------------------------------------------------------------
 
+
+The answer to run valgrind --tool=callgrind is not quite complete without some options. We usually do not want to profile 10 minutes of slow startup time under Valgrind and want to profile our program when it is doing some task.
+
+So this is what I recommend. Run program first:
+
+valgrind --tool=callgrind --dump-instr=yes -v --instr-atstart=no ./binary > tmp
+
+Now when it works and we want to start profiling we should run in another window:
+
+callgrind_control -i on
+
+This turns profiling on. To turn it off and stop whole task we might use:
+
+callgrind_control -k
+
+Now we have some files named callgrind.out.* in current directory. To see profiling results use:
+
+kcachegrind callgrind.out.*
+
+I recommend in next window to click on "Self" column header, otherwise it shows that "main()" is most time consuming task. "Self" shows how much each function itself took time, not together with dependents.

@@ -38,11 +38,14 @@ sudo make install
 rm ~/bin/glsl 
 ln -s ~/apps/glslViewer/bin/glslViewer ~/bin/glsl
 
+echo "installing FlameGraph scripts"
+cd ~/apps
+git clone https://github.com/brendangregg/FlameGraph.git
+
 echo "python colorsampler"
 sudo apt-get install python-pyside python-pyperclip
 cd ~/apps
 git clone https://github.com/cblgh/colorsampler.git
-
 
 echo "installing more fonts (requires sudo password)"
 

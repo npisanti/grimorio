@@ -63,7 +63,6 @@
 
     },
     "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "workbench.enableExperiments": false,
     "editor.wordWrap": "on",
@@ -77,5 +76,7 @@
     "workbench.editor.closeOnFileDelete": true,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "editor.fontSize": 18,
-    "markdown.preview.fontSize": 16
+    "markdown.preview.fontSize": 16,
+    "terminal.integrated.cursorBlinking": true,
+    "editor.trimAutoWhitespace": false
 }

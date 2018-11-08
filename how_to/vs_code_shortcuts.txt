@@ -1,0 +1,14 @@
+
+
++ shortcut to remember :
+    F5  : debug 
+    F8  : build release 
+    CTRL + P : select editor tab
+    CTRL + J : toggle panel
+    CTRL + L : toggle panel position
+    CTRL + B : sidebar
+    
+    CTRL + SHIFT + E : explorer
+    CTRL + SHIFT + D : debug
+    CTRL + SHIFT + M : problems 
+    CTRL + SHIFT + Y : debug console 
