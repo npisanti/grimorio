@@ -38,6 +38,12 @@ sudo make install
 rm ~/bin/glsl 
 ln -s ~/apps/glslViewer/bin/glslViewer ~/bin/glsl
 
+echo "installing of_vscode script"
+cd ~/apps
+git clone https://github.com/npisanti/of_vscode.git
+cd of_vscode
+sh install.sh
+
 echo "installing FlameGraph scripts"
 cd ~/apps
 git clone https://github.com/brendangregg/FlameGraph.git
