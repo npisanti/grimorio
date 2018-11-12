@@ -49,7 +49,7 @@ git clone https://github.com/cblgh/colorsampler.git
 
 echo "installing more fonts (requires sudo password)"
 
-cd ~/dotfiles/fonts
+cd ~/struttura/fonts
 
 sh install_ttf.sh repo
 sh install_ttf.sh raleway

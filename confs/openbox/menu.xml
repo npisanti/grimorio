@@ -130,6 +130,11 @@
 			</item>
 		</menu>
 		<menu id="root-menu-85632" label="Graphics">
+			<item label="Dotgrid">
+				<action name="Execute">
+					<execute>~/bundle/dotgrid-linux-64/Dotgrid</execute>
+				</action>
+			</item>
 			<item label="Gimp">
 				<action name="Execute">
 					<command>gimp</command>

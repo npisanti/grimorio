@@ -69,6 +69,11 @@ CONTROL_CPU_THROTTLING=0
 // COLOR profiling -------------------------------------------------------------
 
 //rememert to save the color profile from windows!!!
+On all Windows Operating Systems, the profiles are located: C:\Windows\System32\spool\drivers\color. If you cannot find your profile in the default location, try a search for *.icc or *.icm to find all the profiles on your system.
+// or search it on the drive 
+find ~/gdrive -name "UX303LA_8086_AE0D1361.icm"
+
+
 // go in the color profile path, then 
 sudo cp UX303LA_8086_AE0D1361.icm /usr/share/color/icc/
 
@@ -88,5 +93,3 @@ sudo geany /etc/modules-load.d/modules.conf
 coretemp
 snd_seq_midi
 asus-nb-wmi
-
-
