@@ -246,6 +246,11 @@
         <command>monitor_stage.sh</command>
       </action>
     </keybind>
+    <keybind key="W-F4">
+      <action name="Execute">
+        <command>pkill -USR1 redshift</command>
+      </action>
+    </keybind>
     <keybind key="W-F5">
       <action name="Execute">
         <command>xbacklight -dec 15</command>
@@ -425,15 +430,6 @@
           <name>Lock screen</name>
         </startupnotify>
         <command>blank.sh</command>
-      </action>
-    </keybind>
-    <keybind key="W-c">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>colorsampler</name>
-        </startupnotify>
-        <command>python ~/bundle/colorsampler/colorsampler.py</command>
       </action>
     </keybind>
     <keybind key="W-e">

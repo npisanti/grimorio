@@ -1,16 +1,15 @@
 
-
-// get ossia score releases:
-https://github.com/OSSIA/score
+// copy archivio from another pc
 
 
-// get and compile fritzing
+VISUAL STUDIO EXTENSIONS:
+    - Twilight theme
+    - Shader languages support
+    - Markdown Preview Github Styling
 
 
-// get caprine messenger 
-https://sindresorhus.com/caprine/
-
-
-// install petmate
-https://nurpax.github.io/petmate/
-
+FIREFOX ADDONS
+    dark reader
+        https://addons.mozilla.org/en-US/firefox/addon/darkreader/
+    adblock plus
+    disconnect

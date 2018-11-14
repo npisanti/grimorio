@@ -44,6 +44,9 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/vanderlin/ofxBox2d.git
     git clone https://github.com/braitsch/ofxParagraph.git
     git clone https://github.com/arturoc/ofxEasing.git
+    git clone https://github.com/armadillu/ofxAnimatable.git
+    git clone https://github.com/armadillu/ofxHistoryPlot.git
+    git clone https://github.com/galsasson/ofxInterface.git
 
 
     ln -s ~/oF/addons/ofxPDSP pdsp

@@ -61,3 +61,6 @@ thunar --daemon &
 ## Enable power management
 xfce4-power-manager &
 
+# Enable redshift 
+redshift -c .config/redshift.conf &
+

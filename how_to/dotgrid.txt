@@ -1,0 +1,11 @@
+
+https://hundredrabbits.github.io/Dotgrid/
+manual:
+    https://100r.co/blog.html#dotgrid
+            
+            
+WITH ITALIAN KEYBOARD: 
+    line thickness -5 = '
+    line thickness +5 = ì
+    line thickenss -1 = `
+    line thickness +1 = ~

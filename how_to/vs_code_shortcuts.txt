@@ -12,3 +12,5 @@
     CTRL + SHIFT + D : debug
     CTRL + SHIFT + M : problems 
     CTRL + SHIFT + Y : debug console 
+
+    CTRL + SHIFT + V : markdown preview 

@@ -16,8 +16,7 @@ cp ~/.bashrc ~/struttura/confs/bashrc
 cp -r ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml ~/struttura/confs/thunar.xml
 cp ~/.local/share/applications/mimeapps.list ~/struttura/confs/mimeapps.list
 cp ~/.config/rncbc.org/QjackCtl.conf ~/struttura/confs/
-cp -ar ~/.config/geany/ ~/struttura/confs/
-rm ~/struttura/confs/geany/geany_socket_*
 cp ~/.config/Code/User/settings.json ~/struttura/confs/vscode.json
+cp ~/.config/redshift.conf ~/struttura/confs/redshift.conf
 
 exit

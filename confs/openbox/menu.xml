@@ -36,22 +36,22 @@
 			</item>
 			<item label="Processing IDE">
 				<action name="Execute">
-					<command>~/bundle/processing-3.3.7/processing</command>
+					<command>~/archivio/apps/processing-3.3.7/processing</command>
 				</action>
 			</item>
 			<item label="Arduino IDE">
 				<action name="Execute">
-					<command>~/bundle/arduino-1.8.5/arduino</command>
+					<command>~/archivio/apps/arduino-1.8.5/arduino</command>
 				</action>
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo ~/bundle/etcher-electron-1.4.4-x86_64.AppImage</command>
+					<command>gksudo ~/archivio/apps/etcher-electron-1.4.4-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Fritzing">
 				<action name="Execute">
-					<command>~/bundle/fritzing-app/Fritzing -parts ~/bundle/fritzing-parts</command>
+					<command>~/archivio/apps/fritzing-app/Fritzing -parts ~/archivio/apps/fritzing-parts</command>
 				</action>
 			</item>
 			<item label="Android Studio">
@@ -66,13 +66,13 @@
 			</item>
 			<item label="ossia score v1">
 				<action name="Execute">
-					<command>~/bundle/Score-v1.0.0-b40-amd64.AppImage 
+					<command>~/archivio/apps/Score-v1.0.0-b40-amd64.AppImage 
 </command>
 				</action>
 			</item>
 			<item label="ossia score v2a">
 				<action name="Execute">
-					<command>~/bundle/Score-v1.0.0-b40-amd64.AppImage 
+					<command>~/archivio/apps/Score-v1.0.0-b40-amd64.AppImage 
 </command>
 				</action>
 			</item>
@@ -105,7 +105,7 @@
 			</item>
 			<item label="VCV Rack">
 				<action name="Execute">
-					<command>~/bundle/rack.sh</command>
+					<command>~/archivio/apps/rack.sh</command>
 				</action>
 			</item>
 			<item label="paulstretch">
@@ -132,7 +132,12 @@
 		<menu id="root-menu-85632" label="Graphics">
 			<item label="Dotgrid">
 				<action name="Execute">
-					<execute>~/bundle/dotgrid-linux-64/Dotgrid</execute>
+					<execute>~/archivio/apps/dotgrid-linux-64/Dotgrid</execute>
+				</action>
+			</item>
+			<item label="GColor">
+				<action name="Execute">
+					<execute>gcolor2</execute>
 				</action>
 			</item>
 			<item label="Gimp">
@@ -147,7 +152,7 @@
 			</item>
 			<item label="colorsampler.py">
 				<action name="Execute">
-					<execute>python ~/bundle/colorsampler/colorsampler.py</execute>
+					<execute>python ~/archivio/apps/colorsampler/colorsampler.py</execute>
 				</action>
 			</item>
 			<item label="Inkscape">
@@ -157,7 +162,7 @@
 			</item>
 			<item label="Blender">
 				<action name="Execute">
-					<command>~/bundle/blender-2.79b-linux-glibc219-x86_64/blender</command>
+					<command>~/archivio/apps/blender-2.79b-linux-glibc219-x86_64/blender</command>
 				</action>
 			</item>
 			<item label="aseprite">
@@ -245,12 +250,12 @@
 			</item>
 			<item label="Telegram">
 				<action name="Execute">
-					<command>~/bundle/Telegram/Telegram</command>
+					<command>~/archivio/apps/Telegram/Telegram</command>
 				</action>
 			</item>
 			<item label="caprine Messenger">
 				<action name="Execute">
-					<command>~/bundle/caprine-2.18.0-x86_64.AppImage</command>
+					<command>~/archivio/apps/caprine-2.18.0-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Skype">

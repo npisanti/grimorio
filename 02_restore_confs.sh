@@ -16,8 +16,8 @@ cp ~/struttura/confs/mimeapps.list ~/.local/share/applications/mimeapps.list
 cp -ar ~/struttura/confs/geany ~/.config/
 mkdir -p ~/.config/rncbc.org/
 cp ~/struttura/confs/QjackCtl.conf  ~/.config/rncbc.org/QjackCtl.conf 
-cp  -ar ~/struttura/confs/vscode.json ~/.config/Code/User/settings.json 
-
+cp -ar ~/struttura/confs/vscode.json ~/.config/Code/User/settings.json 
+cp ~/struttura/confs/redshift.conf ~/.config/redshift.conf
 
 xfconf-query --channel thunar --property /misc-remember-geometry  --create --type bool --set false
 mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml/

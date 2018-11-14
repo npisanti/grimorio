@@ -1,5 +1,5 @@
 #!/bin/bash
 
-code /home/nick/gdrive/backups/todo.txt
+code /home/$USER/archivio/lists/todo.txt
 
 exit
