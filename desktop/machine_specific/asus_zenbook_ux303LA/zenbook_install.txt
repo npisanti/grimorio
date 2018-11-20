@@ -1,3 +1,4 @@
+press a lot of time DEL to enter bios
 
 
 // boot options----------------------------------------------------------------

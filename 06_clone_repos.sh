@@ -54,9 +54,9 @@ if  [ "$folder" = "addons" ]; then
 fi
 # -----------------------------------------------------------------------------
 
-# scrapbook
+# grimorio
 cd ~/oF
-git clone https://github.com/npisanti/grimorio.git
+git clone https://gitlab.com/npisanti/grimorio.git
 ln -s ~/oF/grimorio ~/grimorio
 
 # clone my website
