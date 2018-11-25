@@ -42,7 +42,7 @@ gap_x 30
 #gap_x 1370	### left | right
 #gap_x 1690	### left | right
 
-gap_y 90	### up | down
+gap_y 80	### up | down
 
 #alignment tl
 
