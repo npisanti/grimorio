@@ -33,12 +33,17 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/sebleedelisle/ofxLaser.git
     git clone https://github.com/nickgillian/ofxGrt.git
     git clone https://github.com/roymacdonald/ofxGLWarper.git
-    git clone https://github.com/armadillu/ofxFboBlur.git
     git clone https://github.com/orgicus/ofxCvPiCam.git
-    rm -rf ofxCvPiCam/libs/mmal
-
+        rm -rf ofxCvPiCam/libs/mmal
+    git clone https://github.com/armadillu/ofxFboBlur.git
+    
     # i always have those but still have to use it in a project
-    git clone https://github.com/satoruhiga/ofxNanoVG.git
+    git clone https://github.com/galsasson/ofxNanoVG.git
+        cd ofxNanoVG
+        git submodule init
+        git submodule update
+    cd ~/oF/addons
+    
     git clone https://github.com/robotconscience/ofxLibwebsockets
     git clone https://github.com/Flightphase/ofxImageSequence.git
 	git clone https://github.com/vanderlin/ofxBox2d.git
@@ -49,7 +54,7 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/galsasson/ofxInterface.git
 
 
-    ln -s ~/oF/addons/ofxPDSP pdsp
+    ln -s ~/oF/addons/ofxPDSP ~/pdsp
 
 fi
 # -----------------------------------------------------------------------------

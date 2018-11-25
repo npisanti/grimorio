@@ -35,13 +35,14 @@ own_window_title Bunsen Labs Default Conky
 alignment top_right
 double_buffer yes
 minimum_size 200 0  ### width | height
-maximum_width 200
+maximum_width 250
 gap_x 30
 
 
 #gap_x 1370	### left | right
 #gap_x 1690	### left | right
-#gap_y 60	### up | down
+
+gap_y 90	### up | down
 
 #alignment tl
 
@@ -53,7 +54,7 @@ gap_x 30
 use_xft yes
 
 #xftfont Liberation Mono:regular:size=9:antialias=False
-xftfont Terminus:regular:size=12:antialias=False
+xftfont Terminus:regular:size=13:antialias=False
 #xftfont Anonymous Pro:regular:size=8:antialias=False
 #xftfont Liberation Sans:size=9
 #font TerminusTTF:regular:size=12
@@ -157,37 +158,37 @@ Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
 
 Core 1:${alignr}${freq_g 1} Ghz
-${cpugraph cpu1 60,200}
+${cpugraph cpu1 70,250}
 Core 2:${alignr}${freq_g 2} Ghz
-${cpugraph cpu2 60,200}
+${cpugraph cpu2 70,250}
 Core 3:${alignr}${freq_g 3} Ghz
-${cpugraph cpu3 60,200}
+${cpugraph cpu3 70,250}
 Core 4:${alignr}${freq_g 4} Ghz
-${cpugraph cpu4 60,200}
+${cpugraph cpu4 70,250}
 
 Entropy:${alignr}${entropy_avail}/${entropy_poolsize}
-${entropy_bar 10, 200}
+${entropy_bar 10, 250}
 
 RAM: ${alignr}${mem} / ${memmax}
 Swap: ${alignr}${swap} / ${swapmax}
 Temperature: ${alignr}${execi 5 sensors |  awk '/Physical/ {print $4}'}
 #Fan Speed: ${alignr}${execi 5 sensors |  awk '/fan2/ {print $2}'} RPM
-Battery:  ${alignr} ${execi 9 acpi -b | awk '{print $3 " " $4}' | sed 's/,//g'}
+Battery:${alignr} ${execi 10 battery_status.sh}
 
 
 #NETWORKS------------------------------------------------------------------------------
 ${alignc}N E T W O R K
 ${hr}
-${if_gw}${if_up wlp3s0}Type: ${alignr}Wireless
-ESSID: ${alignr}${wireless_essid wlp3s0}
-#Local IP:${alignr}${addr wlan0}
-Strenght:${alignr}${wireless_link_qual_perc wlp3s0}%
-#UP: ${alignr}${upspeedf wlan0}kb/s
-Download: ${alignr}${downspeedf wlp3s0}kb/s
-Upload: ${alignr}${upspeedf wlp3s0}kb/s
+${if_gw}${if_up wlp2s0}Type: ${alignr}Wireless
+ESSID: ${alignr}${wireless_essid wlp2s0}
+Strenght:${alignr}${wireless_link_qual_perc wlp2s0}%
+Download: ${alignr}${downspeedf wlp2s0}kb/s
+Upload: ${alignr}${upspeedf wlp2s0}kb/s
+IP:${alignr}${addr wlp2s0}
 ${else}${if_up enp0s25}Type: ${alignr}Wired
 Download: ${alignr}${downspeedf enp0s25}kb/s
 Upload: ${alignr}${upspeedf enp0s25}kb/s
+IP:${alignr}${addr enp0s25}
 ${else}Not Connected
 ${endif}${endif}${endif}
 

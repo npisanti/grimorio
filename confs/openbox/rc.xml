@@ -52,7 +52,7 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
-    <keepBorder>yes</keepBorder>
+    <keepBorder>no</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>Terminus</name>
@@ -74,7 +74,7 @@
     </font>
     <font place="MenuHeader">
       <name>Terminus</name>
-      <size>12</size>
+      <size>18</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -83,7 +83,7 @@
     </font>
     <font place="MenuItem">
       <name>Terminus</name>
-      <size>12</size>
+      <size>15</size>
       <!-- font size in points -->
       <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->

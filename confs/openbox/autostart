@@ -61,6 +61,7 @@ thunar --daemon &
 ## Enable power management
 xfce4-power-manager &
 
+xcalib -d :0 /usr/share/color/icc/UX303LA_8086_AE0D1361.icm
+
 # Enable redshift 
 redshift -c .config/redshift.conf &
-

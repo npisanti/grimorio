@@ -1,0 +1,2 @@
+
+go into about:config and adjust layout.css.devPixelsPerPx to 1.25

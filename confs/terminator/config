@@ -28,7 +28,7 @@
     color_scheme = custom
     cursor_color = "#d8d8d8"
     cursor_shape = ibeam
-    font = Terminus 15
+    font = Terminus 18
     foreground_color = "#cccccc"
     palette = "#073642:#b4120d:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#e3541f:#586e75:#657b83:#839496:#6c71c4:#4db6b6:#fdf6e3"
     scrollback_infinite = True

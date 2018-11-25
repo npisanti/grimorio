@@ -18,5 +18,5 @@ cp ~/.local/share/applications/mimeapps.list ~/struttura/confs/mimeapps.list
 cp ~/.config/rncbc.org/QjackCtl.conf ~/struttura/confs/
 cp ~/.config/Code/User/settings.json ~/struttura/confs/vscode.json
 cp ~/.config/redshift.conf ~/struttura/confs/redshift.conf
-
+cp ~/.config/bl-exit/bl-exitrc ~/struttura/confs/
 exit
