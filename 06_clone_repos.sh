@@ -59,11 +59,6 @@ if  [ "$folder" = "addons" ]; then
 fi
 # -----------------------------------------------------------------------------
 
-# grimorio
-cd ~/oF
-git clone https://gitlab.com/npisanti/grimorio.git
-ln -s ~/oF/grimorio ~/grimorio
-
 # clone my website
 mkdir ~/htdocs
 cd ~/htdocs

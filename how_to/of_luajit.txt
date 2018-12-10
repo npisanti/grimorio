@@ -2,6 +2,8 @@
 
 sudo apt-get install lua5.1 luajit liblua5.1-0-dev libluajit-5.1-dev 
 
+// then reboot and make clean luaExample
+
 
 // to the addon_config.mk:
 

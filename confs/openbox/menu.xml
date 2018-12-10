@@ -36,7 +36,7 @@
 			</item>
 			<item label="Processing IDE">
 				<action name="Execute">
-					<command>~/archivio/apps/processing-3.3.7/processing</command>
+					<command>~/archivio/apps/processing-3.4/processing</command>
 				</action>
 			</item>
 			<item label="Arduino IDE">
@@ -46,12 +46,12 @@
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo ~/archivio/apps/etcher-electron-1.4.4-x86_64.AppImage</command>
+					<command>gksudo ~/archivio/apps/balena-etcher-electron-1.4.8-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Fritzing">
 				<action name="Execute">
-					<command>~/archivio/apps/fritzing-app/Fritzing -parts ~/archivio/apps/fritzing-parts</command>
+					<command>fritzing.sh</command>
 				</action>
 			</item>
 			<item label="Android Studio">
@@ -148,11 +148,6 @@
 			<item label="KDenLive">
 				<action name="Execute">
 					<command>kdenlive</command>
-				</action>
-			</item>
-			<item label="colorsampler.py">
-				<action name="Execute">
-					<execute>python ~/archivio/apps/colorsampler/colorsampler.py</execute>
 				</action>
 			</item>
 			<item label="Inkscape">
