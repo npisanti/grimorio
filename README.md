@@ -1,6 +1,6 @@
-struttura
+grimorio
 ==============
-This is basically a dotfile repo, a collection of files to set up my usual working enviroment, and also a collection of how tos to write down things i usually forget. 
+This is basically a dotfile repo, a collection of files to set up my usual working enviroment, a collection of scripts that i keep in my `~/bin` and also a collection of how tos to write down things i usually forget. 
    
 In a folder there is also included a build of the [Equilux theme](https://github.com/ddnexus/equilux-theme).   
 

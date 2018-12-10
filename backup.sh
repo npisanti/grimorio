@@ -1,22 +1,22 @@
 #!/bin/bash
 
-rm -rf ~/struttura/bin/*
-cp -ar ~/bin ~/struttura/
+rm -rf ~/grimorio/bin/*
+cp -ar ~/bin ~/grimorio/
 
-rm -rf ~/struttura/confs/*
-cp -ar ~/.themes/Black-Framework/ ~/struttura/confs/
-cp -ar ~/.config/terminator ~/struttura/confs/
-cp -ar ~/.config/openbox/ ~/struttura/confs/
-cp ~/.config/tint2rc ~/struttura/confs/tint2rc
+rm -rf ~/grimorio/confs/*
+cp -ar ~/.themes/Black-Framework/ ~/grimorio/confs/
+cp -ar ~/.config/terminator ~/grimorio/confs/
+cp -ar ~/.config/openbox/ ~/grimorio/confs/
+cp ~/.config/tint2rc ~/grimorio/confs/tint2rc
 cp ~/.Xresources confs/Xresources
-cp ~/.conkyrc ~/struttura/confs/conkyrc
-cp ~/.gdbinit ~/struttura/confs/gdbinit
-cp ~/.config/compton.conf ~/struttura/confs/compton.conf
-cp ~/.bashrc ~/struttura/confs/bashrc
-cp -r ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml ~/struttura/confs/thunar.xml
-cp ~/.local/share/applications/mimeapps.list ~/struttura/confs/mimeapps.list
-cp ~/.config/rncbc.org/QjackCtl.conf ~/struttura/confs/
-cp ~/.config/Code/User/settings.json ~/struttura/confs/vscode.json
-cp ~/.config/redshift.conf ~/struttura/confs/redshift.conf
-cp ~/.config/bl-exit/bl-exitrc ~/struttura/confs/
+cp ~/.conkyrc ~/grimorio/confs/conkyrc
+cp ~/.gdbinit ~/grimorio/confs/gdbinit
+cp ~/.config/compton.conf ~/grimorio/confs/compton.conf
+cp ~/.bashrc ~/grimorio/confs/bashrc
+cp -r ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml ~/grimorio/confs/thunar.xml
+cp ~/.local/share/applications/mimeapps.list ~/grimorio/confs/mimeapps.list
+cp ~/.config/rncbc.org/QjackCtl.conf ~/grimorio/confs/
+cp ~/.config/Code/User/settings.json ~/grimorio/confs/vscode.json
+cp ~/.config/redshift.conf ~/grimorio/confs/redshift.conf
+cp ~/.config/bl-exit/bl-exitrc ~/grimorio/confs/
 exit
