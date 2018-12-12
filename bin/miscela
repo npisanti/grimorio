@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-    exec /home/$USER/grimorio/glsl/miscela/bin/miscela
+    exec /home/$USER/oF/apps/miscela/miscela/bin/miscela
 else
     FILEPATH=$(realpath "$1")
-    exec /home/$USER/grimorio/glsl/miscela/bin/miscela $FILEPATH
+    exec /home/$USER/oF/apps/miscela/miscela/bin/miscela $FILEPATH
 fi
 
 exit

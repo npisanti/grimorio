@@ -19,19 +19,18 @@ if  [ "$folder" = "addons" ]; then
 
 	# cloning my forks, more up to date
 	git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
+	git clone https://github.com/npisanti/ofxDmx.git
 
     # cloning essentials addon that i have used
 	git clone https://github.com/danomatika/ofxMidi.git
     git clone https://github.com/nariakiiwatani/ofxWatchFile.git
-	git clone https://github.com/paulobarcelos/ofxHomography.git
 	git clone https://github.com/kylemcdonald/ofxCv.git
 	git clone https://github.com/dzlonline/ofxBiquadFilter.git
 	git clone https://github.com/kashimAstro/ofxGPIO.git
 	git clone https://github.com/matsune/ofxReactionDiffusion.git
-	git clone https://github.com/kylemcdonald/ofxDmx.git
     git clone https://github.com/openframeworks/ofxAddonTemplate.git
     git clone https://github.com/sebleedelisle/ofxLaser.git
-    git clone https://github.com/nickgillian/ofxGrt.git
+
     git clone https://github.com/roymacdonald/ofxGLWarper.git
     git clone https://github.com/orgicus/ofxCvPiCam.git
         rm -rf ofxCvPiCam/libs/mmal
@@ -44,16 +43,11 @@ if  [ "$folder" = "addons" ]; then
         git submodule update
     cd ~/oF/addons
     
-    git clone https://github.com/robotconscience/ofxLibwebsockets
-    git clone https://github.com/Flightphase/ofxImageSequence.git
-	git clone https://github.com/vanderlin/ofxBox2d.git
-    git clone https://github.com/braitsch/ofxParagraph.git
+    git clone https://github.com/mzed/ofxRapidLib.git
+    git clone https://github.com/Flightphase/ofxImageSequence.git    
     git clone https://github.com/arturoc/ofxEasing.git
-    git clone https://github.com/armadillu/ofxAnimatable.git
-    git clone https://github.com/armadillu/ofxHistoryPlot.git
-    git clone https://github.com/galsasson/ofxInterface.git
-
-
+	git clone https://github.com/vanderlin/ofxBox2d.git
+    
     ln -s ~/oF/addons/ofxPDSP ~/pdsp
 
 fi
