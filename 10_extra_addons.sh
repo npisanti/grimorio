@@ -2,6 +2,9 @@
 
 cd ~/oF/addons
 
+# lua scripting
+git clone https://github.com/danomatika/ofxLua.git
+
 # ofxBox2d + liquid / elastic 
 git clone https://github.com/tado/ofxLiquidFun.git
 # web sockets

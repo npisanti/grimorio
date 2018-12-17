@@ -94,24 +94,20 @@ some addons that works well on the rpi
 cd ~/your_of_folder/addons  
 git clone https://github.com/kashimAstro/ofxTFTTouch.git  
 git clone https://github.com/kashimAstro/ofxGPIO.git  
-git clone https://github.com/npisanti/ofxMidi.git  
+git clone https://github.com/danomatika/ofxMidi.git  
 git clone https://github.com/npisanti/ofxAudioFile.git  
 git clone https://github.com/npisanti/ofxSIMDFloats.git  
 git clone https://github.com/npisanti/ofxPDSP.git  
 git clone https://github.com/npisanti/ofxRPiezos.git  
 git clone https://github.com/kylemcdonald/ofxCv.git
 git clone https://github.com/patriciogonzalezvivo/ofxThermalPrinter.git  
-git clone https://github.com/npisanti/ofxPDSPPatches.git
+git clone https://github.com/npisanti/np-extra.git
+git clone https://github.com/npisanti/np-patches.git
 git clone https://github.com/nariakiiwatani/ofxWatchFile
 git clone https://github.com/npisanti/ofxDotFrag.git
 git clone https://github.com/Flightphase/ofxImageSequence.git
+git clone https://github.com/npisanti/ofxClayblocks.git
 
-```
-
-### other apps 
-```
-cd ~/openFrameworks/apps
-git clone https://github.com/npisanti/oscworks
 ```
 
 ### enable arduino

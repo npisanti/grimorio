@@ -15,7 +15,6 @@ cp ~/.config/compton.conf ~/grimorio/confs/compton.conf
 cp ~/.bashrc ~/grimorio/confs/bashrc
 cp -r ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml ~/grimorio/confs/thunar.xml
 cp ~/.local/share/applications/mimeapps.list ~/grimorio/confs/mimeapps.list
-cp ~/.config/rncbc.org/QjackCtl.conf ~/grimorio/confs/
 cp ~/.config/Code/User/settings.json ~/grimorio/confs/vscode.json
 cp ~/.config/redshift.conf ~/grimorio/confs/redshift.conf
 cp ~/.config/bl-exit/bl-exitrc ~/grimorio/confs/

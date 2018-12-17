@@ -14,7 +14,6 @@ cp ~/grimorio/confs/Xresources ~/.Xresources
 mkdir -p ~/.local/share/applications/
 cp ~/grimorio/confs/mimeapps.list ~/.local/share/applications/mimeapps.list 
 mkdir -p ~/.config/rncbc.org/
-cp ~/grimorio/confs/QjackCtl.conf  ~/.config/rncbc.org/QjackCtl.conf 
 cp -ar ~/grimorio/confs/vscode.json ~/.config/Code/User/settings.json 
 cp ~/grimorio/confs/redshift.conf ~/.config/redshift.conf
 
