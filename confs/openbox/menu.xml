@@ -41,7 +41,7 @@
 			</item>
 			<item label="Arduino IDE">
 				<action name="Execute">
-					<command>~/archivio/apps/arduino-1.8.5/arduino</command>
+					<command>~/archivio/apps/arduino-1.8.8/arduino</command>
 				</action>
 			</item>
 			<item label="Etcher">

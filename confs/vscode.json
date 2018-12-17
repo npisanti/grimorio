@@ -78,5 +78,6 @@
     "editor.fontSize": 22,
     "markdown.preview.fontSize": 16,
     "terminal.integrated.cursorBlinking": true,
-    "editor.trimAutoWhitespace": false
+    "editor.trimAutoWhitespace": false,
+    "window.titleBarStyle": "native"
 }

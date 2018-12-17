@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "changing atp sources.list"
-sudo cp  ~/struttura/extra/base/sources.list /etc/apt/sources.list
+sudo cp  ~/grimorio/extra/base/sources.list /etc/apt/sources.list
 sudo apt-get update
 
 echo "install multimedia keyring"
@@ -25,12 +25,12 @@ cp ~/struttura/extra/xinitrc ~/.xinitrc
 
 echo "copying system wide hardware confs"
 sudo mkdir -p /usr/share/X11/xorg.conf.d/
-sudo cp ~/struttura/extra/base/20-intel.conf /usr/share/X11/xorg.conf.d/20-intel.conf
+sudo cp ~/grimorio/extra/base/20-intel.conf /usr/share/X11/xorg.conf.d/20-intel.conf
 sudo mkdir -p /etc/modprobe.d/
-sudo cp ~/struttura/extra/kinect-depth.conf /etc/modprobe.d/kinect-depth.conf
-sudo cp ~/struttura/extra/base/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp ~/grimorio/extra/kinect-depth.conf /etc/modprobe.d/kinect-depth.conf
+sudo cp ~/grimorio/extra/base/lightdm.conf /etc/lightdm/lightdm.conf
 sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo cp ~/struttura/extra/base/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
+sudo cp ~/grimorio/extra/base/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 
 echo "setting up GRUB"
 sudo cp extra/base/grub /etc/default/grub
@@ -50,7 +50,7 @@ echo "prepend domain-name-servers 1.0.0.1;" | sudo tee -a /etc/dhcp/dhclient.con
 echo "prepend domain-name-servers 1.1.1.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 
 echo "setting up realtime limits"
-sudo cp ~/struttura/extra/base/limits.conf /etc/security/limits.conf  
+sudo cp ~/grimorio/extra/base/limits.conf /etc/security/limits.conf  
 sudo groupadd realtime
 sudo usermod -a -G realtime $USER
 
@@ -60,10 +60,10 @@ sudo usermod -a -G dialout $USER
 
 # adds .ino, .pde and .fzz from the folder extra_mime_types
 echo "installing mime types"
-xdg-mime install --novendor ~/struttura/extra/mime-types/ino.xml
-xdg-mime install --novendor ~/struttura/extra/mime-types/pde.xml
-xdg-mime install --novendor ~/struttura/extra/mime-types/fzz.xml
-xdg-mime install --novendor ~/struttura/extra/mime-types/frag.xml
+xdg-mime install --novendor ~/grimorio/extra/mime-types/ino.xml
+xdg-mime install --novendor ~/grimorio/extra/mime-types/pde.xml
+xdg-mime install --novendor ~/grimorio/extra/mime-types/fzz.xml
+xdg-mime install --novendor ~/grimorio/extra/mime-types/frag.xml
 
 echo "installing icons"
 mkdir ~/.icons

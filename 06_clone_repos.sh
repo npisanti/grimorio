@@ -34,13 +34,11 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/roymacdonald/ofxGLWarper.git
     git clone https://github.com/orgicus/ofxCvPiCam.git
         rm -rf ofxCvPiCam/libs/mmal
-    git clone https://github.com/armadillu/ofxFboBlur.git
-    
+    git clone https://github.com/kylemcdonald/ofxBlur.git
+
     # i always have those but still have to use it in a project
-    git clone https://github.com/galsasson/ofxNanoVG.git
-        cd ofxNanoVG
-        git submodule init
-        git submodule update
+    git clone https://github.com/satoruhiga/ofxNanoVG.git
+
     cd ~/oF/addons
     
     git clone https://github.com/mzed/ofxRapidLib.git

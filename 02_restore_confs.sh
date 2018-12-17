@@ -3,7 +3,7 @@
 # restoring confs
 echo "restoring confs"
 cp -ar ~/grimorio/confs/Black-Framework ~/.themes/ 
-cp -ar ~/grimorio/confs/terminator/config ~/.config/terminator/config
+#cp -ar ~/grimorio/confs/terminator/config ~/.config/terminator/config
 cp -ar ~/grimorio/confs/openbox ~/.config
 cp ~/grimorio/confs/tint2rc ~/.config/tint2rc
 cp ~/grimorio/confs/conkyrc ~/.conkyrc
@@ -17,8 +17,9 @@ mkdir -p ~/.config/rncbc.org/
 cp ~/grimorio/confs/QjackCtl.conf  ~/.config/rncbc.org/QjackCtl.conf 
 cp -ar ~/grimorio/confs/vscode.json ~/.config/Code/User/settings.json 
 cp ~/grimorio/confs/redshift.conf ~/.config/redshift.conf
-cp ft.conf
-cp ~/grimorio/confs/bl-exitrc  ~/.config/bl-exit/bl-exitrc 
+
+mkdir -p ~/.config/bl-exit/
+cp -r ~/grimorio/confs/bl-exitrc  ~/.config/bl-exit/bl-exitrc 
 
 xfconf-query --channel thunar --property /misc-remember-geometry  --create --type bool --set false
 mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml/
