@@ -21,13 +21,20 @@ paths[15]="/home/$USER/oF/apps/stubs"
 paths[17]="/home/$USER/oF/apps/scrittura"
 paths[18]="/home/$USER/grimorio"
 
+nothingtocommit="true"
+
 for i in "${paths[@]}"
 do
     cd "$i"
     status=`git status | sed -n 3p`
     if [ "$status" != "nothing to commit, working tree clean" ]; then
         echo "changes to commit in folder $i"
+        nothingtocommit="false"
     fi
 done
+
+if [ "$nothingtocommit" = "true" ]; then
+    echo "nothing to commit at all"
+fi
 
 exit
