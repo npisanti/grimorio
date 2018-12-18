@@ -2,7 +2,26 @@
 // copy archivio from another pc
 
 
+install visual studio 
+
+install dotgrid release
+
+install orca release
+
+install processing
+
+install arduino 
+
+install telegram 
+
+install etcher
+
+
 VISUAL STUDIO EXTENSIONS:
+    - C/C++ (microsoft)
+    - C++ Intellisense (austin)
+    - Lua extension 
+    - Swig 
     - Twilight theme
     - Shader languages support
     - Markdown Preview Github Styling
@@ -13,3 +32,9 @@ FIREFOX ADDONS
         https://addons.mozilla.org/en-US/firefox/addon/darkreader/
     adblock plus
     disconnect
+    stylus 
+        (userstyles.com : )
+        github ice dark
+        gmail clean dark
+
+

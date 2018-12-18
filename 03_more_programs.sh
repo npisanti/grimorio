@@ -28,16 +28,6 @@ git clone https://github.com/oblique/create_ap.git
 cd create_ap
 sudo make install
 
-echo "installing glslViewer"
-sudo apt-get install libglfw3-dev git-core libglu1-mesa-dev libxinerama-dev libxcursor-dev libxi-dev python-setuptools
-cd ~/apps
-git clone http://github.com/patriciogonzalezvivo/glslViewer
-cd glslViewer
-make
-sudo make install
-rm ~/bin/glsl 
-ln -s ~/apps/glslViewer/bin/glslViewer ~/bin/glsl
-
 echo "installing of_vscode script"
 cd ~/apps
 git clone https://github.com/npisanti/of_vscode.git
@@ -47,11 +37,6 @@ sh install.sh
 echo "installing FlameGraph scripts"
 cd ~/apps
 git clone https://github.com/brendangregg/FlameGraph.git
-
-echo "python colorsampler"
-sudo apt-get install python-pyside python-pyperclip
-cd ~/apps
-git clone https://github.com/cblgh/colorsampler.git
 
 echo "installing more fonts (requires sudo password)"
 
