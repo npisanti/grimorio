@@ -54,26 +54,9 @@
 					<command>fritzing.sh</command>
 				</action>
 			</item>
-			<item label="Android Studio">
-				<action name="Execute">
-					<execute>~/apps/android-studio/bin/studio.sh</execute>
-				</action>
-			</item>
 			<item label="Kcachegrind">
 				<action name="Execute">
 					<command>kcachegrind</command>
-				</action>
-			</item>
-			<item label="ossia score v1">
-				<action name="Execute">
-					<command>~/archivio/apps/Score-v1.0.0-b40-amd64.AppImage 
-</command>
-				</action>
-			</item>
-			<item label="ossia score v2a">
-				<action name="Execute">
-					<command>~/archivio/apps/Score-v1.0.0-b40-amd64.AppImage 
-</command>
 				</action>
 			</item>
 			<item label="Doxygen Wizard">
@@ -103,14 +86,9 @@
 					<command>audacity</command>
 				</action>
 			</item>
-			<item label="Pure Data">
+			<item label="Supercollider">
 				<action name="Execute">
-					<command>puredata</command>
-				</action>
-			</item>
-			<item label="VCV Rack">
-				<action name="Execute">
-					<command>~/archivio/apps/rack.sh</command>
+					<command>scide</command>
 				</action>
 			</item>
 			<item label="paulstretch">
@@ -246,11 +224,6 @@
 			<item label="Telegram">
 				<action name="Execute">
 					<command>~/apps/Telegram/Telegram</command>
-				</action>
-			</item>
-			<item label="caprine Messenger">
-				<action name="Execute">
-					<command>~/archivio/apps/caprine-2.18.0-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Skype">

@@ -9,6 +9,15 @@ install dotgrid release
 install orca release
 
 install processing
+	install oscP5
+	install ControlP5
+	install Ketai
+	install Minim
+	install P5.js mode
+	install Androide mode
+	install REPL mode
+	install Nature of Code examples
+
 
 install arduino 
 
