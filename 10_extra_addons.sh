@@ -35,4 +35,20 @@ git clone https://github.com/paulobarcelos/ofxHomography.git
 # i used this in phi
 git clone https://github.com/armadillu/ofxFboBlur.git
 
+# kinect & homography calibration
+git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
+
+# oF examples
+cd ~/oF/apps
+
+git clone https://github.com/firmread/NatureOfCode.git
+git clone https://github.com/ofZach/VAW_workshop.git
+git clone https://github.com/SAIC-ATS/ARTTECH-3039.git
+git clone https://github.com/andreasmuller/NoiseWorkshop.git
+mkdir jacres
+cd jacres
+git clone https://github.com/jacres/of-ESMShadowMapping.git
+git clone https://github.com/jacres/of-DeferredRendering.git
+
+
 exit

@@ -42,7 +42,7 @@ gap_x 30
 #gap_x 1370	### left | right
 #gap_x 1690	### left | right
 
-gap_y 80	### up | down
+#gap_y 80	### up | down
 
 #alignment tl
 
@@ -158,13 +158,13 @@ Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
 
 Core 1:${alignr}${freq_g 1} Ghz
-${cpugraph cpu1 70,250}
+${cpugraph cpu1 55,250}
 Core 2:${alignr}${freq_g 2} Ghz
-${cpugraph cpu2 70,250}
+${cpugraph cpu2 55,250}
 Core 3:${alignr}${freq_g 3} Ghz
-${cpugraph cpu3 70,250}
+${cpugraph cpu3 55,250}
 Core 4:${alignr}${freq_g 4} Ghz
-${cpugraph cpu4 70,250}
+${cpugraph cpu4 55,250}
 
 Entropy:${alignr}${entropy_avail}/${entropy_poolsize}
 ${entropy_bar 10, 250}
@@ -192,12 +192,9 @@ IP:${alignr}${addr enp0s25}
 ${else}Not Connected
 ${endif}${endif}${endif}
 
-#BATTERY------------------------------------------------------------------------------
-#${alignc}B A T T E R Y
-#${hr}
-#Status:  ${alignr} ${execi 60 acpi -b | awk '{print $3}'} ${execi 60 acpi -b | awk '{print $4}' | cut -b -3}
-#ETA:  ${alignr}${execi 60 acpi -b | awk '{print$5}'}
-
+${alignc}T O   C O M M I T
+${hr}
+${execi 30 repocheck.sh}
 
 #${alignc}S H O R T C U T    K E Y S
 #${hr}

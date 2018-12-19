@@ -36,17 +36,17 @@
 			</item>
 			<item label="Processing IDE">
 				<action name="Execute">
-					<command>~/archivio/apps/processing-3.4/processing</command>
+					<command>~/apps/processing-3.4/processing</command>
 				</action>
 			</item>
 			<item label="Arduino IDE">
 				<action name="Execute">
-					<command>~/archivio/apps/arduino-1.8.8/arduino</command>
+					<command>~/apps/arduino-1.8.8/arduino</command>
 				</action>
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo ~/archivio/apps/balena-etcher-electron-1.4.8-x86_64.AppImage</command>
+					<command>gksudo ~/apps/balena-etcher-electron-1.4.8-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Fritzing">
@@ -93,6 +93,11 @@
 			</item>
 		</menu>
 		<menu id="root-menu-925651" label="Audio">
+			<item label="Orca">
+				<action name="Execute">
+					<execute>~/apps/orca-linux-64/Orca</execute>
+				</action>
+			</item>
 			<item label="Audacity">
 				<action name="Execute">
 					<command>audacity</command>
@@ -132,7 +137,7 @@
 		<menu id="root-menu-85632" label="Graphics">
 			<item label="Dotgrid">
 				<action name="Execute">
-					<execute>~/archivio/apps/dotgrid-linux-64/Dotgrid</execute>
+					<execute>~/apps/dotgrid-linux-64/Dotgrid</execute>
 				</action>
 			</item>
 			<item label="GColor">
@@ -153,11 +158,6 @@
 			<item label="Inkscape">
 				<action name="Execute">
 					<command>inkscape</command>
-				</action>
-			</item>
-			<item label="Blender">
-				<action name="Execute">
-					<command>~/archivio/apps/blender-2.79b-linux-glibc219-x86_64/blender</command>
 				</action>
 			</item>
 			<item label="aseprite">
@@ -245,7 +245,7 @@
 			</item>
 			<item label="Telegram">
 				<action name="Execute">
-					<command>~/archivio/apps/Telegram/Telegram</command>
+					<command>~/apps/Telegram/Telegram</command>
 				</action>
 			</item>
 			<item label="caprine Messenger">

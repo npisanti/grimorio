@@ -13,12 +13,12 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/npisanti/ofxLaunchControllers.git
     git clone https://github.com/npisanti/ofxDotFrag.git
     git clone https://github.com/npisanti/ofxFixture.git
+    git clone https://github.com/npisanti/ofxGuiPresetSelector.git
 
 	git clone https://github.com/npisanti/np-extra.git
     git clone https://github.com/npisanti/np-patches.git
 
 	# cloning my forks, more up to date
-	git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 	git clone https://github.com/npisanti/ofxDmx.git
 
     # cloning essentials addon that i have used
@@ -56,6 +56,11 @@ mkdir ~/htdocs
 cd ~/htdocs
 git clone https://github.com/npisanti/npisanti-nocms.git
 
+# oF examples
+cd ~/oF/apps
+git clone https://github.com/firmread/NatureOfCode.git
+git clone https://github.com/ofZach/VAW_workshop.git
+
 #clone resistor color code tool
 git clone https://github.com/joewalnes/resisto.rs.git
 
@@ -68,17 +73,5 @@ git clone https://github.com/GlitchCodec/GLIC
 mkdir ~/fritzing_parts
 cd ~/fritzing_parts
 git clone https://github.com/lambert/fritzing-parts
-
-# oF examples
-cd ~/oF/apps
-
-git clone https://github.com/firmread/NatureOfCode.git
-git clone https://github.com/ofZach/VAW_workshop.git
-git clone https://github.com/SAIC-ATS/ARTTECH-3039.git
-git clone https://github.com/andreasmuller/NoiseWorkshop.git
-mkdir jacres
-cd jacres
-git clone https://github.com/jacres/of-ESMShadowMapping.git
-git clone https://github.com/jacres/of-DeferredRendering.git
 
 exit

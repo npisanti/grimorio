@@ -1,5 +1,5 @@
 #!/bin/bash
 
-code /home/$USER/archivio/lists/todo.txt
+code /home/$USER/lists/todo.txt
 
 exit
