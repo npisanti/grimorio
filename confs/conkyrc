@@ -194,7 +194,7 @@ ${endif}${endif}
 
 ${alignc}T O   C O M M I T
 ${hr}
-${execi 30 repocheck.sh}
+${execi 15 repocheck.sh}
 
 #${alignc}S H O R T C U T    K E Y S
 #${hr}

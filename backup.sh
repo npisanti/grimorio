@@ -15,4 +15,6 @@ cp ~/.local/share/applications/mimeapps.list ~/grimorio/confs/mimeapps.list
 cp ~/.config/Code/User/settings.json ~/grimorio/confs/vscode.json
 cp ~/.config/redshift.conf ~/grimorio/confs/redshift.conf
 cp ~/.config/bl-exit/bl-exitrc ~/grimorio/confs/
+cp ~/.gtkrc-2.0 ~/grimorio/confs/gtkrc-2.0
+
 exit

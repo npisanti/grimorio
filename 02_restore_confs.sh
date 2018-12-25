@@ -24,6 +24,8 @@ xfconf-query --channel thunar --property /misc-remember-geometry  --create --typ
 mkdir -p ~/.config/xfce4/xfconf/xfce-perchannel-xml/
 cp ~/grimorio/confs/thunar.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml 
 
+cp ~/grimorio/confs/gtkrc-2.0 ~/.gtkrc-2.0
+
 echo "extra themes"
 cp -r ~/grimorio/extra/themes/* ~/.themes/
 
