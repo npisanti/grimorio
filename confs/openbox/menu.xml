@@ -49,6 +49,11 @@
 					<command>gksudo ~/apps/balena-etcher-electron-1.4.8-x86_64.AppImage</command>
 				</action>
 			</item>
+			<item label="Ossia Score">
+				<action name="Execute">
+					<command>ossia.sh</command>
+				</action>
+			</item>
 			<item label="Fritzing">
 				<action name="Execute">
 					<command>fritzing.sh</command>

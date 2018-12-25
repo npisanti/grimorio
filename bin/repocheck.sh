@@ -35,7 +35,7 @@ do
 done
 
 if [ "$nothingtocommit" = "true" ]; then
-    echo "nothing to commit at all"
+    echo "nothing to commit"
 fi
 
 exit

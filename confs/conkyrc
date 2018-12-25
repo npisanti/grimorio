@@ -179,7 +179,7 @@ Battery:${alignr} ${execi 10 battery_status.sh}
 #NETWORKS------------------------------------------------------------------------------
 ${alignc}N E T W O R K
 ${hr}
-${if_gw}${if_up wlp2s0}Type: ${alignr}Wireless
+${if_up wlp2s0}Type: ${alignr}Wireless
 ESSID: ${alignr}${wireless_essid wlp2s0}
 Strenght:${alignr}${wireless_link_qual_perc wlp2s0}%
 Download: ${alignr}${downspeedf wlp2s0}kb/s
@@ -190,7 +190,7 @@ Download: ${alignr}${downspeedf enp0s25}kb/s
 Upload: ${alignr}${upspeedf enp0s25}kb/s
 IP:${alignr}${addr enp0s25}
 ${else}Not Connected
-${endif}${endif}${endif}
+${endif}${endif}
 
 ${alignc}T O   C O M M I T
 ${hr}

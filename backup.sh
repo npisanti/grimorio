@@ -1,8 +1,5 @@
 #!/bin/bash
 
-rm -rf ~/grimorio/bin/*
-cp -ar ~/bin ~/grimorio/
-
 rm -rf ~/grimorio/confs/*
 cp -ar ~/.themes/Black-Framework/ ~/grimorio/confs/
 cp -ar ~/.config/terminator ~/grimorio/confs/

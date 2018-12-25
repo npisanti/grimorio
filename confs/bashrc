@@ -126,5 +126,7 @@ export GOPATH=$HOME/godir
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
+export PATH=$PATH:$HOME/grimorio/bin
+
 # deactivate accessibility
 export NO_AT_BRIDGE=1
