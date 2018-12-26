@@ -29,10 +29,5 @@ cp ~/grimorio/confs/gtkrc-2.0 ~/.gtkrc-2.0
 echo "extra themes"
 cp -r ~/grimorio/extra/themes/* ~/.themes/
 
-# restoring bins
-echo "restoring bins"
-cp -ar ~/grimorio/bin  ~/
-cd ~/bin
-chmod +x *.sh
 
 exit
