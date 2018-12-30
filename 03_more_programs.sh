@@ -22,6 +22,10 @@ sudo apt-get -t stretch-backports install kicad
 echo "installing jack utils"
 sudo apt-get -y install qjackctl aconnectgui jack-midi-clock jack-capture
 
+echo "adding user to realtime group"
+sudo groupadd realtime
+sudo usermod -a -G realtime $USER
+
 echo "installing create_ap"
 cd ~/apps
 git clone https://github.com/oblique/create_ap.git
