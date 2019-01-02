@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    #exec /home/$USER/apps/Orca-c/build/release/orca --strict-timing --portmidi-output-device 0 
+    exec /home/$USER/apps/Orca-c/build/release/orca --strict-timing  --osc-port 4444 
+else
+    FILEPATH=$(realpath "$1")
+    exec /home/$USER/apps/Orca-c/build/release/orca --strict-timing  --osc-port 4444 $FILEPATH
+    #exec /home/$USER/apps/Orca-c/build/release/orca --strict-timing --portmidi-output-device 0 $FILEPATH
+fi
+
+exit

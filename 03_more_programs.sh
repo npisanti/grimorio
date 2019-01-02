@@ -32,6 +32,13 @@ git clone https://github.com/oblique/create_ap.git
 cd create_ap
 sudo make install
 
+echo "installing Orca-c" 
+cd ~/apps
+sudo apt-get install libportmidi-dev
+git clone https://github.com/hundredrabbits/Orca-c.git
+cd Orca-c
+./tool --portmidi build release orca 
+
 echo "installing of_vscode script"
 cd ~/apps
 git clone https://github.com/npisanti/of_vscode.git

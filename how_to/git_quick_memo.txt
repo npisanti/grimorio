@@ -50,7 +50,11 @@ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.gi
 // for oF
 git remote add upstream https://github.com/openframeworks/openFrameworks.git
 
-// fetch repo
+// merge original repo 
+git fetch upstream
+git pull upstream master
+
+// or with a different branch
 git fetch upstream
 git checkout selectedbranch
 git merge upstream/selectedbranch
