@@ -30,10 +30,18 @@
     cursor_shape = ibeam
     font = Terminus 18
     foreground_color = "#cccccc"
-    palette = "#073642:#b4120d:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#e3541f:#586e75:#657b83:#839496:#6c71c4:#4db6b6:#fdf6e3"
+    palette = "#073642:#b4120d:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#e3541f:#586e75:#657b83:#839496:#6c71c4:#4db6b6:#babdb6"
     scrollback_infinite = True
     scrollback_lines = 5000
     scrollbar_position = hidden
     show_titlebar = False
     urgent_bell = True
+    use_system_font = False
+  [[orca]]
+    cursor_color = "#aaaaaa"
+    font = CodingFontTobi 30
+    foreground_color = "#ff1010"
+    palette = "#2e3436:#ff4040:#4e9a06:#c4a000:#3465a4:#75507b:#ffffff:#d3d7cf:#2e3436:#ffffff:#8ae234:#f57900:#729fcf:#ad7fa8:#babdb6:#eeeeec"
+    scrollbar_position = hidden
+    show_titlebar = False
     use_system_font = False
