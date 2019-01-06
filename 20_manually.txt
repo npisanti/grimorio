@@ -5,7 +5,7 @@ INSTALL VS CODE
 VISUAL STUDIO EXTENSIONS:
     - C/C++ (microsoft)
     - C++ Intellisense (austin)
-    - Lua extension 
+    - Lua Linter 
     - Swig 
     - Twilight theme
     - Shader languages support

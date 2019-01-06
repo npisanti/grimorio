@@ -171,8 +171,8 @@ ${entropy_bar 10, 250}
 
 RAM: ${alignr}${mem} / ${memmax}
 Swap: ${alignr}${swap} / ${swapmax}
-Temperature: ${alignr}${execi 5 sensors |  awk '/Physical/ {print $4}'}
-#Fan Speed: ${alignr}${execi 5 sensors |  awk '/fan2/ {print $2}'} RPM
+Temperature: ${alignr}${execi 5 sensors |  awk '/Package/ {print $4}'}
+Fan Speed: ${alignr}${execi 5 sensors |  awk '/cpu_fan/ {print $2}'} RPM
 Battery:${alignr} ${execi 10 battery_status.sh}
 
 
@@ -184,11 +184,9 @@ ESSID: ${alignr}${wireless_essid wlp2s0}
 Strenght:${alignr}${wireless_link_qual_perc wlp2s0}%
 Download: ${alignr}${downspeedf wlp2s0}kb/s
 Upload: ${alignr}${upspeedf wlp2s0}kb/s
-IP:${alignr}${addr wlp2s0}
 ${else}${if_up enp0s25}Type: ${alignr}Wired
 Download: ${alignr}${downspeedf enp0s25}kb/s
 Upload: ${alignr}${upspeedf enp0s25}kb/s
-IP:${alignr}${addr enp0s25}
 ${else}Not Connected
 ${endif}${endif}
 

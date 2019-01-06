@@ -16,4 +16,4 @@ sudo geany /usr/share/code/resources/app/out/vs/workbench/workbench.main.css
 
 // search
 .editor-group-container>.title .title-label a{text-decoration:none;font-size:
-// and change the font size to 16px or 12px
+// and change the font size from 13px to 16px or 12px
