@@ -22,7 +22,8 @@ sudo apt-get -t stretch-backports install kicad
 echo "installing jack utils"
 sudo apt-get -y install qjackctl aconnectgui jack-midi-clock jack-capture
 
-echo "adding user to realtime group"
+echo "setting up realtime limits"
+sudo cp ~/grimorio/extra/base/limits.conf /etc/security/limits.conf  
 sudo groupadd realtime
 sudo usermod -a -G realtime $USER
 
@@ -34,7 +35,7 @@ sudo make install
 
 echo "installing Orca-c" 
 cd ~/apps
-sudo apt-get install libportmidi-dev
+sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev
 git clone https://github.com/hundredrabbits/Orca-c.git
 cd Orca-c
 ./tool --portmidi build release orca 
