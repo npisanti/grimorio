@@ -1,0 +1,207 @@
+# For commands above TEXT check:
+# http://conky.sourceforge.net/config_settings.html
+
+# For commands available below TEXT check:
+# http://conky.sourceforge.net/variables.html
+
+# Bunsen Labs Conky help threads
+# http://crunchbang.org/forums/viewtopic.php?pid=371424#p371424
+
+# beta tested by: smacz
+# Enjoy! :)
+
+# pkill -xf "conky -q -c $HOME/.config/conky/BL-Default.conkyrc" &
+###  Begin Window Settings  #####################
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
+own_window_colour 000000
+own_window_class Conky
+own_window_title Bunsen Labs Default Conky
+
+### ARGB can be used for real transparency
+### NOTE that a composite manager is required for real transparency.
+### This option will not work as desired (in most cases) in conjunction with
+### own_window_type normal
+# own_window_argb_visual yes # Options: yes or no
+
+### When ARGB visuals are enabled, this use this to modify the alpha value
+### Use: own_window_type normal
+### Use: own_window_transparent no
+### Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
+# own_window_argb_value 50
+
+alignment top_right
+double_buffer yes
+minimum_size 200 0  ### width | height
+maximum_width 200
+
+gap_x 30    ### left | right
+gap_y 40	### up | down
+
+
+#alignment tl
+
+
+
+#######################  End Window Settings  ###
+###  Font Settings  #############################
+# Use Xft (anti-aliased font and stuff)
+use_xft yes
+
+#xftfont Liberation Mono:regular:size=9:antialias=False
+xftfont Terminus:regular:size=12:antialias=False
+#xftfont Anonymous Pro:regular:size=8:antialias=False
+#xftfont Liberation Sans:size=9
+#font TerminusTTF:regular:size=12
+
+# Alpha of Xft font. Must be a value at or between 1 and 0 ###
+xftalpha 1
+# Force UTF8? requires XFT ###
+override_utf8_locale yes
+
+uppercase no
+#########################  End Font Settings  ###
+###  Colour Settings  ###########################
+draw_shades no #yes
+default_shade_color 000000
+
+draw_outline no # amplifies text if yes
+default_outline_color 000000
+
+#default_color 656667 # Waldorf original colour
+#default_color 7a7a7a # Flame  & Bunsen Grey
+#default_color 929292 # Labs Grey
+#default_color C0C0C0 # Silver
+default_color C0C0C0 
+color0 B0E0E6 # PowderBlue
+color1 778899 # LightSlateGray
+color2 D8BFD8 # Thistle
+color3 9ACD32 # YellowGreen
+color4 FFA07A # LightSalmon
+color5 FFDEAD # NavajoWhite
+color6 00BFFF # DeepSkyBlue
+color7 5F9EA0 # CadetBlue
+color8 BDB76B # DarkKhaki
+color9 CD5C5C # IndianRed
+#######################  End Colour Settings  ###
+###  Borders Section  ###########################
+draw_borders no
+# Stippled borders?
+stippled_borders 5
+# border margins
+border_inner_margin 5
+border_outer_margin 0
+# border width
+border_width 2
+# graph borders
+draw_graph_borders yes #no
+#default_graph_size 15 40
+#######################  End Borders Section  ###
+###  Miscellaneous Section  #####################
+# Boolean value, if true, Conky will be forked to background when started.
+background yes
+
+# Adds spaces around certain objects to stop them from moving other things
+# around, this only helps if you are using a mono font
+# Options: right, left or none
+use_spacer none
+
+# Default and Minimum size is 256 - needs more for single commands that
+# "call" a lot of text IE: bash scripts
+text_buffer_size 6144
+
+# Subtract (file system) buffers from used memory?
+no_buffers yes
+
+# change GiB to G and MiB to M
+short_units yes
+
+# Like it says, ot pads the decimals on % values
+# doesn't seem to work since v1.7.1
+pad_percents 2
+
+# Imlib2 image cache size, in bytes. Default 4MiB Increase this value if you use
+# $image lots. Set to 0 to disable the image cache.
+imlib_cache_size 0
+
+# Use the Xdbe extension? (eliminates flicker)
+# It is highly recommended to use own window with this one
+# so double buffer won't be so big.
+double_buffer yes
+
+#   Maximum size of user text buffer, i.e. layout below TEXT line in config file
+#  (default is 16384 bytes)
+# max_user_text 16384
+
+# Desired output unit of all objects displaying a temperature. Parameters are
+# either "fahrenheit" or "celsius". The default unit is degree Celsius.
+# temperature_unit Fahrenheit
+
+#################  End Miscellaneous Section  ###
+#### ${font Liberation Mono:bold:size=10}${alignc}${execpi 600 $HOME/.config/conky/scripts/bunsenweather.sh}
+update_interval 1
+
+# an interface is up only if it has an address
+if_up_strictness address
+
+TEXT
+${color}${alignc}S Y S T E M   I N F O
+${hr}
+Date:  ${alignr}${execi 3600 date | awk '{print$1}' } ${execi 3600 date | awk '{print$3}' } ${execi 3600 date | awk '{print$2}' } ${execi 3600 date | awk '{print$6}' }
+Host:${alignr}${nodename}
+#Kernel: ${alignr}${execi 60 uname -a | awk '{print $3}'}
+Uptime:${alignr}${uptime}
+
+Core 1:${alignr}${freq_g 1} Ghz
+${cpugraph cpu1 55,200}
+Core 2:${alignr}${freq_g 2} Ghz
+${cpugraph cpu2 55,200}
+Core 3:${alignr}${freq_g 3} Ghz
+${cpugraph cpu3 55,200}
+Core 4:${alignr}${freq_g 4} Ghz
+${cpugraph cpu4 55,200}
+
+RAM: ${alignr}${mem} / ${memmax}
+Swap: ${alignr}${swap} / ${swapmax}
+Temperature: ${alignr}${execi 5 sensors |  awk '/temp1/ {print $2}'}
+Fan Speed: ${alignr}${execi 5 sensors |  awk '/fan1/ {print $2}'} RPM
+Entropy:${alignr}${entropy_avail} / ${entropy_poolsize}
+Battery:${alignr} ${execi 10 battery_status.sh}
+
+
+#NETWORKS------------------------------------------------------------------------------
+${alignc}N E T W O R K
+${hr}
+${if_up wlp3s0}Type: ${alignr}Wireless
+ESSID: ${alignr}${wireless_essid wlp3s0}
+Strenght:${alignr}${wireless_link_qual_perc wlp3s0}%
+Download: ${alignr}${downspeedf wlp3s0}kb/s
+Upload: ${alignr}${upspeedf wlp3s0}kb/s
+${else}${if_up enp0s25}Type: ${alignr}Wired
+Download: ${alignr}${downspeedf enp0s25}kb/s
+Upload: ${alignr}${upspeedf enp0s25}kb/s
+${else}Not Connected
+${endif}${endif}
+
+${alignc}T O   C O M M I T
+${hr}
+${execi 15 repocheck.sh}
+
+#${alignc}S H O R T C U T    K E Y S
+#${hr}
+#[W] + r${alignr}(r)un dmenu
+#[W] + q${alignr}(q)uit window
+#[W] + tab/t/y${alignr}(t)erminal
+#[W] + e${alignr}geany (e)ditor
+#[W] + c${alignr}(c)hromium
+#[W] + f${alignr}(f)ile manager
+#[W] + h${alignr}(h)top
+#[W] + l${alignr}(l)ock screen
+
+#[W] + arrows ${alignr}move focus
+#[W] + pags${alignr} cycle desktop
+#[W+S]+1-4${alignr} move to desktop
+#[W] + m${alignr}(m)aximize
+#[W+S]+arrows${alignr}tiling
