@@ -18,9 +18,8 @@ paths[13]="oF/apps/orcamenti"
 paths[14]="oF/apps/miscela"
 paths[15]="oF/apps/sketches"
 paths[15]="oF/apps/stubs"
-paths[17]="oF/apps/scrittura"
+paths[17]="oF/apps/instruments"
 paths[18]="oF/addons/ofxSIMDFloats"
-paths[19]="oF/apps/np-instruments"
 
 nothingtocommit="true"
 

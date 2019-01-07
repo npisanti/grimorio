@@ -56,6 +56,20 @@ mkdir ~/htdocs
 cd ~/htdocs
 git clone https://github.com/npisanti/npisanti-nocms.git
 
+
+# may apps
+cd ~/oF/apps
+git clone https://github.com/npisanti/orcamenti.git
+git clone https://github.com/npisanti/np-instruments.git instruments
+git clone https://github.com/npisanti/np-stubs.git stubs
+git clone https://github.com/npisanti/np-sketches.git sketches
+git clone https://github.com/npisanti/miscela.git
+
+# bash code 
+mkdir -p ~/workspace
+cd ~/workspace
+git clone https://gitlab.com/npisanti/bashcode.git
+
 # oF examples
 cd ~/oF/apps
 git clone https://github.com/firmread/NatureOfCode.git

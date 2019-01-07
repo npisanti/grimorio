@@ -15,6 +15,7 @@ install Dotgrid release
     https://hundredrabbits.itch.io/dotgrid
     
 install Orca release
+    https://hundredrabbits.itch.io/orca
 
 install processing
 	install oscP5
@@ -40,11 +41,11 @@ install Ossia Score
 
 
 FIREFOX ADDONS
-    dark reader
-        https://addons.mozilla.org/en-US/firefox/addon/darkreader/
-    adblock plus
-    disconnect
-    stylus 
+    Adblock Plus
+    Disconnect
+    Stylus 
         (userstyles.com : )
-        github ice dark
-        gmail clean dark
+        Github Ice Dark
+        Gmail Clean Dark
+        Dark Facebook by DM
+        Dark/Night Facebook Messenger
