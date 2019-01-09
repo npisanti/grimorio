@@ -32,6 +32,7 @@ sudo usermod -a -G realtime yourUserID
 //in jack controls setup, set "realtime" to checked and "priority" to 89
 //check that jack is running with high priority:
 ps -Leo class,comm,rtprio | grep jack
+
 //also in setup->display uncheck "blink indicator"
 
 
@@ -50,4 +51,3 @@ sudo modprobe snd-virmidi
 //test midi with
 amidi -l 
 amidi -p hw:x,0,0 -d
-
