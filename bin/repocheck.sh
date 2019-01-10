@@ -31,7 +31,9 @@ for i in "${paths[@]}"
 do
     cd "$HOME/$i"
     status=`git status | sed -n 3p`
-    if [ "$status" != "nothing to commit, working tree clean" ]; then
+    if [ "$status" == "  (use \"git push\" to publish your local commits)" ]; then
+        echo "> $i"
+    elif [ "$status" != "nothing to commit, working tree clean" ]; then
         echo "$i"
         nothingtocommit="false"
     fi
