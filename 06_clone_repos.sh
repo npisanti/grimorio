@@ -56,8 +56,7 @@ mkdir ~/htdocs
 cd ~/htdocs
 git clone https://github.com/npisanti/npisanti-nocms.git
 
-
-# may apps
+# my apps
 cd ~/oF/apps
 git clone https://github.com/npisanti/orcamenti.git
 git clone https://github.com/npisanti/np-instruments.git instruments
@@ -65,10 +64,11 @@ git clone https://github.com/npisanti/np-stubs.git stubs
 git clone https://github.com/npisanti/np-sketches.git sketches
 git clone https://github.com/npisanti/miscela.git
 
-# bash code 
+# bash code and graphics
 mkdir -p ~/workspace
 cd ~/workspace
-git clone https://gitlab.com/npisanti/bashcode.git
+git clone https://github.com/npisanti/bashcode.git
+git clone https://github.com/npisanti/graphicsrepo.git graphics
 
 # oF examples
 cd ~/oF/apps
@@ -82,10 +82,5 @@ git clone https://github.com/joewalnes/resisto.rs.git
 mkdir ~/sketchbook
 cd ~/sketchbook
 git clone https://github.com/GlitchCodec/GLIC
-
-# fritzing parts
-mkdir ~/fritzing_parts
-cd ~/fritzing_parts
-git clone https://github.com/lambert/fritzing-parts
 
 exit
