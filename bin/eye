@@ -1,0 +1,3 @@
+#!/bin/bash
+exec /home/$USER/oF/apps/sketches/the_eye/bin/the_eye "$@"
+exit
