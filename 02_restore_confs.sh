@@ -3,7 +3,8 @@
 # restoring confs
 echo "restoring confs"
 cp -ar ~/grimorio/confs/Black-Framework ~/.themes/ 
-#cp -ar ~/grimorio/confs/terminator/config ~/.config/terminator/config
+mkdir -p ~/.config/terminator/
+cp -ar ~/grimorio/confs/terminator/config ~/.config/terminator/config
 cp -ar ~/grimorio/confs/openbox ~/.config
 cp ~/grimorio/confs/tint2rc ~/.config/tint2rc
 cp ~/grimorio/confs/conkyrc ~/.conkyrc
@@ -13,7 +14,7 @@ cp ~/grimorio/confs/bashrc ~/.bashrc
 cp ~/grimorio/confs/Xresources ~/.Xresources 
 mkdir -p ~/.local/share/applications/
 cp ~/grimorio/confs/mimeapps.list ~/.local/share/applications/mimeapps.list 
-mkdir -p ~/.config/rncbc.org/
+mkdir -p ~/.config/Code/User/
 cp -ar ~/grimorio/confs/vscode.json ~/.config/Code/User/settings.json 
 cp ~/grimorio/confs/redshift.conf ~/.config/redshift.conf
 

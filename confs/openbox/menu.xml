@@ -46,7 +46,7 @@
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo ~/apps/balena-etcher-electron-1.4.8-x86_64.AppImage</command>
+					<command>gksudo ~/apps/balena-etcher-electron-1.4.9-x86_64.AppImage</command>
 				</action>
 			</item>
 			<item label="Ossia Score">

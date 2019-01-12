@@ -484,9 +484,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>MocP</name>
+          <name>Orca term</name>
         </startupnotify>
-        <command>x-terminal-emulator -T 'mocp' -e mocp</command>
+        <command>x-terminal-emulator --geometry 1000x950+0+0 --profile=orca</command>
       </action>
     </keybind>
     <keybind key="W-p">
@@ -510,6 +510,17 @@
     <keybind key="W-Return">
       <action name="ShowMenu">
         <menu>root-menu</menu>
+      </action>
+    </keybind>
+    <!-- screencasting -->
+    <keybind key="W-S-s">
+      <action name="Execute">
+        <command>start_screencast.sh</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-d">
+      <action name="Execute">
+        <command>stop_screencast.sh</command>
       </action>
     </keybind>
     <!-- fine mouse control sometimes is useful  -->
