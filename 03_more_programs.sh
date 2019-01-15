@@ -36,8 +36,9 @@ sudo make install
 echo "installing Orca-c" 
 cd ~/apps
 sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev
-git clone https://github.com/hundredrabbits/Orca-c.git
+git clone https://github.com/npisanti/Orca-c.git
 cd Orca-c
+git remote add upstream https://github.com/hundredrabbits/Orca-c.git
 ./tool --portmidi build release orca 
 
 echo "installing of_vscode script"

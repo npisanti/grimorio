@@ -1,5 +1,6 @@
 #!/bin/bash
 declare -a paths
+declare -a forks
 
 paths=(
     "oF"
@@ -26,6 +27,9 @@ paths=(
     "oF/addons/ofxWatchFile"
 )
 
+forks=(
+    "apps/Orca-c"
+)
 
 for i in "${paths[@]}"
 do
@@ -36,5 +40,16 @@ do
         echo "[ $i ] $status"
     fi
 done
+
+for i in "${forks[@]}"
+do
+    cd "$HOME/$i"
+    git fetch -q upstream
+    status=`git diff master upstream/master`
+    if [ "$status" != "" ]; then
+        echo "[ $i ] there are difference between your fork and upstream"
+    fi
+done
+
 
 exit
