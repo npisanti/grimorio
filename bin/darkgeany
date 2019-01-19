@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ "$*" == "" ]; then
-    GTK2_RC_FILES=~/bin/geany.gtkrc geany --no-msgwin
-else
-    GTK2_RC_FILES=~/bin/geany.gtkrc geany --no-msgwin "$*"
-fi
-exit

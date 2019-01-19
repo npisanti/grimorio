@@ -17,4 +17,14 @@ cp ~/.config/redshift.conf ~/grimorio/confs/redshift.conf
 cp ~/.config/bl-exit/bl-exitrc ~/grimorio/confs/
 cp ~/.gtkrc-2.0 ~/grimorio/confs/gtkrc-2.0
 
+mkdir -p ~/grimorio/confs/geany/colorschemes
+mkdir -p ~/grimorio/confs/geany/filedefs
+mkdir -p ~/grimorio/confs/geany/plugins/treebrowser
+cp ~/.config/geany/colorschemes/sands.conf ~/grimorio/confs/geany/colorschemes
+cp ~/.config/geany/filedefs/filetypes.cpp ~/grimorio/confs/geany/filedefs
+cp ~/.config/geany/plugins/treebrowser/treebrowser.conf ~/grimorio/confs/geany/plugins/treebrowser
+cp ~/.config/geany/geany.conf ~/grimorio/confs/geany
+cp ~/.config/geany/keybindings.conf ~/grimorio/confs/geany
+
+
 exit

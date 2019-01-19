@@ -438,7 +438,7 @@
           <enabled>false</enabled>
           <name>Editor</name>
         </startupnotify>
-        <command>code</command>
+        <command>dgeany</command>
       </action>
     </keybind>
     <keybind key="W-a">

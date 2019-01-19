@@ -29,9 +29,9 @@
 		</item>
 		<separator/>
 		<menu id="root-menu-823532" label="Coding">
-			<item label="Visual Studio Code">
+			<item label="Geany Text Editor">
 				<action name="Execute">
-					<command>code</command>
+					<command>dgeany</command>
 				</action>
 			</item>
 			<item label="Processing IDE">
