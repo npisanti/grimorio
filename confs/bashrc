@@ -57,8 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;91m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -90,7 +89,7 @@ export GCC_COLORS='error=00;31:warning=00;33:note=00;36:caret=00;32:locus=01:quo
 
 
 # http://linux-sxs.org/housekeeping/lscolors.html
-export LS_COLORS='di=33:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=32:*.rpm=90' 
+export LS_COLORS='di=94:fi=0:ln=31:pi=5:so=5:bd=5:cd=6:or=31:mi=0:ex=32:*.rpm=90' 
 
 
 # some more ls aliases

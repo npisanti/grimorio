@@ -30,7 +30,7 @@
     cursor_shape = ibeam
     font = Terminus 18
     foreground_color = "#cccccc"
-    palette = "#073642:#b4120d:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#e3541f:#586e75:#657b83:#839496:#6c71c4:#34e2e2:#babdb6"
+    palette = "#073642:#bf2020:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#ef2929:#586e75:#657b83:#839496:#6c71c4:#34e2e2:#babdb6"
     scrollback_infinite = True
     scrollback_lines = 5000
     scrollbar_position = hidden
