@@ -1,5 +1,5 @@
 #!/bin/bash
 
-code /home/$USER/lists/todo.txt
+dgeany /home/$USER/lists/todo.txt
 
 exit
