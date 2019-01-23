@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/apps/Dotgrid/desktop
+npm start
+exit

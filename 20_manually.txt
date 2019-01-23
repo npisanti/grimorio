@@ -11,12 +11,6 @@ VISUAL STUDIO EXTENSIONS:
     - Shader languages support
     - Markdown Preview Github Styling
 
-install Dotgrid release
-    https://hundredrabbits.itch.io/dotgrid
-    
-install Orca release
-    https://hundredrabbits.itch.io/orca
-
 install processing
 	install oscP5
 	install ControlP5
@@ -30,15 +24,11 @@ install processing
 install Arduino 
     https://www.arduino.cc/download_handler.php
 
-install Telegram desktop app
-    https://desktop.telegram.org/
-
 install Etcher
     https://www.balena.io/etcher/
 
 install Ossia Score
     https://github.com/OSSIA/score/releases/tag/v1.0.0-b40
-
 
 FIREFOX ADDONS
     Adblock Plus

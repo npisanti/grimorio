@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/apps/Orca/desktop
+npm start
+exit
