@@ -58,3 +58,14 @@ git pull upstream master
 git fetch upstream
 git checkout selectedbranch
 git merge upstream/selectedbranch
+
+
+// -------------- REBASE THINGS ------------------------
+// first of all close the text editor then
+git rebase -i HEAD~4
+// to rebase the last 4 commits
+// leave one to "pick" and the other to "squash", save and exit
+// now in the new opened file you can change the messages
+// change the message to the commit you picked if you want
+// then 
+git push -f 

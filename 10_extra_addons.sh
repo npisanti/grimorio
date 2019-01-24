@@ -38,6 +38,10 @@ git clone https://github.com/armadillu/ofxFboBlur.git
 # kinect & homography calibration
 git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 
+# tags system for objects
+git clone https://github.com/armadillu/ofxTagSystem
+
+
 # oF examples
 cd ~/oF/apps
 
