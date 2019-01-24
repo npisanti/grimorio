@@ -83,7 +83,7 @@
 		<menu id="root-menu-925651" label="Audio">
 			<item label="Orca">
 				<action name="Execute">
-					<execute>~/apps/orca-linux-64/Orca</execute>
+					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'Orca' -e orca</command>
 				</action>
 			</item>
 			<item label="Audacity">
@@ -91,14 +91,19 @@
 					<command>audacity</command>
 				</action>
 			</item>
-			<item label="Supercollider">
+			<item label="Ardour">
 				<action name="Execute">
-					<command>scide</command>
+					<command>ardour</command>
 				</action>
 			</item>
 			<item label="paulstretch">
 				<action name="Execute">
 					<command>paulstretch</command>
+				</action>
+			</item>
+			<item label="Supercollider">
+				<action name="Execute">
+					<command>scide</command>
 				</action>
 			</item>
 			<item label="Jack Controls">
@@ -120,7 +125,7 @@
 		<menu id="root-menu-85632" label="Graphics">
 			<item label="Dotgrid">
 				<action name="Execute">
-					<execute>~/apps/dotgrid-linux-64/Dotgrid</execute>
+					<execute>dotgrid</execute>
 				</action>
 			</item>
 			<item label="GColor">
@@ -228,7 +233,7 @@
 			</item>
 			<item label="Telegram">
 				<action name="Execute">
-					<command>~/apps/Telegram/Telegram</command>
+					<command>telegram-desktop</command>
 				</action>
 			</item>
 			<item label="Skype">
