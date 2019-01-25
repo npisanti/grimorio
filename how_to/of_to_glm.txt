@@ -1,0 +1,4 @@
+
+
+vec.lengthSquared( vecb )     ---> glm::length2( vec, vecb ) 
+vec.squaredDistance( vecb )   ---> glm::distance2( vec, vecb )
