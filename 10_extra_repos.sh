@@ -2,9 +2,6 @@
 
 cd ~/oF/addons
 
-# lua scripting
-git clone https://github.com/danomatika/ofxLua.git
-
 # ofxBox2d + liquid / elastic 
 git clone https://github.com/tado/ofxLiquidFun.git
 # web sockets
@@ -54,5 +51,11 @@ cd jacres
 git clone https://github.com/jacres/of-ESMShadowMapping.git
 git clone https://github.com/jacres/of-DeferredRendering.git
 
+
+# processing
+mkdir ~/sketchbook
+cd ~/sketchbook
+git clone https://github.com/GlitchCodec/GLIC
+git clone https://github.com/r4dian/Processing-3-glitch-collection.git
 
 exit

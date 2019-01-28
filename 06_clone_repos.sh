@@ -17,6 +17,7 @@ if  [ "$folder" = "addons" ]; then
 
 	git clone https://github.com/npisanti/np-extra.git
     git clone https://github.com/npisanti/np-patches.git
+    git clone https://github.com/npisanti/np-miscela.git
 
 	# cloning my forks, more up to date
 	git clone https://github.com/npisanti/ofxDmx.git
@@ -45,11 +46,12 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/Flightphase/ofxImageSequence.git    
     git clone https://github.com/arturoc/ofxEasing.git
 	git clone https://github.com/vanderlin/ofxBox2d.git
+    git clone https://github.com/danomatika/ofxLua.git
     
     ln -s ~/oF/addons/ofxPDSP ~/pdsp
 
 fi
-# -----------------------------------------------------------------------------
+# -------------------------------------------------------------------
 
 # clone my website
 mkdir ~/htdocs
@@ -62,7 +64,6 @@ git clone https://github.com/npisanti/orcamenti.git
 git clone https://github.com/npisanti/np-instruments.git instruments
 git clone https://github.com/npisanti/np-stubs.git stubs
 git clone https://github.com/npisanti/np-sketches.git sketches
-git clone https://github.com/npisanti/miscela.git
 
 # bash code and graphics
 mkdir -p ~/workspace
@@ -77,10 +78,5 @@ git clone https://github.com/ofZach/VAW_workshop.git
 
 #clone resistor color code tool
 git clone https://github.com/joewalnes/resisto.rs.git
-
-# processing
-mkdir ~/sketchbook
-cd ~/sketchbook
-git clone https://github.com/GlitchCodec/GLIC
 
 exit

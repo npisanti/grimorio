@@ -1,15 +1,15 @@
 
 // copy archivio from another pc
 
-INSTALL VS CODE
-VISUAL STUDIO EXTENSIONS:
-    - C/C++ (microsoft)
-    - C++ Intellisense (austin)
-    - Lua Linter 
-    - Swig 
-    - Twilight theme
-    - Shader languages support
-    - Markdown Preview Github Styling
+FIREFOX ADDONS
+    Adblock Plus
+    Disconnect
+    Stylus 
+        (userstyles.com : )
+        Github Ice Dark
+        Gmail Clean Dark
+        Dark Facebook by DM
+        Dark/Night Facebook Messenger
 
 install processing
 	install oscP5
@@ -21,21 +21,8 @@ install processing
 	install REPL mode
 	install Nature of Code examples
 
-install Arduino 
+install Arduino IDE
     https://www.arduino.cc/download_handler.php
-
-install Etcher
-    https://www.balena.io/etcher/
-
-install Ossia Score
-    https://github.com/OSSIA/score/releases/tag/v1.0.0-b40
-
-FIREFOX ADDONS
-    Adblock Plus
-    Disconnect
-    Stylus 
-        (userstyles.com : )
-        Github Ice Dark
-        Gmail Clean Dark
-        Dark Facebook by DM
-        Dark/Night Facebook Messenger
+    + install CapacitiveSensor library
+    + install MIDIUSB library 
+    

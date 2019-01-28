@@ -57,15 +57,25 @@ echo "installing 100r Themes"
 cd ~/apps
 https://github.com/hundredrabbits/Themes.git
 
-echo "installing of_vscode script"
-cd ~/apps
-git clone https://github.com/npisanti/of_vscode.git
-cd of_vscode
-sh install.sh
-
 echo "installing FlameGraph scripts"
 cd ~/apps
 git clone https://github.com/brendangregg/FlameGraph.git
+
+echo "getting Processing 3"
+cd ~/apps
+wget download.processing.org/processing-3.5.2-linux64.tgz
+tar -xvzf processing-3.5.2-linux64.tgz
+
+echo "getting Ossia Score v1"
+cd ~/apps
+wget https://github.com/OSSIA/score/releases/download/v1.0.0-b40/Score-v1.0.0-b40-amd64.AppImage
+chmod +x Score-*
+
+echo "installing Etcher"
+echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+sudo apt-get update
+sudo apt-get  -y install balena-etcher-electron
 
 echo "installing more fonts (requires sudo password)"
 
