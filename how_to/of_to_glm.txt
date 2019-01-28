@@ -2,3 +2,7 @@
 
 vec.lengthSquared( vecb )     ---> glm::length2( vec, vecb ) 
 vec.squaredDistance( vecb )   ---> glm::distance2( vec, vecb )
+
+vec.crossed( vecb )           ---> glm::cross( vec, vecb )
+
+vec.getPerpendicular( vecb )  ---> glm::perp( vec, vecb )
