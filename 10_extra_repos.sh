@@ -4,8 +4,12 @@ cd ~/oF/addons
 
 # ofxBox2d + liquid / elastic 
 git clone https://github.com/tado/ofxLiquidFun.git
+
 # web sockets
 git clone https://github.com/robotconscience/ofxLibwebsockets
+
+# preload image sequences, maybe your png streamer is better? 
+git clone https://github.com/Flightphase/ofxImageSequence.git  
 
 # text paragraphs
 git clone https://github.com/braitsch/ofxParagraph.git
@@ -38,6 +42,8 @@ git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 # tags system for objects
 git clone https://github.com/armadillu/ofxTagSystem
 
+# gesture recognition
+git clone https://github.com/mzed/ofxRapidLib.git  
 
 # oF examples
 cd ~/oF/apps

@@ -42,8 +42,6 @@ if  [ "$folder" = "addons" ]; then
 
     cd ~/oF/addons
     
-    git clone https://github.com/mzed/ofxRapidLib.git
-    git clone https://github.com/Flightphase/ofxImageSequence.git    
     git clone https://github.com/arturoc/ofxEasing.git
 	git clone https://github.com/vanderlin/ofxBox2d.git
     git clone https://github.com/danomatika/ofxLua.git
