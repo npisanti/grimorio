@@ -25,6 +25,7 @@ paths=(
     "oF/addons/ofxNanoVG"
     "oF/addons/ofxRapidLib"
     "oF/addons/ofxWatchFile"
+    "apps/ardour"
 )
 
 forks=(
