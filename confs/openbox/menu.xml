@@ -36,7 +36,7 @@
 			</item>
 			<item label="Processing IDE">
 				<action name="Execute">
-					<command>~/apps/processing-3.4/processing</command>
+					<command>~/apps/processing-3.5.2/processing</command>
 				</action>
 			</item>
 			<item label="Arduino IDE">
@@ -46,7 +46,7 @@
 			</item>
 			<item label="Etcher">
 				<action name="Execute">
-					<command>gksudo ~/apps/balena-etcher-electron-1.4.9-x86_64.AppImage</command>
+					<command>gksudo balena-etcher-electron</command>
 				</action>
 			</item>
 			<item label="Ossia Score">

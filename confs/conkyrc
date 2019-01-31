@@ -90,6 +90,6 @@ Upload: ${alignr}${upspeedf enp0s25}kb/s
 ${else}Not Connected
 ${endif}${endif}
 
-${alignc}T O   C O M M I T
+${alignc}G R I M O R I O 
 ${hr}
-${execi 15 repocheck.sh}
+${execi 12 repocheck.sh}
