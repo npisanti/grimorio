@@ -19,6 +19,7 @@ paths=(
     "oF/apps/sketches"
     "oF/apps/stubs"
     "oF/apps/instruments"
+    "oF/apps/utilities"
     "workspace/graphics"
     "workspace/bashcode"
     "workspace/fatture"

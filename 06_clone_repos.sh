@@ -62,6 +62,7 @@ git clone https://github.com/npisanti/orcamenti.git
 git clone https://github.com/npisanti/np-instruments.git instruments
 git clone https://github.com/npisanti/np-stubs.git stubs
 git clone https://github.com/npisanti/np-sketches.git sketches
+git clone https://github.com/npisanti/np-utilities.git utilities
 
 # bash code and graphics
 mkdir -p ~/workspace

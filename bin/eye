@@ -1,3 +1,3 @@
 #!/bin/bash
-exec /home/$USER/oF/apps/sketches/eye/bin/eye "$@"
+exec /home/$USER/oF/apps/utilities/eye/bin/eye "$@"
 exit
