@@ -33,6 +33,10 @@ git clone https://github.com/oblique/create_ap.git
 cd create_ap
 sudo make install
 
+echo "installing fff"
+cd ~/apps
+git clone https://github.com/dylanaraps/fff
+
 echo "installing Orca-c" 
 cd ~/apps
 sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev

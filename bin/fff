@@ -1,0 +1,3 @@
+#!/bin/bash
+exec /home/$USER/apps/fff/fff "$@"
+exit
