@@ -83,7 +83,7 @@
 		<menu id="root-menu-925651" label="Audio">
 			<item label="Orca">
 				<action name="Execute">
-					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'Orca' -e orca</command>
+					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'orca' -e orca</command>
 				</action>
 			</item>
 			<item label="Audacity">
@@ -204,6 +204,11 @@
 			<item label="Transmission btClient">
 				<action name="Execute">
 					<command>transmission-gtk</command>
+				</action>
+			</item>
+			<item label="OBS Streamer">
+				<action name="Execute">
+					<command>obs</command>
 				</action>
 			</item>
 			<item label="HexChat IRC Client">

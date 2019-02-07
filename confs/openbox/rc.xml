@@ -486,7 +486,7 @@
           <enabled>true</enabled>
           <name>Orca term</name>
         </startupnotify>
-        <command>x-terminal-emulator --geometry 1000x950+0+0 --profile=orcam</command>
+        <command>x-terminal-emulator  -T 'orca' --geometry 1000x950+0+0 --profile=orcam</command>
       </action>
     </keybind>
     <keybind key="W-p">
@@ -601,20 +601,20 @@
     </keybind>
     <keybind key="W-8">
       <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <width>50%</width>
-        <height>75%</height>
+        <width>75%</width>
         <x>0</x>
         <y>0</y>
       </action>
     </keybind>
     <keybind key="W-9">
       <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <width>50%</width>
-        <height>25%</height>
-        <x>0</x>
-        <y>75%</y>
+        <width>25%</width>
+        <x>-0</x>
+        <y>0</y>
       </action>
     </keybind>
   </keyboard>
