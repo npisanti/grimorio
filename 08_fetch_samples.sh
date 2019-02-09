@@ -13,9 +13,9 @@ echo "-------- removing archives --------"
 rm *.zip
 
 echo "-------- moving data --------"
-cd ~
-mv ~/npisanti.com/samples/ np-samples
-rmdir npisanti.com/
+mkdir -p ~/resources
+mv ~/npisanti.com/samples/ ~/resources/np-samples
+rmdir ~/npisanti.com/
 
 echo "-------- done  --------"
 

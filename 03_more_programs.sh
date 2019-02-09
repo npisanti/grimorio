@@ -53,13 +53,13 @@ npm install
 
 echo "installing Dotgrid" 
 cd ~/apps
-https://github.com/hundredrabbits/Dotgrid.git
+git clone https://github.com/hundredrabbits/Dotgrid.git
 cd Dotgrid/desktop
 npm install 
 
 echo "installing 100r Themes" 
 cd ~/apps
-https://github.com/hundredrabbits/Themes.git
+git clone https://github.com/hundredrabbits/Themes.git
 
 echo "installing FlameGraph scripts"
 cd ~/apps
