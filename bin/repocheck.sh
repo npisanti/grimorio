@@ -16,6 +16,7 @@ paths=(
     "oF/addons/np-patches"
     "oF/addons/np-miscela"
     "oF/apps/orcamenti"
+    "oF/apps/motore_entropico"
     "oF/apps/sketches"
     "oF/apps/stubs"
     "oF/apps/instruments"
