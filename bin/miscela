@@ -1,10 +1,13 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-    exec /home/$USER/oF/addons/np-miscela/miscela/bin/miscela
-else
-    FILEPATH=$(realpath "$1")
-    exec /home/$USER/oF/addons/np-miscela/miscela/bin/miscela $FILEPATH
-fi
+MULTIARGS=""
+
+for var in "$@"
+do
+    FILEPATH=$(realpath "$var")    
+    MULTIARGS="$MULTIARGS$FILEPATH "
+done
+
+exec /home/$USER/oF/addons/np-miscela/miscela/bin/miscela $MULTIARGS
 
 exit
