@@ -21,6 +21,7 @@ paths=(
     "oF/apps/stubs"
     "oF/apps/instruments"
     "oF/apps/utilities"
+    "np-scrapbook"
     "workspace/graphics"
     "workspace/bashcode"
     "workspace/fatture"
