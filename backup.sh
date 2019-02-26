@@ -26,5 +26,6 @@ cp ~/.config/geany/plugins/treebrowser/treebrowser.conf ~/grimorio/confs/geany/p
 cp ~/.config/geany/geany.conf ~/grimorio/confs/geany
 cp ~/.config/geany/keybindings.conf ~/grimorio/confs/geany
 
+cp ~/.config/mpv/mpv.conf ~/grimorio/confs/mpv.conf
 
 exit

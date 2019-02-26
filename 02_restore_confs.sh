@@ -32,5 +32,7 @@ cp ~/grimorio/confs/gtkrc-2.0 ~/.gtkrc-2.0
 echo "extra themes"
 cp -r ~/grimorio/extra/themes/* ~/.themes/
 
+mkdir -p /.config/mpv
+cp ~/grimorio/confs/mpv.conf ~/.config/mpv/mpv.conf
 
 exit
