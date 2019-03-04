@@ -40,7 +40,7 @@ git clone https://github.com/dylanaraps/fff
 echo "installing Orca-c" 
 cd ~/apps
 sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev
-git clone https://github.com/npisanti/Orca-c.git
+git clone https://github.com/hundredrabbits/Orca-c.git
 cd Orca-c
 git remote add upstream https://github.com/hundredrabbits/Orca-c.git
 ./tool --portmidi build release orca 
@@ -80,6 +80,11 @@ echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 sudo apt-get update
 sudo apt-get  -y install balena-etcher-electron
+
+echo "installing micro"
+cd ~/apps
+curl https://getmic.ro | bash
+sudo mv micro /usr/local/bin/
 
 echo "installing more fonts (requires sudo password)"
 
