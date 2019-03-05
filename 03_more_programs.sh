@@ -81,6 +81,15 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 sudo apt-get update
 sudo apt-get  -y install balena-etcher-electron
 
+echo "installing glslViewer"
+sudo apt-get install libglfw3-dev git-core libglu1-mesa-dev libxinerama-dev libxcursor-dev libxi-dev python-setuptools
+cd ~/apps
+git clone http://github.com/patriciogonzalezvivo/glslViewer
+cd glslViewer
+make
+sudo make install
+sudo ln -s ~/apps/glslViewer/bin/glslViewer  /usr/local/bin/glsl
+
 echo "installing micro"
 cd ~/apps
 curl https://getmic.ro | bash
