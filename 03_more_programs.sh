@@ -42,7 +42,7 @@ cd ~/apps
 sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev
 git clone https://github.com/hundredrabbits/Orca-c.git
 cd Orca-c
-git remote add upstream https://github.com/hundredrabbits/Orca-c.git
+#git remote add upstream https://github.com/hundredrabbits/Orca-c.git
 ./tool --portmidi build release orca 
 
 echo "installing OrcaJS" 
@@ -58,7 +58,8 @@ cd Dotgrid/desktop
 npm install 
 
 echo "installing 100r Themes" 
-cd ~/apps
+mkdir -p ~/resources
+cd ~/resources
 git clone https://github.com/hundredrabbits/Themes.git
 
 echo "installing FlameGraph scripts"

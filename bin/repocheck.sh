@@ -16,6 +16,7 @@ paths=(
     "oF/addons/np-patches"
     "oF/addons/np-miscela"
     "oF/apps/orcamenti"
+    "oF/apps/orca-snippets"
     "oF/apps/motore_entropico"
     "oF/apps/sketches"
     "oF/apps/stubs"
@@ -33,7 +34,7 @@ nothingtocommit="true"
 for i in "${paths[@]}"
 do
     cd "$HOME/$i"
-    status=`git status | sed -n 3p`
+    status=`git status --ignore-submodules | sed -n 3p`
     if [ "$status" == "  (use \"git push\" to publish your local commits)" ]; then
         echo "> $i"
         nothingtocommit="false"

@@ -58,11 +58,18 @@ git clone https://github.com/npisanti/npisanti-nocms.git
 
 # my apps
 cd ~/oF/apps
-git clone https://github.com/npisanti/orcamenti.git
+git clone https://github.com/npisanti/motore_entropico.git
 git clone https://github.com/npisanti/np-instruments.git instruments
 git clone https://github.com/npisanti/np-stubs.git stubs
 git clone https://github.com/npisanti/np-sketches.git sketches
 git clone https://github.com/npisanti/np-utilities.git utilities
+git clone https://github.com/npisanti/orcamenti.git
+git clone https://github.com/npisanti/orca-snippets.git
+
+
+# clone scrapbook
+cd ~
+git clone https://github.com/npisanti/np-scrapbook.git
 
 # bash code and graphics
 mkdir -p ~/workspace
