@@ -36,7 +36,7 @@
 			</item>
 			<item label="Processing IDE">
 				<action name="Execute">
-					<command>~/apps/processing-3.5.2/processing</command>
+					<command>~/apps/processing-3.5.3/processing</command>
 				</action>
 			</item>
 			<item label="Arduino IDE">

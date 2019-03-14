@@ -1,25 +1,3 @@
-m## Openbox autostart
-## ====================
-## When you login to your BunsenLabs Openbox session, this autostart script
-## will be executed to set-up your environment and launch any applications
-## you want to run at startup.
-##
-## Note: some programs, such as 'nm-applet' are run via XDG autostart.
-## Run
-## /usr/lib/i386-linux-gnu/openbox-xdg-autostart --list
-## or
-## /usr/lib/x86_64-linux-gnu/openbox-xdg-autostart --list
-## to list any XDG autostarted programs.
-##
-## More information about this can be found at:
-## http://openbox.org/wiki/Help:Autostart
-##
-## If you do something cool with your autostart script and you think others
-## could benefit from your hack, please consider sharing it at:
-## http://forums.bunsenlabs.org (registration required)
-##
-
-## SETTINGS START
 
 ## Configure touchpad. See 'man synaptics' for more info.
 synclient VertEdgeScroll=0 HorizEdgeScroll=0 TapButton1=1 VertScrollDelta=130 VertHysteresis=30 2>/dev/null

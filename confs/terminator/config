@@ -55,7 +55,7 @@
     use_system_font = False
   [[orcam]]
     cursor_color = "#aaaaaa"
-    font = Terminus 21
+    font = Terminus 18
     foreground_color = "#babdb6"
     palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#ffffff:#d3d7cf:#303030:#ef2929:#8ae234:#ef2929:#729fcf:#ad7fa8:#eeeeec:#eeeeec"
     scrollbar_position = hidden
