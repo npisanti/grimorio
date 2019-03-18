@@ -1,3 +1,3 @@
 #!/bin/bash
-fusermount -u /home/nick/mnt/ssh
+fusermount -u /home/$USER/mnt/ssh
 exit

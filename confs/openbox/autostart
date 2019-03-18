@@ -33,6 +33,9 @@ nitrogen --restore &
 # starts thunar daemon
 thunar --daemon &
 
+#starts clipit with no icon
+clipit --no-icon &
+
 #kill unclutter, deactivate for installations
 #pkill unclutter
 

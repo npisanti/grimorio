@@ -17,7 +17,6 @@ if  [ "$folder" = "addons" ]; then
 
 	git clone https://github.com/npisanti/np-extra.git
     git clone https://github.com/npisanti/np-patches.git
-    git clone https://github.com/npisanti/np-miscela.git
 
 	# cloning my forks, more up to date
 	git clone https://github.com/npisanti/ofxDmx.git
@@ -65,7 +64,7 @@ git clone https://github.com/npisanti/np-sketches.git sketches
 git clone https://github.com/npisanti/np-utilities.git utilities
 git clone https://github.com/npisanti/orcamenti.git
 git clone https://github.com/npisanti/orca-snippets.git
-
+git clone https://github.com/npisanti/np-miscela.git
 
 # clone scrapbook
 cd ~

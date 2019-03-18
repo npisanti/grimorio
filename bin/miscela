@@ -8,6 +8,6 @@ do
     MULTIARGS="$MULTIARGS$FILEPATH "
 done
 
-exec /home/$USER/oF/addons/np-miscela/miscela/bin/miscela $MULTIARGS
+exec /home/$USER/oF/apps/np-miscela/miscela/bin/miscela $MULTIARGS
 
 exit

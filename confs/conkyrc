@@ -50,7 +50,7 @@ if_up_strictness address
 # http://conky.sourceforge.net/variables.html
 
 TEXT
-${color}${alignc}S Y S T E M   I N F O
+${color}${alignc}G R I M O R I O
 ${hr}
 Date:  ${alignr}${execi 3600 date | awk '{print$1}' } ${execi 3600 date | awk '{print$3}' } ${execi 3600 date | awk '{print$2}' } ${execi 3600 date | awk '{print$6}' }
 Host:${alignr}${nodename}
@@ -78,7 +78,7 @@ Battery:${alignr} ${execi 10 battery_status.sh}
 
 
 #NETWORKS------------------------------------------------------------------------------
-${alignc}N E T W O R K
+NETWORK
 ${hr}
 ${if_up wlp2s0}Type: ${alignr}Wireless
 Strenght:${alignr}${wireless_link_qual_perc wlp2s0}%
@@ -90,6 +90,6 @@ Upload: ${alignr}${upspeedf enp0s25}kb/s
 ${else}Not Connected
 ${endif}${endif}
 
-${alignc}T O   C O M M I T
+TO COMMIT
 ${hr}
 ${execi 12 repocheck.sh}
