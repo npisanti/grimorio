@@ -9,6 +9,7 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/npisanti/ofxSIMDFloats.git
 	git clone https://github.com/npisanti/ofxAudioFile.git
 	git clone https://github.com/npisanti/ofxPDSP.git
+        ln -s ~/oF/addons/ofxPDSP ~/pdsp
 	git clone https://github.com/npisanti/ofxClayblocks.git
     git clone https://github.com/npisanti/ofxLaunchControllers.git
     git clone https://github.com/npisanti/ofxDotFrag.git
@@ -38,14 +39,9 @@ if  [ "$folder" = "addons" ]; then
 
     # i always have those but still have to use it in a project
     git clone https://github.com/satoruhiga/ofxNanoVG.git
-
-    cd ~/oF/addons
-    
+    git clone https://github.com/mzed/ofxRapidLib.git  
     git clone https://github.com/arturoc/ofxEasing.git
 	git clone https://github.com/vanderlin/ofxBox2d.git
-    git clone https://github.com/danomatika/ofxLua.git
-    
-    ln -s ~/oF/addons/ofxPDSP ~/pdsp
 
 fi
 # -------------------------------------------------------------------

@@ -14,7 +14,7 @@ paths=(
     "oF/addons/ofxFixture"
     "oF/addons/np-extra"
     "oF/addons/np-patches"
-    "oF/addons/np-miscela"
+    "oF/apps/np-miscela"
     "oF/apps/orcamenti"
     "oF/apps/orca-snippets"
     "oF/apps/motore_entropico"

@@ -2,6 +2,9 @@
 
 cd ~/oF/addons
 
+# lua scripting
+git clone https://github.com/danomatika/ofxLua.git
+
 # ofxBox2d + liquid / elastic 
 git clone https://github.com/tado/ofxLiquidFun.git
 
@@ -41,9 +44,6 @@ git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 
 # tags system for objects
 git clone https://github.com/armadillu/ofxTagSystem
-
-# gesture recognition
-git clone https://github.com/mzed/ofxRapidLib.git  
 
 # oF examples
 cd ~/oF/apps
