@@ -7,8 +7,6 @@ git clone --recursive https://github.com/openframeworks/openFrameworks.git
 rm ~/oF
 ln -s ~/openFrameworks/ ~/oF
 
-sh ~/oF/scripts/linux/download_libs.sh 
-
 cd ~/oF/scripts/linux/
 ./download_libs.sh 
 
