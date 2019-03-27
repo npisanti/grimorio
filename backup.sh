@@ -21,6 +21,7 @@ mkdir -p ~/grimorio/confs/geany/colorschemes
 mkdir -p ~/grimorio/confs/geany/filedefs
 mkdir -p ~/grimorio/confs/geany/plugins/treebrowser
 cp ~/.config/geany/colorschemes/sands.conf ~/grimorio/confs/geany/colorschemes
+cp ~/.config/geany/colorschemes/less.conf ~/grimorio/confs/geany/colorschemes
 cp ~/.config/geany/filedefs/filetypes.cpp ~/grimorio/confs/geany/filedefs
 cp ~/.config/geany/plugins/treebrowser/treebrowser.conf ~/grimorio/confs/geany/plugins/treebrowser
 cp ~/.config/geany/geany.conf ~/grimorio/confs/geany

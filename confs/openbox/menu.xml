@@ -138,9 +138,9 @@
 					<command>gimp</command>
 				</action>
 			</item>
-			<item label="KDenLive">
+			<item label="Olive Editor">
 				<action name="Execute">
-					<command>kdenlive</command>
+					<command>~/apps/olive/olive-editor</command>
 				</action>
 			</item>
 			<item label="Inkscape">
