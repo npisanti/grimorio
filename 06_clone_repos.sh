@@ -41,7 +41,7 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/satoruhiga/ofxNanoVG.git
     git clone https://github.com/mzed/ofxRapidLib.git  
     git clone https://github.com/arturoc/ofxEasing.git
-	git clone https://github.com/vanderlin/ofxBox2d.git
+    git clone https://github.com/tado/ofxLiquidFun.git
 
 fi
 # -------------------------------------------------------------------

@@ -12,7 +12,7 @@ paths=(
     "oF/addons/ofxAddonTemplate"
     "oF/addons/ofxBiquadFilter"
     "oF/addons/ofxBlur"
-    "oF/addons/ofxBox2d"
+    "oF/addons/ofxLiquidFun"
     "oF/addons/ofxCv"
     "oF/addons/ofxCvPiCam"
     "oF/addons/ofxDmx"
