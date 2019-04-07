@@ -81,9 +81,14 @@
 			</item>
 		</menu>
 		<menu id="root-menu-925651" label="Audio">
-			<item label="Orca">
+			<item label="Orca-c">
 				<action name="Execute">
 					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'orca' -e orca</command>
+				</action>
+			</item>
+			<item label="OrcaJS">
+				<action name="Execute">
+					<command>orcaJS</command>
 				</action>
 			</item>
 			<item label="Audacity">

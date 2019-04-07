@@ -9,7 +9,6 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/npisanti/ofxSIMDFloats.git
 	git clone https://github.com/npisanti/ofxAudioFile.git
 	git clone https://github.com/npisanti/ofxPDSP.git
-        ln -s ~/oF/addons/ofxPDSP ~/pdsp
 	git clone https://github.com/npisanti/ofxClayblocks.git
     git clone https://github.com/npisanti/ofxLaunchControllers.git
     git clone https://github.com/npisanti/ofxDotFrag.git
@@ -42,7 +41,9 @@ if  [ "$folder" = "addons" ]; then
     git clone https://github.com/mzed/ofxRapidLib.git  
     git clone https://github.com/arturoc/ofxEasing.git
     git clone https://github.com/tado/ofxLiquidFun.git
-
+    git clone https://github.com/armadillu/ofxRectangleUtils.git
+    git clone https://github.com/armadillu/ofxTextureAtlas.git
+    
 fi
 # -------------------------------------------------------------------
 
