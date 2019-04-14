@@ -9,5 +9,6 @@ do
 done
 
 exec /home/$USER/oF/apps/np-miscela/miscela/bin/miscela $MULTIARGS
+#launch /home/$USER/oF/apps/np-miscela/miscela/bin/miscela $MULTIARGS
 
 exit

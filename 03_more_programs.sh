@@ -96,6 +96,13 @@ cd ~/apps
 curl https://getmic.ro | bash
 sudo mv micro /usr/local/bin/
 
+echo "installing launch"
+cd ~/apps
+git clone https://github.com/silverhammermba/launch
+cd launch 
+make launch
+sudo mv launch /usr/local/bin/
+
 echo "installing more fonts (requires sudo password)"
 
 cd ~/grimorio/fonts

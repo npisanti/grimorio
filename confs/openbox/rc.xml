@@ -290,6 +290,9 @@
     <!-- Keybindings for window switching -->
     <keybind key="W-Up">
       <action name="NextWindow">
+        <dialog>none</dialog>
+        <raise>yes</raise>
+        <bar>yes</bar>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
@@ -299,6 +302,9 @@
     </keybind>
     <keybind key="W-Down">
       <action name="PreviousWindow">
+        <dialog>none</dialog>
+        <raise>yes</raise>
+        <bar>yes</bar>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
