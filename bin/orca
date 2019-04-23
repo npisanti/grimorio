@@ -7,7 +7,7 @@ else
     ext="${1#*.}"  
     BPM=$(cut -d'.' -f1 <<<$ext)
 
-    if [ "$bpm" = "orca" ]; then
+    if [[ $BPM = "orca" ]]; then
         BPM="120"
     fi
 
