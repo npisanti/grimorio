@@ -14,6 +14,7 @@ paths=(
     "oF/addons/ofxFixture"
     "oF/addons/np-extra"
     "oF/addons/np-patches"
+    "oF/addons/np-analyzer"
     "oF/addons/np-luavg"
     "oF/apps/np-miscela"
     "oF/apps/orcamenti"
