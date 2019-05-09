@@ -53,3 +53,12 @@ rm -rf build
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
         <!-- API 14 theme customizations can go here. -->
     </style>
+    
+    
+// -------------- 0.10.1 fix ---------------
+
++ fix for maven : 
+    in the example gradle script
+    in all projects, in repositories after jcenter()
+    add 
+        maven{ url "https://maven.google.com" }

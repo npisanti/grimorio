@@ -18,6 +18,7 @@ if  [ "$folder" = "addons" ]; then
 	git clone https://github.com/npisanti/np-extra.git
     git clone https://github.com/npisanti/np-patches.git
     git clone https://github.com/npisanti/np-analyzer.git
+    git clone https://github.com/npisanti/np-microscript.git
 
 	# cloning my forks, more up to date
 	git clone https://github.com/npisanti/ofxDmx.git
