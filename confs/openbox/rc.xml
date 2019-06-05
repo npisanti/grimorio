@@ -18,7 +18,7 @@
     <focusDelay>200</focusDelay>
     <!-- when followMouse is enabled, the mouse must be inside the window for
        this many milliseconds (1000 = 1 sec) before moving focus to it -->
-    <raiseOnFocus>no</raiseOnFocus>
+    <raiseOnFocus>yes</raiseOnFocus>
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
   </focus>
@@ -177,18 +177,6 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="W-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>yes</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-Right">
-      <action name="GoToDesktop">
-        <to>right</to>
-        <wrap>yes</wrap>
-      </action>
-    </keybind>
     <!-- desktops -->
     <keybind key="W-1">
       <action name="GoToDesktop">
@@ -288,6 +276,16 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
+    <keybind key="W-Right">
+      <action name="DirectionalTargetWindow">
+          <direction>east</direction>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="DirectionalTargetWindow">
+          <direction>west</direction>
+      </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="NextWindow">
         <dialog>none</dialog>
@@ -313,17 +311,17 @@
       </action>
     </keybind>
     <!-- Volume Control -->
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="W-period">
       <action name="Execute">
         <command>volume_up.sh</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="W-comma">
       <action name="Execute">
         <command>volume_down.sh</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="W-minus">
       <action name="Execute">
         <command>volume_mute.sh</command>
       </action>

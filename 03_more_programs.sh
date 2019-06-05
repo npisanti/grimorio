@@ -20,7 +20,7 @@ echo "installing kicad from backports"
 sudo apt-get -t stretch-backports install kicad
 
 echo "installing jack utils"
-sudo apt-get -y install qjackctl aconnectgui jack-midi-clock jack-capture
+sudo apt-get -y install qjackctl aconnectgui jack-midi-clock jack-capture jamin
 
 echo "setting up realtime limits"
 sudo cp ~/grimorio/extra/base/limits.conf /etc/security/limits.conf  
