@@ -1,5 +1,5 @@
 #!/bin/bash
-scan-build make Debug  -j4 -s 2>&1 || exit 1
+scan-build-6.0 make Debug  -j4 -s 2>&1 || exit 1
 DIR="${PWD##*/}_debug"
 
 if [ $? == 0 ]
