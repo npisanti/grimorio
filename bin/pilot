@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/apps/Pilot/desktop
+npm start
+exit

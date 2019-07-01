@@ -15,7 +15,7 @@ paths=(
     "oF/addons/np-extra"
     "oF/addons/np-patches"
     "oF/addons/np-analyzer"
-    "oF/addons/np-microscript"
+    "oF/addons/np-pixelscript"
     "oF/apps/np-miscela"
     "oF/apps/orcamenti"
     "oF/apps/orca-snippets"
