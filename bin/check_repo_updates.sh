@@ -16,8 +16,6 @@ paths=(
     "oF/addons/ofxEasing"
     "oF/addons/ofxGLWarper"
     "oF/addons/ofxGPIO"
-    "oF/addons/ofxRectangleUtils"
-    "oF/addons/ofxTextureAtlas"
     "oF/addons/ofxMidi"
     "oF/addons/ofxRapidLib"
     "oF/addons/ofxWatchFile"

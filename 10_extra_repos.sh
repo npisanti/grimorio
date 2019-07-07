@@ -8,6 +8,8 @@ git clone https://github.com/vanderlin/ofxBox2d.git
 # lua scripting
 git clone https://github.com/danomatika/ofxLua.git
 
+git clone https://github.com/satoruhiga/ofxNanoVG.git
+
 # ofxBox2d + liquid / elastic 
 git clone https://github.com/tado/ofxLiquidFun.git
 
@@ -47,6 +49,10 @@ git clone https://github.com/npisanti/ofxKinectProjectorToolkit.git
 
 # tags system for objects
 git clone https://github.com/armadillu/ofxTagSystem
+
+# really fast to draw lots of images 
+git clone https://github.com/armadillu/ofxRectangleUtils.git
+git clone https://github.com/armadillu/ofxTextureAtlas.git
 
 # oF examples
 cd ~/oF/apps
