@@ -1,0 +1,3 @@
+#!/bin/bash
+exec /home/$USER/oF/apps/np-miscela/miscela/bin/miscela "$@"
+exit
