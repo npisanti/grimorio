@@ -6,7 +6,6 @@ folder=${PWD##*/}
 if  [ "$folder" = "addons" ]; then
 
     # cloning my repos
-	git clone https://github.com/npisanti/ofxSIMDFloats.git
 	git clone https://github.com/npisanti/ofxAudioFile.git
 	git clone https://github.com/npisanti/ofxPDSP.git
 	git clone https://github.com/npisanti/ofxClayblocks.git
