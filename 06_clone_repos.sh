@@ -40,8 +40,7 @@ if  [ "$folder" = "addons" ]; then
     # i always have those but still have to use it in a project
     git clone https://github.com/mzed/ofxRapidLib.git  
     git clone https://github.com/arturoc/ofxEasing.git
-    git clone https://github.com/tado/ofxLiquidFun.git
-
+    git clone https://github.com/vanderlin/ofxBox2d.git
     
 fi
 # -------------------------------------------------------------------

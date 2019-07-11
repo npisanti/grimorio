@@ -2,8 +2,9 @@
 
 cd ~/oF/addons
 
-# box2d
-git clone https://github.com/vanderlin/ofxBox2d.git
+# box2d alternative
+git clone https://github.com/tado/ofxLiquidFun.git
+
 
 # lua scripting
 git clone https://github.com/danomatika/ofxLua.git
