@@ -16,6 +16,10 @@ sudo apt-get -y install aseprite shutter solvespace grafx2 chkrootkit rkhunter u
 
 sudo apt-get -y install kcachegrind krita kdenlive
 
+echo "installing lua strict module"
+sudo mkdir -p /usr/local/share/lua/5.1/
+sudo cp  ~/grimorio/extra/libs/strict.lua  /usr/local/share/lua/5.1/
+
 echo "installing kicad from backports"
 sudo apt-get -t stretch-backports install kicad
 
