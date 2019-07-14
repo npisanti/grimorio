@@ -107,6 +107,11 @@ cd launch
 make launch
 sudo mv launch /usr/local/bin/
 
+echo "installing keybase"
+curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+sudo dpkg -i keybase_amd64.deb
+sudo apt-get install -f
+
 echo "installing more fonts (requires sudo password)"
 
 cd ~/grimorio/fonts
