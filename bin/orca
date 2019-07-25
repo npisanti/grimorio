@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-    chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --undo-limit 20 --margins 1 --osc-port 4444 
-else
+SEED=$(od -vAn -N4 -tu4 < /dev/urandom)
 
+if [ -z "$1" ]; then
+    chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 
+else
     ext="${1#*.}"  
     BPM=$(cut -d'.' -f1 <<<$ext)
 
@@ -11,8 +12,7 @@ else
         BPM="120"
     fi
 
-    #FILEPATH=$(realpath "$1")
-    chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --bpm "$BPM" --undo-limit 20 --margins 1 --osc-port 4444 $1
+    chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --bpm "$BPM" --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 $1
 fi
 
 exit
