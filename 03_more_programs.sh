@@ -54,12 +54,24 @@ cd ~/apps
 git clone https://github.com/npisanti/Orca.git
 cd Orca/desktop
 npm install
+sudo chown root node_modules/electron/dist/chrome-sandbox
+sudo chmod 4755 node_modules/electron/dist/chrome-sandbox  
 
 echo "installing Dotgrid" 
 cd ~/apps
 git clone https://github.com/hundredrabbits/Dotgrid.git
 cd Dotgrid/desktop
 npm install 
+sudo chown root node_modules/electron/dist/chrome-sandbox
+sudo chmod 4755 node_modules/electron/dist/chrome-sandbox  
+
+echo "installing Ronin" 
+cd ~/apps
+git clone https://github.com/hundredrabbits/Ronin.git
+cd Dotgrid/desktop
+npm install 
+sudo chown root node_modules/electron/dist/chrome-sandbox
+sudo chmod 4755 node_modules/electron/dist/chrome-sandbox  
 
 echo "installing 100r Themes" 
 mkdir -p ~/resources

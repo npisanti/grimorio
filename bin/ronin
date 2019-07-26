@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/apps/Ronin/desktop
+npm start
+exit
