@@ -1,0 +1,3 @@
+
+sox stereo_inputfile.wav leftchannel.wav remix 1
+sox stereo_inputfile.wav rightchannel.wav remix 2

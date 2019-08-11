@@ -1,0 +1,23 @@
+
+
+audacity shortcuts:
+    ctrl + 1 = zoom in
+    ctrl + 2 = zoom to normal
+    ctrl + 3 = zoom out
+    ctrl + shift + F = fit vertically
+    ctrl + shift + N = new track 
+    home = playhead to start 
+    shift + U = toggle mute track 
+    shift + S = toggle solo track 
+    Z = find zero crossing 
+
+REMAP KEYS
+    W = Select Cursor to Track End
+    Q = Skip to Start
+    M = mute track
+    S = solo track 
+    1 = zoom in
+    2 = zoom to normal 
+    3 = zoom out 
+    X = cut
+    V = paste

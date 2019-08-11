@@ -1,0 +1,9 @@
+#!/bin/bash
+
+exec ~/oF/apps/orcaset/motore/bin/motore & 
+
+sleep 2
+
+terminator -b  -T 'orca' --geometry 1920x820+0+270 --profile=orcam -e "orca ~/oF/apps/orcaset/cycle.123.orca"
+
+exit
