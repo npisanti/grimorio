@@ -68,7 +68,15 @@ sudo chmod 4755 node_modules/electron/dist/chrome-sandbox
 echo "installing Ronin" 
 cd ~/apps
 git clone https://github.com/hundredrabbits/Ronin.git
-cd Dotgrid/desktop
+cd Ronin/desktop
+npm install 
+sudo chown root node_modules/electron/dist/chrome-sandbox
+sudo chmod 4755 node_modules/electron/dist/chrome-sandbox  
+
+echo "installing Left" 
+cd ~/apps
+git clone https://github.com/hundredrabbits/Left.git
+cd Left/desktop
 npm install 
 sudo chown root node_modules/electron/dist/chrome-sandbox
 sudo chmod 4755 node_modules/electron/dist/chrome-sandbox  

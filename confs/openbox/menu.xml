@@ -91,6 +91,11 @@
 					<command>orcaJS</command>
 				</action>
 			</item>
+			<item label="Pilot">
+				<action name="Execute">
+					<command>pilot</command>
+				</action>
+			</item>
 			<item label="Audacity">
 				<action name="Execute">
 					<command>audacity</command>
@@ -128,9 +133,19 @@
 			</item>
 		</menu>
 		<menu id="root-menu-85632" label="Graphics">
+			<item label="aseprite">
+				<action name="Execute">
+					<command>~/apps/aseprite/build/bin/aseprite</command>
+				</action>
+			</item>
 			<item label="Dotgrid">
 				<action name="Execute">
 					<execute>dotgrid</execute>
+				</action>
+			</item>
+			<item label="Ronin">
+				<action name="Execute">
+					<execute>ronin</execute>
 				</action>
 			</item>
 			<item label="GColor">
@@ -151,11 +166,6 @@
 			<item label="Inkscape">
 				<action name="Execute">
 					<command>inkscape</command>
-				</action>
-			</item>
-			<item label="aseprite">
-				<action name="Execute">
-					<command>aseprite</command>
 				</action>
 			</item>
 			<item label="GrafX2">
