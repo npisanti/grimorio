@@ -6,7 +6,7 @@ pkill -USR1 redshift
 
 sleep 2
 
-terminator -b  -T 'orca' --geometry 1920x820+0+270 --profile=orcam -e "orca ~/oF/apps/orcaset/cycle.168.orca"
+terminator -b  -T 'orca' --geometry 1920x900+0+270 --profile=orcam -e "orca ~/oF/apps/orcaset/cycle.168.orca"
 
 pkill -USR1 redshift
 
