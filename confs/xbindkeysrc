@@ -1,0 +1,7 @@
+
+"xdotool mousedown 1"
+  c:66
+
+"xdotool mouseup 1"
+  release + c:66
+  

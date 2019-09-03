@@ -54,16 +54,6 @@
 					<command>ossia.sh</command>
 				</action>
 			</item>
-			<item label="Fritzing">
-				<action name="Execute">
-					<command>fritzing.sh</command>
-				</action>
-			</item>
-			<item label="Kcachegrind">
-				<action name="Execute">
-					<command>kcachegrind</command>
-				</action>
-			</item>
 			<item label="Doxygen Wizard">
 				<action name="Execute">
 					<command>doxywizard</command>
@@ -72,11 +62,6 @@
 			<item label="Universal Indent GUI">
 				<action name="Execute">
 					<command>universalindentgui</command>
-				</action>
-			</item>
-			<item label="octave">
-				<action name="Execute">
-					<command>octave --force-gui</command>
 				</action>
 			</item>
 		</menu>
@@ -109,11 +94,6 @@
 			<item label="paulstretch">
 				<action name="Execute">
 					<command>paulstretch</command>
-				</action>
-			</item>
-			<item label="Supercollider">
-				<action name="Execute">
-					<command>scide</command>
 				</action>
 			</item>
 			<item label="Jack Controls">
@@ -161,36 +141,6 @@
 			<item label="Olive Editor">
 				<action name="Execute">
 					<command>~/apps/olive/olive-editor</command>
-				</action>
-			</item>
-			<item label="Inkscape">
-				<action name="Execute">
-					<command>inkscape</command>
-				</action>
-			</item>
-			<item label="GrafX2">
-				<action name="Execute">
-					<command>grafx2</command>
-				</action>
-			</item>
-			<item label="Solvespace">
-				<action name="Execute">
-					<command>solvespace</command>
-				</action>
-			</item>
-			<item label="KiCad">
-				<action name="Execute">
-					<command>kicad</command>
-				</action>
-			</item>
-			<item label="Krita">
-				<action name="Execute">
-					<command>krita</command>
-				</action>
-			</item>
-			<item label="Fontforge">
-				<action name="Execute">
-					<command>fontforge</command>
 				</action>
 			</item>
 		</menu>
@@ -254,11 +204,6 @@
 			<item label="Telegram">
 				<action name="Execute">
 					<command>telegram-desktop</command>
-				</action>
-			</item>
-			<item label="Skype">
-				<action name="Execute">
-					<command>skypeforlinux</command>
 				</action>
 			</item>
 			<item label="LibreOffice Writer">

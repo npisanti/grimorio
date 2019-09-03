@@ -10,6 +10,7 @@ cp ~/.conkyrc ~/grimorio/confs/conkyrc
 cp ~/.gdbinit ~/grimorio/confs/gdbinit
 cp ~/.config/compton.conf ~/grimorio/confs/compton.conf
 cp ~/.bashrc ~/grimorio/confs/bashrc
+cp ~/.xbindkeysrc ~/grimorio/confs/xbindkeysrc
 cp -r ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml ~/grimorio/confs/thunar.xml
 cp ~/.local/share/applications/mimeapps.list ~/grimorio/confs/mimeapps.list
 #cp ~/.config/Code/User/settings.json ~/grimorio/confs/vscode.json

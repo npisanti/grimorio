@@ -14,4 +14,5 @@
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
   <property name="last-details-view-column-widths" type="string" value="50,131,50,50,222,50,50,92,124"/>
   <property name="misc-remember-geometry" type="bool" value="false"/>
+  <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
 </channel>

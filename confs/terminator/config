@@ -2,14 +2,57 @@
   dbus = False
   focus = system
   handle_size = 1
-  suppress_multiple_term_dialog = True
-  title_font = Terminus 12
-  title_inactive_bg_color = "#000000"
-  title_receive_bg_color = "#082a3f"
   title_transmit_bg_color = "#000000"
+  title_receive_bg_color = "#082a3f"
+  title_inactive_bg_color = "#000000"
+  suppress_multiple_term_dialog = True
   title_use_system_font = False
+  title_font = Terminus 12
 [keybindings]
   hide_window = <Shift><Control>a
+[profiles]
+  [[default]]
+    allow_bold = False
+    urgent_bell = True
+    background_darkness = 0.82
+    background_type = transparent
+    color_scheme = custom
+    cursor_shape = ibeam
+    cursor_color = "#d8d8d8"
+    font = Terminus 18
+    foreground_color = "#cccccc"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    palette = "#073642:#bf2020:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#ef2929:#586e75:#657b83:#839496:#6c71c4:#34e2e2:#babdb6"
+    use_system_font = False
+  [[orca]]
+    cursor_color = "#aaaaaa"
+    font = Terminus Bold 24
+    foreground_color = "#ef2929"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#2e3436:#ff4040:#4e9a06:#c4a000:#3465a4:#75507b:#ffffff:#d3d7cf:#2e3436:#ffffff:#8ae234:#f57900:#729fcf:#ad7fa8:#babdb6:#eeeeec"
+    use_system_font = False
+  [[orca2]]
+    cursor_color = "#aaaaaa"
+    font = Terminus 24
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00ffff:#aaaaaa:#555555:#ff5555:#55ff55:#f57900:#5555ff:#ff55ff:#34e2e2:#ffffff"
+    use_system_font = False
+  [[orcam]]
+    allow_bold = False
+    cursor_shape = ibeam
+    cursor_color = "#aaaaaa"
+    font = Terminus Bold 18
+    foreground_color = "#babdb6"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#ffffff:#d3d7cf:#303030:#ef2929:#8ae234:#ef2929:#729fcf:#ad7fa8:#eeeeec:#eeeeec"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -20,45 +63,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    allow_bold = False
-    background_darkness = 0.82
-    background_type = transparent
-    color_scheme = custom
-    cursor_color = "#d8d8d8"
-    cursor_shape = ibeam
-    font = Terminus 18
-    foreground_color = "#cccccc"
-    palette = "#073642:#bf2020:#859900:#db902b:#0d1820:#d33682:#2aa198:#eee8d5:#002b36:#ef2929:#586e75:#657b83:#839496:#6c71c4:#34e2e2:#babdb6"
-    scrollback_infinite = True
-    scrollback_lines = 5000
-    scrollbar_position = hidden
-    show_titlebar = False
-    urgent_bell = True
-    use_system_font = False
-  [[orca]]
-    cursor_color = "#aaaaaa"
-    font = Terminus Bold 24
-    foreground_color = "#ef2929"
-    palette = "#2e3436:#ff4040:#4e9a06:#c4a000:#3465a4:#75507b:#ffffff:#d3d7cf:#2e3436:#ffffff:#8ae234:#f57900:#729fcf:#ad7fa8:#babdb6:#eeeeec"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[orca2]]
-    cursor_color = "#aaaaaa"
-    font = Terminus 24
-    foreground_color = "#ffffff"
-    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00ffff:#aaaaaa:#555555:#ff5555:#55ff55:#f57900:#5555ff:#ff55ff:#34e2e2:#ffffff"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[orcam]]
-    cursor_color = "#aaaaaa"
-    cursor_shape = ibeam
-    font = Terminus Bold 18
-    foreground_color = "#babdb6"
-    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#ffffff:#d3d7cf:#303030:#ef2929:#8ae234:#ef2929:#729fcf:#ad7fa8:#eeeeec:#eeeeec"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False

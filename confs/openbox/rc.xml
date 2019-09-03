@@ -272,18 +272,18 @@
     </keybind>
     <keybind key="W-Print">
       <action name="Execute">
-        <command>shutter</command>
+        <command>flameshot</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="W-Right">
       <action name="DirectionalTargetWindow">
-          <direction>east</direction>
+        <direction>east</direction>
       </action>
     </keybind>
     <keybind key="W-Left">
       <action name="DirectionalTargetWindow">
-          <direction>west</direction>
+        <direction>west</direction>
       </action>
     </keybind>
     <keybind key="W-Up">
@@ -952,6 +952,9 @@
       <decor>no</decor>
     </application>
     <application name="left">
+      <decor>no</decor>
+    </application>
+    <application name="ronin">
       <decor>no</decor>
     </application>
     <application name="dotgrid">
