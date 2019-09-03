@@ -36,7 +36,7 @@ nothingtocommit="true"
 for i in "${paths[@]}"
 do
     cd "$HOME/$i"
-    status=`git status --ignore-submodules | sed -n 3p`
+    status=`git status --ignore-submodules | sed -n 4p`
     if [ "$status" == "  (use \"git push\" to publish your local commits)" ]; then
         echo "> $i"
         nothingtocommit="false"

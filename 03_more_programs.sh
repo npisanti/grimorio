@@ -12,16 +12,13 @@ mkdir ~/apps
 sudo apt-get update
 sudo apt-get dist-upgrade
 
-sudo apt-get -y install aseprite shutter solvespace grafx2 chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay moc moc-ffmpeg-plugin winff lame sox cmatrix input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot vim vim-pathogen vim-gtk lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 seahorse inxi figlet toilet toilet-fonts python-pip python-dev python-demjson fontforge alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen mosquitto mosquitto-clients build-essential xclip qv4l2 v4l-utils swig python-tk libncurses5-dev libncursesw5-dev paulstretch audacity supercollider gtk2-engines-murrine libappindicator3-1 telegram-desktop obs lua5.1 luajit liblua5.1-0-dev libluajit-5.1-dev 
+sudo apt-get -y install flameshot chkrootkit rkhunter ufw gufw sshfs dnsutils ack-grep nmon fortune cowsay moc moc-ffmpeg-plugin winff lame sox cmatrix input-utils mtdev-tools daemontools guvcview freenect libcups2-dev cups-bsd android-tools-adb android-tools-fastboot lvm2 testdisk trash-cli util-linux procps hostapd iproute2 iw dnsmasq iptables haveged espeak libespeak-dev bluez joystick vokoscreen x264 inxi figlet toilet toilet-fonts python-pip python-dev python-demjson alsa-tools-gui shellcheck vorbis-tools lame monkeys-audio cmake screen  build-essential xclip qv4l2 v4l-utils swig python-tk libncurses5-dev libncursesw5-dev paulstretch audacity gtk2-engines-murrine libappindicator3-1 telegram-desktop obs 
 
-sudo apt-get -y install kcachegrind krita kdenlive
+sudo apt-get -y install kcachegrind kdenlive
 
 echo "installing lua strict module"
 sudo mkdir -p /usr/local/share/lua/5.1/
 sudo cp  ~/grimorio/extra/libs/strict.lua  /usr/local/share/lua/5.1/
-
-echo "installing kicad from backports"
-sudo apt-get -t stretch-backports install kicad
 
 echo "installing jack utils"
 sudo apt-get -y install qjackctl aconnectgui jack-midi-clock jack-capture jamin
@@ -89,11 +86,6 @@ git clone https://github.com/hundredrabbits/Themes.git
 echo "installing FlameGraph scripts"
 cd ~/apps
 git clone https://github.com/brendangregg/FlameGraph.git
-
-echo "getting Processing 3"
-cd ~/apps
-wget download.processing.org/processing-3.5.2-linux64.tgz
-tar -xvzf processing-3.5.2-linux64.tgz
 
 echo "getting Ossia Score v1"
 cd ~/apps
