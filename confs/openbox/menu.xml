@@ -115,7 +115,7 @@
 		<menu id="root-menu-85632" label="Graphics">
 			<item label="aseprite">
 				<action name="Execute">
-					<command>~/apps/aseprite/build/bin/aseprite</command>
+					<command>aseprite</command>
 				</action>
 			</item>
 			<item label="Dotgrid">

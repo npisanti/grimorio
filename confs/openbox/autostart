@@ -4,8 +4,8 @@ synclient VertEdgeScroll=0 HorizEdgeScroll=0 TapButton1=1 VertScrollDelta=130 Ve
 
 ## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
 ## Adjust the values according to your preferances.
-#xset r rate 250 40
-xset r off 
+xset r rate 250 40
+#xset r off 
 
 
 #sets riit window color
