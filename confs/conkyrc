@@ -1,55 +1,42 @@
-# For commands above TEXT check:
-# http://conky.sourceforge.net/config_settings.html
 
-own_window yes
-own_window_type normal
-own_window_transparent yes
-own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
-own_window_colour 000000
-own_window_class Conky
-#own_window_title Bunsen Labs Default Conky
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = '#DDD',
+    default_outline_color = '#DDD',
+    default_shade_color = '#DDD',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'Terminus:regular:size=13:antialias=False',
+    gap_x = 30,
+    minimum_height = 0,
+    minimum_width = 200,
+    maximum_width = 250,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
 
-alignment top_right
-double_buffer yes
-minimum_size 200 0  ### width | height
-maximum_width 250
-gap_x 30 ### left | right
-#gap_y 80	### up | down
-#alignment tl
-
-use_xft yes
-xftfont Terminus:regular:size=13:antialias=False
-xftalpha 1
-override_utf8_locale yes
-uppercase no
-
-draw_shades no #yes
-default_shade_color 000000
-default_outline_color 000000
-default_color C0C0C0 
-
-draw_borders no
-stippled_borders 5
-border_inner_margin 5
-border_outer_margin 0
-border_width 1
-draw_graph_borders yes #no
-
-background yes
-use_spacer none
-text_buffer_size 6144
-no_buffers yes
-short_units yes
-pad_percents 2
-imlib_cache_size 0
-double_buffer yes
-update_interval 1
-if_up_strictness address
-
-# For commands available below TEXT check:
-# http://conky.sourceforge.net/variables.html
-
-TEXT
+conky.text = [[
 ${color}${alignc}G R I M O R I O
 ${hr}
 Date:  ${alignr}${execi 3600 date | awk '{print$1}' } ${execi 3600 date | awk '{print$3}' } ${execi 3600 date | awk '{print$2}' } ${execi 3600 date | awk '{print$6}' }
@@ -77,7 +64,7 @@ Fan Speed: ${alignr}${execi 5 sensors |  awk '/cpu_fan/ {print $2}'} RPM
 Battery:${alignr} ${execi 10 battery_status.sh}
 
 
-#NETWORKS------------------------------------------------------------------------------
+
 NETWORK
 ${hr}
 ${if_up wlp2s0}Type: ${alignr}Wireless
@@ -93,3 +80,4 @@ ${endif}${endif}
 TO COMMIT
 ${hr}
 ${execi 12 repocheck.sh}
+]]

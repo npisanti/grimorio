@@ -1,0 +1,11 @@
+
+
+git clone https://github.com/npisanti/openFrameworks.git of_fork
+
+git remote add upstream https://github.com/openframeworks/openFrameworks.git
+
+git fetch upstream
+git pull upstream master
+
+# create new branch 
+git checkout -b brach-for-fix

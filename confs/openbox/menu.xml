@@ -28,10 +28,11 @@
 			</action>
 		</item>
 		<separator/>
+        
 		<menu id="root-menu-823532" label="Coding">
 			<item label="Geany Text Editor">
 				<action name="Execute">
-					<command>dgeany</command>
+					<command>geany</command>
 				</action>
 			</item>
 			<item label="Processing IDE">
@@ -41,7 +42,7 @@
 			</item>
 			<item label="Arduino IDE">
 				<action name="Execute">
-					<command>~/apps/arduino-1.8.8/arduino</command>
+					<command>~/apps/arduino-1.8.9/arduino</command>
 				</action>
 			</item>
 			<item label="Etcher">
@@ -66,21 +67,6 @@
 			</item>
 		</menu>
 		<menu id="root-menu-925651" label="Audio">
-			<item label="Orca-c">
-				<action name="Execute">
-					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'orca' -e orca</command>
-				</action>
-			</item>
-			<item label="OrcaJS">
-				<action name="Execute">
-					<command>orcaJS</command>
-				</action>
-			</item>
-			<item label="Pilot">
-				<action name="Execute">
-					<command>pilot</command>
-				</action>
-			</item>
 			<item label="Audacity">
 				<action name="Execute">
 					<command>audacity</command>
@@ -94,6 +80,21 @@
 			<item label="paulstretch">
 				<action name="Execute">
 					<command>paulstretch</command>
+				</action>
+			</item>
+			<item label="Orca-c">
+				<action name="Execute">
+					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'orca' -e orca</command>
+				</action>
+			</item>
+			<item label="OrcaJS">
+				<action name="Execute">
+					<command>orcaJS</command>
+				</action>
+			</item>
+			<item label="Pilot">
+				<action name="Execute">
+					<command>pilot</command>
 				</action>
 			</item>
 			<item label="Jack Controls">
@@ -113,7 +114,7 @@
 			</item>
 		</menu>
 		<menu id="root-menu-85632" label="Graphics">
-			<item label="aseprite">
+			<item label="Aseprite">
 				<action name="Execute">
 					<command>aseprite</command>
 				</action>
@@ -123,9 +124,14 @@
 					<execute>dotgrid</execute>
 				</action>
 			</item>
-			<item label="Ronin">
+			<item label="DarkTable">
 				<action name="Execute">
-					<execute>ronin</execute>
+					<execute>darktable</execute>
+				</action>
+			</item>
+			<item label="KDenLive">
+				<action name="Execute">
+					<command>kdenlive</command>
 				</action>
 			</item>
 			<item label="GColor">
@@ -133,31 +139,35 @@
 					<execute>gcolor2</execute>
 				</action>
 			</item>
-			<item label="Gimp">
+		</menu>
+        
+		<menu id="office" label="Office">
+			<item label="LO Writer">
 				<action name="Execute">
-					<command>gimp</command>
+					<command>lowriter</command>
 				</action>
 			</item>
-			<item label="Olive Editor">
+			<item label="LO Calc">
 				<action name="Execute">
-					<command>~/apps/olive/olive-editor</command>
+					<command>localc</command>
+				</action>
+			</item>
+			<item label="Thunderbird Mail">
+				<action name="Execute">
+					<command>thunderbird</command>
+				</action>
+			</item>
+			<item label="XSane Scanning Utiliy">
+				<action name="Execute">
+					<command>xsane</command>
 				</action>
 			</item>
 		</menu>
+
 		<menu id="network" label="Network">
-			<item label="Network Manager TUI">
+			<item label="Telegram">
 				<action name="Execute">
-					<command>x-terminal-emulator -T 'Network Manager' -e nmtui</command>
-				</action>
-			</item>
-			<item label="activate wifi">
-				<action name="Execute">
-					<command>nmcli r wifi on</command>
-				</action>
-			</item>
-			<item label="deactivate wi-fi">
-				<action name="Execute">
-					<command>nmcli r wifi off</command>
+					<command>telegram-desktop</command>
 				</action>
 			</item>
 			<separator/>
@@ -174,6 +184,21 @@
 			<item label="OBS Streamer">
 				<action name="Execute">
 					<command>obs</command>
+				</action>
+			</item>
+			<item label="Network Manager TUI">
+				<action name="Execute">
+					<command>x-terminal-emulator -T 'Network Manager' -e nmtui</command>
+				</action>
+			</item>
+			<item label="activate wifi">
+				<action name="Execute">
+					<command>nmcli r wifi on</command>
+				</action>
+			</item>
+			<item label="deactivate wi-fi">
+				<action name="Execute">
+					<command>nmcli r wifi off</command>
 				</action>
 			</item>
 			<item label="HexChat IRC Client">
@@ -195,76 +220,7 @@
 			<separator/>
 			<menu execute="bl-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
 		</menu>
-		<menu id="office" label="Office">
-			<item label="Thunderbird Mail">
-				<action name="Execute">
-					<command>thunderbird</command>
-				</action>
-			</item>
-			<item label="Telegram">
-				<action name="Execute">
-					<command>telegram-desktop</command>
-				</action>
-			</item>
-			<item label="LibreOffice Writer">
-				<action name="Execute">
-					<command>lowriter</command>
-				</action>
-			</item>
-			<item label="LibreOffice Calc">
-				<action name="Execute">
-					<command>localc</command>
-				</action>
-			</item>
-			<item label="LibreOffice Draw">
-				<action name="Execute">
-					<command>lodraw</command>
-				</action>
-			</item>
-			<item label="LibreOffice Impress">
-				<action name="Execute">
-					<command>loimpress</command>
-				</action>
-			</item>
-			<item label="LibreOffice Base">
-				<action name="Execute">
-					<command>lobase</command>
-				</action>
-			</item>
-			<item label="XSane Scanning Utiliy">
-				<action name="Execute">
-					<command>xsane</command>
-				</action>
-			</item>
-			<item label="Google Docs">
-				<action name="Execute">
-					<command>
-                        x-www-browser https://drive.google.com/
-                    </command>
-				</action>
-			</item>
-			<item label="Gnumeric Spreadsheet">
-				<action name="Execute">
-					<command>
-                        gnumeric
-                    </command>
-				</action>
-			</item>
-			<item label="Calculator">
-				<action name="Execute">
-					<command>
-                        galculator
-                    </command>
-				</action>
-			</item>
-			<item label="Evince PDF Viewer">
-				<action name="Execute">
-					<command>
-                        evince
-                    </command>
-				</action>
-			</item>
-		</menu>
+
 		<menu id="root-menu-264844" label="Fun">
 			<item label="Steam">
 				<action name="Execute">
@@ -282,6 +238,7 @@
 				</action>
 			</item>
 		</menu>
+
 		<menu id="accessories" label="Utilities">
 			<item label="Video Transcoder">
 				<action name="Execute">

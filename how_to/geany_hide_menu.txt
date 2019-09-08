@@ -1,0 +1,13 @@
+
+Having root privileges, it's a matter of rewritting /usr/share/geany/geany.glade
+
+<object class="GtkHBox" id="hbox_menubar">
+<property name="visible">False</property>
+
+
+---------------------------------------
+
+remember, preferences is ALT+P
+plugin preferences is SHIFT+ALT+P
+
+(if you need another key for choosing plugin, assign it )

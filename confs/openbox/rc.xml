@@ -442,7 +442,7 @@
           <enabled>false</enabled>
           <name>Editor</name>
         </startupnotify>
-        <command>dgeany</command>
+        <command>geany</command>
       </action>
     </keybind>
     <keybind key="W-a">
