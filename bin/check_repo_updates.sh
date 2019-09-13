@@ -10,7 +10,7 @@ paths=(
     "apps/create_ap"
     "apps/FlameGraph"
     "oF/addons/ofxAddonTemplate"
-    "oF/addons/ofxLiquidFun"
+    "oF/addons/ofxBox2d"
     "oF/addons/ofxCv"
     "oF/addons/ofxCvPiCam"
     "oF/addons/ofxEasing"

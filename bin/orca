@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SEED=$(od -vAn -N4 -tu4 < /dev/urandom)
+SEED=$(od -vAn -N2 -tu2 < /dev/urandom)
 
 if [ -z "$1" ]; then
     chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 
