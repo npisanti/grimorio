@@ -7,6 +7,7 @@ paths=(
     "apps/Orca-c"
     "apps/Orca"
     "apps/Dotgrid"
+    "apps/Ronin"
     "apps/create_ap"
     "apps/FlameGraph"
     "oF/addons/ofxAddonTemplate"

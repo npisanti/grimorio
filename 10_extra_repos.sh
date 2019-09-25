@@ -5,6 +5,8 @@ cd ~/oF/addons
 # box2d alternative
 git clone https://github.com/tado/ofxLiquidFun.git
 
+# quick nearest neighbours 
+https://github.com/bakercp/ofxSpatialHash
 
 # lua scripting
 git clone https://github.com/danomatika/ofxLua.git
