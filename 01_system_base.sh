@@ -16,7 +16,7 @@ echo "copying system wide hardware confs"
 sudo mkdir -p /usr/share/X11/xorg.conf.d/
 sudo cp ~/grimorio/extra/base/20-intel.conf /usr/share/X11/xorg.conf.d/20-intel.conf
 sudo mkdir -p /etc/modprobe.d/
-sudo cp ~/grimorio/extra/kinect-depth.conf /etc/modprobe.d/kinect-depth.conf
+sudo cp ~/grimorio/extra/base/kinect-depth.conf /etc/modprobe.d/kinect-depth.conf
 sudo cp ~/grimorio/extra/base/lightdm.conf /etc/lightdm/lightdm.conf
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp ~/grimorio/extra/base/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
