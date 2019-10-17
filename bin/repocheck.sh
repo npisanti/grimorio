@@ -23,7 +23,7 @@ paths=(
     "oF/apps/sketches"
     "oF/apps/stubs"
     "oF/apps/instruments"
-    "oF/apps/utilities"
+    "oF/apps/np-tools"
     "np-scrapbook"
     "workspace/graphics"
     "workspace/bashcode"
