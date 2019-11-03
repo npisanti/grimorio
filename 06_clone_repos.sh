@@ -53,13 +53,13 @@ git clone https://github.com/npisanti/npisanti-nocms.git
 # my apps
 cd ~/oF/apps
 git clone https://github.com/npisanti/motore_entropico.git
-git clone https://github.com/npisanti/np-instruments.git instruments
-git clone https://github.com/npisanti/np-stubs.git stubs
-git clone https://github.com/npisanti/np-sketches.git sketches
-git clone https://github.com/npisanti/np-utilities.git utilities
+git clone https://github.com/npisanti/np-instruments.git
+git clone https://github.com/npisanti/np-stubs.git 
+git clone https://github.com/npisanti/np-sketches.git 
+git clone https://github.com/npisanti/np-utilities.git 
 git clone https://github.com/npisanti/orcamenti.git
 git clone https://github.com/npisanti/orca-snippets.git
-git clone https://github.com/npisanti/np-miscela.git
+git clone https://github.com/npisanti/np-tools.git
 
 # clone scrapbook
 cd ~

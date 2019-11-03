@@ -1,12 +1,13 @@
 #!/bin/bash
 
-exec ~/oF/apps/orcaset/motore/bin/motore & 
+exec ~/oF/apps/1mp-exile/band/bin/band & 
 
 pkill -USR1 redshift
 
 sleep 2
 
-terminator -b  -T 'orca' --geometry 1920x916+0+256 --profile=orcam -e "orca ~/oF/apps/orcaset/cycle.168.orca"
+cd ~/oF/apps/1mp-exile/
+terminator -b  -T 'orca' --geometry 1920x916+0+256 --profile=orcam 
 
 pkill -USR1 redshift
 
