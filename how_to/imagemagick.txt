@@ -1,3 +1,7 @@
 
 // convert in place, all black to transparent
 mogrify -transparent black *
+
+// rotate 90 deg
+mogrify -transparent black *
+
