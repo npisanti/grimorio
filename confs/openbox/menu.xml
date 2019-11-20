@@ -42,7 +42,7 @@
 			</item>
 			<item label="Arduino IDE">
 				<action name="Execute">
-					<command>~/apps/arduino-1.8.9/arduino</command>
+					<command>~/apps/arduino-1.8.10/arduino</command>
 				</action>
 			</item>
 			<item label="Etcher">
@@ -114,14 +114,14 @@
 			</item>
 		</menu>
 		<menu id="root-menu-85632" label="Graphics">
-			<item label="Aseprite">
-				<action name="Execute">
-					<command>aseprite</command>
-				</action>
-			</item>
 			<item label="Dotgrid">
 				<action name="Execute">
 					<execute>dotgrid</execute>
+				</action>
+			</item>
+			<item label="Ronin">
+				<action name="Execute">
+					<execute>ronin</execute>
 				</action>
 			</item>
 			<item label="DarkTable">
@@ -134,6 +134,11 @@
 					<command>kdenlive</command>
 				</action>
 			</item>
+			<item label="Aseprite">
+				<action name="Execute">
+					<command>aseprite</command>
+				</action>
+			</item>
 			<item label="GColor">
 				<action name="Execute">
 					<execute>gcolor2</execute>
@@ -142,6 +147,17 @@
 		</menu>
         
 		<menu id="office" label="Office">
+			<item label="Telegram">
+				<action name="Execute">
+					<command>telegram-desktop</command>
+				</action>
+			</item>
+			<item label="Thunderbird Mail">
+				<action name="Execute">
+					<command>thunderbird</command>
+				</action>
+			</item>
+			<separator/>
 			<item label="LO Writer">
 				<action name="Execute">
 					<command>lowriter</command>
@@ -152,11 +168,6 @@
 					<command>localc</command>
 				</action>
 			</item>
-			<item label="Thunderbird Mail">
-				<action name="Execute">
-					<command>thunderbird</command>
-				</action>
-			</item>
 			<item label="XSane Scanning Utiliy">
 				<action name="Execute">
 					<command>xsane</command>
@@ -165,12 +176,6 @@
 		</menu>
 
 		<menu id="network" label="Network">
-			<item label="Telegram">
-				<action name="Execute">
-					<command>telegram-desktop</command>
-				</action>
-			</item>
-			<separator/>
 			<item label="Filezilla FTP Client">
 				<action name="Execute">
 					<command>filezilla</command>
@@ -227,14 +232,9 @@
 					<command>steam</command>
 				</action>
 			</item>
-			<item label="BrutalDoom2">
-				<action name="Execute">
-					<command>/home/nick/gzdoom_build/gzdoom/build/gzdoom -iwad ~/wads/doom2.wad -file ~/wads/brutaldoom/brutalv20b.pk3</command>
-				</action>
-			</item>
 			<item label="BrutalDoom">
 				<action name="Execute">
-					<command>/home/nick/gzdoom_build/gzdoom/build/gzdoom -iwad ~/wads/doom.wad -file ~/wads/brutaldoom/brutalv20b.pk3</command>
+					<command>gzdoom -file ~/wads/brutaldoom/brutalv20b.pk3</command>
 				</action>
 			</item>
 		</menu>
