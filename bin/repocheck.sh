@@ -22,10 +22,6 @@ paths=(
     "oF/apps/np-instruments"
     "oF/apps/np-tools"
     "np-scrapbook"
-    "workspace/graphics"
-    "workspace/bashcode"
-    "workspace/fatture"
-    "workspace/scartoffie"
 )
 
 nothingtocommit="true"

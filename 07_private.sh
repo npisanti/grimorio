@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # private repos
-mkdir -p ~/workspace
-cd ~/workspace
+mkdir -p ~/bureau
+cd ~/bureau
 
 git clone https://gitlab.com/npisanti/scartoffie.git
 git clone https://gitlab.com/npisanti/fatture.git

@@ -1,0 +1,27 @@
+
+# thermald can save from hardware thermal shutdown 
+sudo apt-get install thermald
+
+
+# you can use cpufreq-utils
+sudo cpufreq-set -c 0 -g performance
+sudo cpufreq-set -c 1 -g performance
+sudo cpufreq-set -c 2 -g performance
+sudo cpufreq-set -c 3 -g performance
+
+
+# you can check with :
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+
+# or cpupower 
+# cpupower is useful to scale freqs and change governor 
+sudo apt-get install linux-cpupower
+
+cpupower frequency-info
+
+sudo cpupower frequency-set -g performance
+
+
+# reference
+https://wiki.archlinux.org/index.php/CPU_frequency_scaling#cpupower

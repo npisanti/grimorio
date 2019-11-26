@@ -1,6 +1,11 @@
 
+# just get the L output with sox 
 
-audacity shortcuts:
+mkdir mono 
+for i in *; do sox $i "mono/$i" remix 1 ; done
+
+
+# audacity shortcuts:
     ctrl + 1 = zoom in
     ctrl + 2 = zoom to normal
     ctrl + 3 = zoom out
@@ -11,7 +16,8 @@ audacity shortcuts:
     shift + S = toggle solo track 
     Z = find zero crossing 
 
-REMAP KEYS
+
+# REMAP KEYS
     W = Select Cursor to Track End
     Q = Skip to Start
     M = mute track

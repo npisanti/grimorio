@@ -1,18 +1,3 @@
-#!/bin/bash
-
-MULTIARGS=""
-
-for var in "$@"
-do
-    FILEPATH=$(realpath "$var")    
-    MULTIARGS="$MULTIARGS$FILEPATH "
-done
-
-if [ -z "$1" ]; then
-    exec  /home/$USER/oF/apps/orcamenti/substrata/bin/substrata 
-else
-    #FILEPATH=$(realpath "$1")
-    exec /home/$USER/oF/apps/orcamenti/substrata/bin/substrata $MULTIARGS
-fi
-
+#!/bin/sh
+exec /home/$USER/oF/apps/np-tools/substrata/bin/substrata "$@"
 exit
