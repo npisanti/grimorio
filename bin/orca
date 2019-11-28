@@ -3,7 +3,7 @@
 SEED=$(od -vAn -N2 -tu2 < /dev/urandom)
 
 if [ -z "$1" ]; then
-    chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 
+    chrt --rr 79  /home/$USER/apps/orca-c/build/release/orca --strict-timing --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 
 else
     ext="${1#*.}"  
     BPM=$(cut -d'.' -f1 <<<$ext)
@@ -12,7 +12,7 @@ else
         BPM="120"
     fi
 
-    chrt --rr 79  /home/$USER/apps/Orca-c/build/release/orca --strict-timing --bpm "$BPM" --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 $1
+    chrt --rr 79  /home/$USER/apps/orca-c/build/release/orca --strict-timing --bpm "$BPM" --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 $1
 fi
 
 exit
