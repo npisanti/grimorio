@@ -21,7 +21,7 @@ paths=(
     "oF/apps/stubs"
     "oF/apps/np-instruments"
     "oF/apps/np-tools"
-    "np-scrapbook"
+    "scrapbook"
 )
 
 nothingtocommit="true"
