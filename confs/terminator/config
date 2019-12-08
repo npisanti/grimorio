@@ -2,6 +2,7 @@
   dbus = False
   focus = system
   handle_size = 1
+  borderless = True
   title_transmit_bg_color = "#000000"
   title_receive_bg_color = "#082a3f"
   title_inactive_bg_color = "#000000"

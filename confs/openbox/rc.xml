@@ -490,7 +490,7 @@
           <enabled>true</enabled>
           <name>Orca term</name>
         </startupnotify>
-        <command>terminator -b  -T 'orca' --geometry 1000x950+0+0 --profile=orcam</command>
+        <command>terminator -b  -T 'orca-c' --geometry 1000x950+0+0 --profile=orcam</command>
       </action>
     </keybind>
     <keybind key="W-p">
@@ -946,8 +946,19 @@
     <manageDesktops>yes</manageDesktops>
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
-  <applications>
+  
     <!-- remove decorations -->
+  
+    <applications>
+    <!-- Match all windows and remove their decorations -->
+    <application class="*"> <decor>no</decor> </application>
+    <!-- Give back decorations to some app windows -->
+    <application name="galculator"> <decor>yes</decor> </application>
+    <application name="gcolor2"> <decor>yes</decor> </application>
+    </applications>
+
+<!--
+  <applications>
     <application name="geany">
       <decor>no</decor>
     </application>
@@ -970,6 +981,10 @@
       <maximized>yes</maximized>
       <decor>no</decor>
     </application>
+    </applications>
+ -->
+
+</openbox_config>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
@@ -1078,5 +1093,4 @@
       </position>
     </application>
 -->
-  </applications>
-</openbox_config>
+

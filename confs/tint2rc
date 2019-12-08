@@ -58,7 +58,7 @@ border_color = #888888 20
 
 # Panel
 panel_monitor = 1
-panel_position = bottom center horizontal
+panel_position = top center horizontal
 panel_items = TBSC
 panel_size = 100% 30
 panel_margin = 0 0
@@ -83,7 +83,7 @@ taskbar_active_background_id = 6
 taskbar_name = 0
 taskbar_name_background_id = 0
 taskbar_name_active_background_id = 0
-taskbar_name_font = Terminus 12
+taskbar_name_font = Terminus 9
 taskbar_name_font_color = #828282 100
 taskbar_name_active_font_color = #828282 100
 
@@ -107,7 +107,7 @@ task_iconified_icon_asb = 80 0 0
 
 # Fonts
 #task_font = Liberation Sans 06_55 8
-task_font = Terminus 9
+task_font = Terminus 12
 task_font_color = #cccccc 60
 
 task_active_font_color = #ffffff 100
