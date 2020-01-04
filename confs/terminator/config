@@ -48,7 +48,7 @@
     allow_bold = False
     cursor_shape = ibeam
     cursor_color = "#aaaaaa"
-    font = Terminus Bold 18
+    font = Inconsolata Medium 21
     foreground_color = "#babdb6"
     show_titlebar = False
     scrollbar_position = hidden

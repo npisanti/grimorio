@@ -1,0 +1,17 @@
+
+
+// set up wpa supplicant as usual 
+
+country=IT
+
+network={
+	ssid="your-essid"
+	psk="your*password"
+}
+
+------------------------------------------
+
+sudo apt-get update 
+sudo apt-get dist-upgrade 
+
+sudo apt-get install xinit openbox terminator lightdm nitrogen hsetroot xfce4-power-manager

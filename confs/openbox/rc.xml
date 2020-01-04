@@ -493,6 +493,15 @@
         <command>terminator -b  -T 'orca-c' --geometry 1000x950+0+0 --profile=orcam</command>
       </action>
     </keybind>
+    <keybind key="W-S-e">o
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>engines</name>
+        </startupnotify>
+        <command>gnome-terminal --title="substrata engine" -- start_engines.sh</command>
+      </action>
+    </keybind>
     <keybind key="W-p">
       <action name="Execute">
         <startupnotify>

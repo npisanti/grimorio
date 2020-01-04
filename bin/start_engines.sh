@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEVICE="PCH"
+DEVICE="MK2"
 
 if [ ! -z "$1" ]; then
     DEVICE="$1"
