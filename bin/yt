@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "insert video url as argument please"
+else
+    youtube-dl --extract-audio --audio-format mp3 $1
+fi
+
+exit

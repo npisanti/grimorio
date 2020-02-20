@@ -2,3 +2,4 @@ sudo geany /var/log/syslog &
 sudo geany /var/log/Xorg.0.log &
 sudo geany /var/log/messages &
 
+sudo grep -i error /var/log/messages

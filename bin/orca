@@ -3,7 +3,7 @@
 SEED=$(od -vAn -N2 -tu2 < /dev/urandom)
 
 if [ -z "$1" ]; then
-    nice -n -20 /home/$USER/apps/orca-c/build/orca --strict-timing --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 
+    nice -n -20 /home/$USER/apps/Orca-c/build/orca --strict-timing --undo-limit 20 --seed $SEED 
     #chrt --rr 79  /home/$USER/apps/orca-c/build/release/orca --strict-timing --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 
 else
     ext="${1#*.}"  
@@ -14,7 +14,7 @@ else
     fi
 
     #chrt --rr 79  /home/$USER/apps/orca-c/build/release/orca --strict-timing --bpm "$BPM" --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 $1
-    nice -n -20  /home/$USER/apps/orca-c/build/orca --strict-timing --bpm "$BPM" --undo-limit 20 --seed $SEED --margins 1 --osc-port 4444 $1
+    nice -n -20  /home/$USER/apps/Orca-c/build/orca --strict-timing --bpm "$BPM" --undo-limit 20 --seed $SEED $1
 fi
 
 exit

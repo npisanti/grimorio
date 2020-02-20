@@ -20,9 +20,9 @@ fi
 S_RESO="$SCREENCAST_WIDTHx$SCREENCAST_HEIGHT"
 S_OFF="$SCREENCAST_X,$SCREENCAST_Y"
 
-#ffmpeg -y -f x11grab -s 600x720 -i :0.0+660,140 -vcodec libx264 -threads 2 $HOME/Videos/screencast_temp.mkv &
+ffmpeg -y -f x11grab -s 1280x720 -i :0.0+320,130 -vcodec libx264 -threads 2 $HOME/Videos/screencast_temp.mkv &
 
-ffmpeg -y -f x11grab -s 400x640 -i :0.0+0,0 -vcodec libx264 -threads 2 $HOME/Videos/screencast_temp.mkv &
+#ffmpeg -y -f x11grab -s 400x640 -i :0.0+0,0 -vcodec libx264 -threads 2 $HOME/Videos/screencast_temp.mkv &
 
 jack_capture -d 6000 $HOME/Videos/screencast_temp.wav &
 

@@ -42,6 +42,10 @@ echo "installing fff"
 cd ~/apps
 git clone https://github.com/dylanaraps/fff
 
+echo "installing youtube-dl" 
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
 echo "installing Orca-c" 
 cd ~/apps
 sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev
