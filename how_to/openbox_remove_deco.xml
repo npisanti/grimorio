@@ -1,0 +1,7 @@
+    <applications>
+    <!-- Match all windows and remove their decorations -->
+    <application class="*"> <decor>no</decor> </application>
+    <!-- Give back decorations to some app windows -->
+    <application name="galculator"> <decor>yes</decor> </application>
+    <application name="gcolor2"> <decor>yes</decor> </application>
+    </applications>

@@ -1,0 +1,5 @@
+
+
+// paste to clipboard
+	"+y
+
