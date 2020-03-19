@@ -36,4 +36,7 @@ cp -r ~/grimorio/extra/themes/* ~/.themes/
 mkdir -p /.config/mpv
 cp ~/grimorio/confs/mpv.conf ~/.config/mpv/mpv.conf
 
+cp -ar ~/grimorio/confs/micro ~/.config
+cp ~/grimorio/confs/tmux.conf ~/.tmux.conf
+
 exit

@@ -30,4 +30,7 @@ cp ~/.config/geany/keybindings.conf ~/grimorio/confs/geany
 
 cp ~/.config/mpv/mpv.conf ~/grimorio/confs/mpv.conf
 
+cp -ar ~/.config/micro/ ~/grimorio/confs/
+cp ~/.tmux.conf ~/grimorio/confs/tmux.conf
+
 exit

@@ -1,0 +1,33 @@
+#Geany
+
+color-link default "251"
+color-link comment "241"
+
+color-link constant "bold 255"
+color-link constant.string "bold 255"
+color-link identifier "bold 255"
+
+color-link preproc "124"
+
+color-link statement "255"
+color-link type "255"
+color-link error "196"
+color-link todo "160"
+
+
+color-link symbol "white"
+
+color-link special "blue"
+
+color-link indent-char "bold black"
+color-link indent-char "bold black"
+color-link line-number "251,234"
+color-link current-line-number ""
+color-link statusline "black,white"
+color-link tabbar "black,white"
+color-link color-column "bold geren"
+color-link diff-added "green"
+color-link diff-modified "yellow"
+color-link diff-deleted "red"
+color-link gutter-error ",red"
+color-link gutter-warning "red"

@@ -128,10 +128,13 @@ export PATH=$PATH:/usr/local/go/bin
 # deactivate accessibility
 export NO_AT_BRIDGE=1
 
-
 export EDITOR="dgeany"
 export FFF_LS_COLORS=1
 # Selection color [0-9] (copied/moved files)
 export FFF_COL3=0
 # Cursor color [0-9]
 export FFF_COL4=7
+
+# for using micro inside tmux
+export TERM=xterm-256color
+
