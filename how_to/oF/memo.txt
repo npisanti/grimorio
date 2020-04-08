@@ -1,0 +1,15 @@
+
+set in ofConstant.h, line 16
+//#define GLM_FORCE_CTOR_INIT 1
+
+desktop
+- edit: of_v0.11.0_linux64gcc6_release/libs/openFrameworksCompiled/project/makefileCommon/config.linux.common.mk
+- line 460
+PLATFORM_CXX = clang-8++ -B/usr/lib/gold-ld
+
+rpi :
+- copy config.linuxarmv6l.default.mk into 
+	libs/openFrameworksCompiled/project/linuxarmv6l/    
+- modify ofxPDSP/addon_config.mk , comment line 85
+# ADDON_CFLAGS = -mfpu=neon -mfloat-abi=hard -ftree-vectorize
+	

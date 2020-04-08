@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "please give an argument"
+else
+	
+	ABSOLUTE=$PWD
+	ABSOLUTE+="/$1"
+
+	exec /home/$USER/oF/addons/np-pixelscript/pixelscript/bin/pixelscript /home/$USER/scrapbook/tools/shader/main.lua "$ABSOLUTE"
+
+fi
+
+exit
