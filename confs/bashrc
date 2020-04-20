@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;91m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;91m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[31m\]|:::| ${debian_chroot:+($debian_chroot)}\[\033[37m\]\u@\h:\w$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -87,10 +88,8 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=00;31:warning=00;33:note=00;36:caret=00;32:locus=01:quote=01'
 
-
 # http://linux-sxs.org/housekeeping/lscolors.html
-export LS_COLORS='di=94:fi=0:ln=31:pi=5:so=5:bd=5:cd=6:or=31:mi=0:ex=33:*.rpm=90' 
-
+export LS_COLORS='di=0:fi=1;0:ln=33:pi=5:so=5:bd=5:cd=6:or=31:mi=0:ex=94:*.rpm=90' 
 
 # some more ls aliases
 #alias ll='ls -l'
@@ -127,13 +126,6 @@ export PATH=$PATH:/usr/local/go/bin
 
 # deactivate accessibility
 export NO_AT_BRIDGE=1
-
-export EDITOR="dgeany"
-export FFF_LS_COLORS=1
-# Selection color [0-9] (copied/moved files)
-export FFF_COL3=0
-# Cursor color [0-9]
-export FFF_COL4=7
 
 # for using micro inside tmux
 export TERM=xterm-256color

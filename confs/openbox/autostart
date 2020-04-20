@@ -18,7 +18,7 @@ xset b off
 #xmodmap -e "keysym Insert = Multi_key"
 
 # remap caps lock to left click 
-xmodmap -e "keycode 66 ="
+xmodmap -e "keycode 66 =BackSpace"
 
 ## SETTINGS END
 

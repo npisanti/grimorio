@@ -1,5 +1,9 @@
-//set default alsa card
-sudo geany /usr/share/alsa/alsa.conf 
-//set the number of a card you can see on alsamixer, for example
-defaults.ctl.card 1
+
+# find your desired card with:
+
+cat /proc/asound/cards
+
+# and then create /etc/asound.conf with the following entries:
+
 defaults.pcm.card 1
+defaults.ctl.card 1

@@ -33,4 +33,6 @@ cp ~/.config/mpv/mpv.conf ~/grimorio/confs/mpv.conf
 cp -ar ~/.config/micro/ ~/grimorio/confs/
 cp ~/.tmux.conf ~/grimorio/confs/tmux.conf
 
+cp ~/.config/cmus/rc ~/grimorio/confs/cmusrc
+
 exit

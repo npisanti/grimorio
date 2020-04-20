@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/nicola/.gtkrc-2.0.mine"
-gtk-theme-name="Equilux"
+gtk-theme-name="Simply_Circles_Dark"
 gtk-icon-theme-name="breeze-dark"
 gtk-font-name="Terminus (TTF) Medium 12"
 gtk-cursor-theme-name="Adwaita"

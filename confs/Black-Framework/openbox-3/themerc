@@ -6,18 +6,19 @@
 #     Menu Settings	
 #======================================
 
+menu.border.color: #fff
 menu.title.bg: raised
-menu.title.bg.color: #181818
-menu.title.text.color: #ffffff
-menu.separator.color: #242424
+menu.title.bg.color: #000000
+menu.title.text.color: #fff
+menu.separator.color: #222
 menu.items.bg: raised
-menu.items.bg.color: #181818
-menu.items.text.color: #ffffff
+menu.items.bg.color: #000000
+menu.items.text.color: #fff
 menu.items.disabled.text.color: #505050
 menu.items.active.bg: flat border
-menu.items.active.bg.color: #777777
-menu.items.active.bg.border.color: #777777
-menu.items.active.text.color: #000000
+menu.items.active.bg.color: #ccc
+menu.items.active.bg.border.color: #ccc
+menu.items.active.text.color: #000
 
 #======================================
 #     Focused Window Settings

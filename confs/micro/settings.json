@@ -21,7 +21,7 @@
     "infobar": true,
     "keepautoindent": false,
     "keymenu": false,
-    "linter": true,
+    "linter": false,
     "literate": true,
     "matchbrace": false,
     "matchbraceleft": false,

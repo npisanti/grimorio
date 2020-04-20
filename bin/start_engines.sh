@@ -21,5 +21,7 @@ jackd -R -P89 -p128 -t2000 -dalsa -dhw:$DEVICE -r44100 -p512 -n2 -s -P &
 sleep 3
 substrata -p ~/resources/substrata -o 4242
 
+sleep 1
+killall jackd
 
 exit

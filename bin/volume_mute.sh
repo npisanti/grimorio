@@ -1,6 +1,7 @@
 #!/bin/bash
-pactl -- set-sink-mute 0 toggle
-mutestatus=`amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $4 }'`
+amixer set Master toggle
+
+mutestatus=`amixer sget Master | grep 'Mono:' | awk -F'[][]' '{ print $6 }'`
 if [ "$mutestatus" == "on" ]; then
     mutestatus="off"
 else

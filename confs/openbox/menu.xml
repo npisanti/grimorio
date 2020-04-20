@@ -24,7 +24,7 @@
 		</item>
 		<item label="Text Editor">
 			<action name="Execute">
-				<command>code</command>
+				<command>geany</command>
 			</action>
 		</item>
 		<separator/>
@@ -35,24 +35,9 @@
 					<command>geany</command>
 				</action>
 			</item>
-			<item label="Processing IDE">
-				<action name="Execute">
-					<command>~/apps/processing-3.5.3/processing</command>
-				</action>
-			</item>
-			<item label="Arduino IDE">
-				<action name="Execute">
-					<command>~/apps/arduino-1.8.10/arduino</command>
-				</action>
-			</item>
 			<item label="Etcher">
 				<action name="Execute">
 					<command>gksudo balena-etcher-electron</command>
-				</action>
-			</item>
-			<item label="Ossia Score">
-				<action name="Execute">
-					<command>ossia.sh</command>
 				</action>
 			</item>
 			<item label="Doxygen Wizard">
@@ -72,11 +57,6 @@
 					<command>audacity</command>
 				</action>
 			</item>
-			<item label="Ardour">
-				<action name="Execute">
-					<command>ardour</command>
-				</action>
-			</item>
 			<item label="paulstretch">
 				<action name="Execute">
 					<command>paulstretch</command>
@@ -84,7 +64,7 @@
 			</item>
 			<item label="Orca-c">
 				<action name="Execute">
-					<command>x-terminal-emulator --profile=orcam --geometry 950x1000 -T 'orca' -e orca</command>
+					<command>terminator -b --profile=orcam --geometry 950x1000 -T 'orca-c' -e orca</command>
 				</action>
 			</item>
 			<item label="OrcaJS">
@@ -107,36 +87,26 @@
 					<command>x-terminal-emulator -T 'alsamixer' -e alsamixer</command>
 				</action>
 			</item>
-			<item label="Pulse Audio Controls">
-				<action name="Execute">
-					<command>pavucontrol</command>
-				</action>
-			</item>
 		</menu>
 		<menu id="root-menu-85632" label="Graphics">
-			<item label="Dotgrid">
-				<action name="Execute">
-					<execute>dotgrid</execute>
-				</action>
-			</item>
-			<item label="Ronin">
-				<action name="Execute">
-					<execute>ronin</execute>
-				</action>
-			</item>
 			<item label="DarkTable">
 				<action name="Execute">
 					<execute>darktable</execute>
 				</action>
 			</item>
+			<item label="Dotgrid">
+				<action name="Execute">
+					<execute>dotgrid</execute>
+				</action>
+			</item>
+			<item label="Krita">
+				<action name="Execute">
+					<execute>krita</execute>
+				</action>
+			</item>
 			<item label="KDenLive">
 				<action name="Execute">
 					<command>kdenlive</command>
-				</action>
-			</item>
-			<item label="Aseprite">
-				<action name="Execute">
-					<command>aseprite</command>
 				</action>
 			</item>
 			<item label="GColor">
@@ -158,14 +128,19 @@
 				</action>
 			</item>
 			<separator/>
-			<item label="LO Writer">
+			<item label="Galculator">
 				<action name="Execute">
-					<command>lowriter</command>
+					<command>galculator</command>
 				</action>
 			</item>
-			<item label="LO Calc">
+			<item label="Abiword">
 				<action name="Execute">
-					<command>localc</command>
+					<command>abiword</command>
+				</action>
+			</item>
+			<item label="Gnumeric">
+				<action name="Execute">
+					<command>gnumeric</command>
 				</action>
 			</item>
 			<item label="XSane Scanning Utiliy">
@@ -240,24 +215,14 @@
 		</menu>
 
 		<menu id="accessories" label="Utilities">
-			<item label="Video Transcoder">
+			<item label="Test Camera">
 				<action name="Execute">
-					<command>winff</command>
-				</action>
-			</item>
-			<item label="Cam Capture">
-				<action name="Execute">
-					<command>guvcview</command>
+					<command>qv4l2</command>
 				</action>
 			</item>
 			<item label="Shutter screenshots">
 				<action name="Execute">
 					<command>shutter</command>
-				</action>
-			</item>
-			<item label="Vokoscreen">
-				<action name="Execute">
-					<command>vokoscreen</command>
 				</action>
 			</item>
 			<item label="Combo Jack Fixer">
@@ -273,13 +238,6 @@
 			<item label="Disk Usage Analyzer">
 				<action name="Execute">
 					<command>xdiskusage</command>
-				</action>
-			</item>
-			<item label="Catfish File Search">
-				<action name="Execute">
-					<command>
-                        catfish
-                    </command>
 				</action>
 			</item>
 			<item label="Archive Manager">

@@ -3,21 +3,22 @@
 color-link default "251"
 color-link comment "241"
 
-color-link constant "bold 255"
-color-link constant.string "bold 255"
-color-link identifier "bold 255"
+color-link constant "255"
+color-link constant.string "255"
+color-link identifier "255"
 
 color-link preproc "124"
 
-color-link statement "255"
-color-link type "255"
+color-link statement "bold 255"
+color-link type "bold 255"
+
 color-link error "196"
 color-link todo "160"
 
 
 color-link symbol "white"
 
-color-link special "blue"
+color-link special "124"
 
 color-link indent-char "bold black"
 color-link indent-char "bold black"

@@ -13,11 +13,9 @@ cp ~/grimorio/confs/compton.conf ~/.config/compton.conf
 cp ~/grimorio/confs/bashrc ~/.bashrc 
 cp ~/grimorio/confs/xbindkeysrc ~/.xbindkeysrc 
 cp ~/grimorio/confs/Xresources ~/.Xresources 
+
 mkdir -p ~/.local/share/applications/
 cp ~/grimorio/confs/mimeapps.list ~/.local/share/applications/mimeapps.list 
-mkdir -p ~/.config/Code/User/
-cp -ar ~/grimorio/confs/vscode.json ~/.config/Code/User/settings.json 
-cp ~/grimorio/confs/redshift.conf ~/.config/redshift.conf
 
 mkdir -p ~/.config/bl-exit/
 cp -r ~/grimorio/confs/bl-exitrc  ~/.config/bl-exit/bl-exitrc 
@@ -38,5 +36,8 @@ cp ~/grimorio/confs/mpv.conf ~/.config/mpv/mpv.conf
 
 cp -ar ~/grimorio/confs/micro ~/.config
 cp ~/grimorio/confs/tmux.conf ~/.tmux.conf
+
+mkdir -p ~/.config/cmus/
+cp ~/grimorio/confs/cmusrc ~/.config/cmus/rc
 
 exit

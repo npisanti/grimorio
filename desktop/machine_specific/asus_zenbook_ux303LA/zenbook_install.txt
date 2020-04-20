@@ -94,3 +94,9 @@ sudo geany /etc/modules-load.d/modules.conf
 coretemp
 snd_seq_midi
 asus-nb-wmi
+
+
+
+// ---------------------- no pulseaudio -------------------------
+sudo cp asound.conf /etc/asound.conf 
+

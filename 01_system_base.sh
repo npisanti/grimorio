@@ -1,16 +1,44 @@
 #!/bin/bash
 
+echo "installing hardware stuff"
+sudo apt-get -y build-essential amd64-microcode firmware-b43-installer firmware-b43legacy-installer firmware-linux firmware-ralink firmware-iwlwifi firmware-realtek i965-va-driver intel-microcode cpufrequtils hdparm hddtemp acpi printer-driver-all hplip va-driver-all vdpau-va-driver
+
+echo "installing coding tools"
+sudo apt-get -y build-essential swig shellcheck make cloc clang-8 clang-format-8 clang-tools-8 clang-tidy-8 lldb-8 git linux-tools perf-tools-unstable linux-perf valgrind frama-c-base doxygen doxygen-doc 
+
 echo "installing some kind of crunchbang system"
-sudo apt-get -y install alsa-utils amd64-microcode anacron apt-transport-https apt-xapian-index aptitude arandr arj bash-completion btrfs-tools catfish chntpw clipit compton conky-all cpufrequtils curl crda dmz-cursor-theme dosfstools efibootmgr eject enchant evince fbxkb feh file-roller firmware-b43-installer firmware-b43legacy-installer firmware-linux firmware-ralink firmware-iwlwifi firmware-realtek fonts-cantarell fonts-dejavu fonts-droid-fallback fonts-inconsolata fonts-liberation ftp fuse galculator galternatives gdebi geany ghostscript gigolo gksu gmrun abiword gnumeric gparted gsimplecal gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly gstreamer1.0-pulseaudio gvfs gvfs-backends gvfs-fuse hardinfo hdparm hddtemp hexchat htop hwdata i965-va-driver intel-microcode lame libnotify-bin lightdm lm-sensors locales lsb-release lxappearance lzop mirage mlocate modemmanager network-manager nitrogen ntfs-3g ntp obconf obmenu openbox openssh-client p7zip-full pavucontrol pciutils pcmciautils policykit-1-gnome pulseaudio python-keybinder python-notify python-xdg rfkill rpl rsync rzip scrot smartmontools suckless-tools sudo synaptic terminator thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tint2 transmission-gtk ttf-mscorefonts-installer unace unalz unar unrar unzip update-inetd usb-modeswitch usbutils user-setup uuid-runtime va-driver-all vdpau-va-driver xdg-user-dirs xdg-utils xfburn xfce4-notifyd xfce4-power-manager xfce4-screenshooter xinput xorg xsel xz-utils yad zip make acpi tree fonts-stix fonts-lmodern fonts-powerline fonts-roboto xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique fonts-inconsolata fonts-f500 fonts-roboto-fontface fonts-firacode fonts-open-sans fonts-3270 printer-driver-all filezilla firefox-esr libreoffice libreoffice-gtk gimp xsane thunderbird neofetch git geany-plugins cppcheck cloc grc doxygen doxygen-doc doxygen-gui universalindentgui hplip python3-pyqt5 xdiskusage linux-tools perf-tools-unstable linux-perf global gcolor2 redshift xbacklight mpv vlc vlc-plugin-notify ncftp clang-8 clang-format-8 clang-tools-8 clang-tidy-8 nmap xbindkeys xdotool strace hsetroot wmctrl thermald
+sudo apt-get -y install alsa-utils anacron apt-transport-https apt-xapian-index aptitude arandr arj bash-completion btrfs-tools chntpw clipit compton conky-all curl crda dmz-cursor-theme dosfstools efibootmgr eject enchant evince fbxkb feh file-roller ftp fuse galculator galternatives gdebi ghostscript gpicview gksu abiword gnumeric gparted hardinfo htop hwdata libnotify-bin lightdm lm-sensors locales lsb-release lxappearance lzop mlocate modemmanager network-manager nitrogen ntfs-3g ntp obconf obmenu openbox openssh-client p7zip-full pciutils pcmciautils python-keybinder python-notify python-xdg rfkill rpl rsync rzip scrot smartmontools suckless-tools synaptic terminator thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tint2 transmission-gtk  unace unalz unar unrar unzip update-inetd usb-modeswitch usbutils user-setup uuid-runtime xdg-user-dirs xdg-utils xfce4-notifyd xfce4-power-manager xfce4-screenshooter xinput xorg xsel xz-utils yad zip treefilezilla firefox-esr xsane thunderbird neofetch grc python3-pyqt5 xdiskusage gcolor2 redshift xbacklight mpv ncftp nmap xdotool strace hsetroot wmctrl thermald gvfs gvfs-backends gvfs-fuse sshfs nmon fortune cmus sox cmatrix trash-cli cowsay joystick 
+
+echo "installing dev libs"
+sudo apt-get -y install libncurses5-dev libncursesw5-dev libportmidi-dev
+
+echo "installing codecs"
+sudo apt-get -y install vorbis-tools lame monkeys-audio gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly 
+
+echo "installing more apps"
+sudo apt-get -y install flameshot telegram-desktop obs calibre kdenlive krita wine winbind paulstretch audacity espeak x264 figlet toilet toilet-fonts qv4l2
+
+sudo apt-get -y install libreoffice libreoffice-gtk gimp doxygen-gui universalindentgui cppcheck geany geany-plugins 
+
+echo "installing fonts"
+sudo apt-get -y install fonts-cantarell fonts-dejavu fonts-droid-fallback fonts-inconsolata fonts-liberation fonts-stix fonts-lmodern fonts-powerline fonts-roboto xfonts-terminus xfonts-terminus-dos xfonts-terminus-oblique fonts-inconsolata fonts-f500 fonts-roboto-fontface fonts-firacode fonts-open-sans fonts-3270 ttf-mscorefonts-installer
 
 echo "installing realtime kernel"
 sudo apt-get install linux-image-4.18.0-0.bpo.3-rt-amd64
+
+echo "installing jack utils"
+sudo apt-get -y install jackd1 qjackctl aconnectgui jack-midi-clock jack-capture
+
+echo "setting up realtime limits"
+sudo cp ~/grimorio/extra/base/limits.conf /etc/security/limits.conf  
+sudo groupadd realtime
+sudo usermod -a -G realtime $USER
 
 echo "installing updated intel drivers"
 sudo apt-get -t stretch-backports install xserver-xorg-video-intel
 
 echo "setting up xinitrc"
-cp ~/struttura/extra/xinitrc ~/.xinitrc
+cp ~/grimorio/extra/xinitrc ~/.xinitrc
 
 echo "copying system wide hardware confs"
 sudo mkdir -p /usr/share/X11/xorg.conf.d/
@@ -38,17 +66,9 @@ echo "adding cloudshare DNS to resolv.conf"
 echo "prepend domain-name-servers 1.0.0.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 echo "prepend domain-name-servers 1.1.1.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 
-
 echo "adding user to dialout and tty"
 sudo usermod -a -G tty $USER
 sudo usermod -a -G dialout $USER
-
-# adds .ino, .pde and .fzz from the folder extra_mime_types
-echo "installing mime types"
-xdg-mime install --novendor ~/grimorio/extra/mime-types/ino.xml
-xdg-mime install --novendor ~/grimorio/extra/mime-types/pde.xml
-xdg-mime install --novendor ~/grimorio/extra/mime-types/fzz.xml
-xdg-mime install --novendor ~/grimorio/extra/mime-types/frag.xml
 
 echo "installing icons"
 mkdir ~/.icons
@@ -57,11 +77,6 @@ git clone https://github.com/EmptyStackExn/mono-dark-flattr-icons.git
 
 mkdir ~/apps
 
-echo "installing bunsen themes"
-git clone https://github.com/BunsenLabs/bunsen-themes.git
-mv bunsen-themes/themes/* ~/.themes/
-rm -rf bunsen-themes/
-
 echo "installing bl-exit"
 cd ~/apps
 git clone https://github.com/BunsenLabs/bunsen-exit.git
@@ -69,10 +84,4 @@ git clone https://github.com/BunsenLabs/bunsen-exit.git
 echo "linking bins"
 rm -rf ~/bin
 ln -s ~/grimorio/bin ~/bin
-
-echo "install node.js and npm"
-sudo apt-get install curl software-properties-common
-curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-sudo apt-get install nodejs
-
 exit
