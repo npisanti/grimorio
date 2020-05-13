@@ -1,3 +1,4 @@
 #!/bin/bash
-exec /home/$USER/oF/apps/np-tools/eye/bin/eye "$@"
+pixelscript ~/scrapbook/tools/eye/
+#exec /home/$USER/oF/apps/np-tools/eye/bin/eye "$@"
 exit

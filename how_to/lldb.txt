@@ -1,0 +1,13 @@
+
+# also check out: https://linux-audit.com/understand-and-configure-core-dumps-work-on-linux/
+
+# check core dump limits with 
+ulimits -c 
+
+# first to get a core dump you should enable it 
+ulimit -c unlimited
+
+# then when you have a core dump :
+lldb-o ./program_debug_build -c /path/to/core
+
+# usually the core is in the same path of the executable

@@ -9,3 +9,25 @@ nano libs/openFrameworksCompiled/project/linuxarmv6l/config.linuxarmv6l.default.
 PLATFORM_CFLAGS += -mfpu=vfp
 // to
 PLATFORM_CFLAGS += -mfpu=neon
+
+
+
+// HYPERPIXEL---------------------------------------------------------
+
+in ofAppEGLWindow.cpp, line 1511
+    
+        // HYPERPIXEL TOUCH HACK ----------------------------
+        if( ev.code == 330) {
+            if( ev.value==0 ){ // release
+                mouseEvent.button = OF_MOUSE_BUTTON_LEFT;
+                mouseEvent.type = ofMouseEventArgs::Released;
+                mb.mouseButtonState &= ~MOUSE_BUTTON_LEFT_MASK;
+                pushMouseEvent = true;                
+            } else if( ev.value==1 ){ // press
+                mb.mouseButtonState |= MOUSE_BUTTON_LEFT_MASK;
+                mouseEvent.type = ofMouseEventArgs::Pressed;
+                mouseEvent.button = OF_MOUSE_BUTTON_LEFT;
+                pushMouseEvent = true;
+            }
+        } else 
+        // -------------------------------------------------
