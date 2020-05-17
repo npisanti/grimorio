@@ -15,7 +15,6 @@ color-link type "bold 255"
 color-link error "196"
 color-link todo "160"
 
-
 color-link symbol "white"
 
 color-link special "124"
@@ -23,10 +22,11 @@ color-link special "124"
 color-link indent-char "bold black"
 color-link indent-char "bold black"
 color-link line-number "251,234"
+color-link tabbar "251,234"
 color-link current-line-number ""
 color-link statusline "black,white"
-color-link tabbar "black,white"
-color-link color-column "bold geren"
+
+color-link color-column "234"
 color-link diff-added "green"
 color-link diff-modified "yellow"
 color-link diff-deleted "red"

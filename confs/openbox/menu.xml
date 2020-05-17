@@ -133,14 +133,14 @@
 					<command>galculator</command>
 				</action>
 			</item>
-			<item label="Abiword">
+			<item label="LO Writer">
 				<action name="Execute">
-					<command>abiword</command>
+					<command>lowriter</command>
 				</action>
 			</item>
-			<item label="Gnumeric">
+			<item label="LO Calc">
 				<action name="Execute">
-					<command>gnumeric</command>
+					<command>localc</command>
 				</action>
 			</item>
 			<item label="XSane Scanning Utiliy">

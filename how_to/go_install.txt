@@ -1,0 +1,11 @@
+
+// download go 
+	https://golang.org/dl/
+
+// then 
+sudo tar -C /usr/local -xzf go1.etcetc
+
+micro ~/.profile
+// add
+export PATH=$PATH:/usr/local/go/bin
+

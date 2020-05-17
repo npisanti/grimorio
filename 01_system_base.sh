@@ -18,7 +18,7 @@ echo "installing terminal stuff"
 sudo apt-get -y install terminator tmux cmatrix cowsay fortune nmon neofetch xdotool trash-cli figlet toilet toilet-fonts htop espeak tree
 
 echo "installing coding tools"
-sudo apt-get -y install build-essential swig shellcheck make cloc clang-8 clang-format-8 clang-tools-8 clang-tidy-8 lldb-8 git linux-tools perf-tools-unstable linux-perf valgrind frama-c-base doxygen doxygen-doc gdb
+sudo apt-get -y install build-essential swig shellcheck make cloc clang-8 clang-format-8 clang-tools-8 clang-tidy-8 lldb-8 git git-email linux-tools perf-tools-unstable linux-perf valgrind frama-c-base doxygen doxygen-doc gdb
 cd ~/apps
 git clone https://github.com/brendangregg/FlameGraph.git
 

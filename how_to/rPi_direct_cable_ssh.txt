@@ -28,3 +28,13 @@ ssh -Y pi@169.254.0.2
 
 
 // if needed connect usb-wifi to rPi
+
+// ---- buster -----------------------
+
+sudo micro /etc/dhcpcd.conf 
+```
+interface eth0
+static ip_address=169.254.0.2/24
+static routers=169.254.0.1
+static domain_name_servers=8.8.8.8
+```

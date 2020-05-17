@@ -366,9 +366,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>false</enabled>
-          <name>tmux</name>
+          <name>todo</name>
         </startupnotify>
-        <command>x-terminal-emulator -T 'todo' -e micro -startpos 8000,0 ~/wall/todo.txt</command>
+        <command>x-terminal-emulator -T 'todo' -e micro ~/wall/todo.txt:1000:0</command>
       </action>
     </keybind>
     <keybind key="W-c">
@@ -377,7 +377,7 @@
           <enabled>false</enabled>
           <name>tmux</name>
         </startupnotify>
-        <command>x-terminal-emulator -T 'culture' -e micro -startpos 8000,0 ~/wall/culture.txt</command>
+        <command>x-terminal-emulator -T 'todo' -e micro ~/wall/todo.txt</command>
       </action>
     </keybind>
     <keybind key="W-u">
@@ -565,7 +565,7 @@
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <width>50%</width>
+        <width>55%</width>
         <x>0</x>
         <y>0</y>
       </action>
@@ -574,7 +574,7 @@
       <action name="UnmaximizeFull"/>
       <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
-        <width>50%</width>
+        <width>45%</width>
         <x>-0</x>
         <y>0</y>
       </action>
@@ -582,7 +582,7 @@
     <keybind key="W-S-Up">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
-        <width>50%</width>
+        <width>45%</width>
         <height>50%</height>
         <x>-0</x>
         <y>0</y>
@@ -591,7 +591,7 @@
     <keybind key="W-S-Down">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
-        <width>50%</width>
+        <width>45%</width>
         <height>50%</height>
         <x>-0</x>
         <y>50%</y>

@@ -5,11 +5,11 @@
   title_transmit_bg_color = "#000000"
   title_receive_bg_color = "#082a3f"
   title_inactive_bg_color = "#000000"
+  inactive_color_offset = 1.0
   suppress_multiple_term_dialog = True
   title_use_system_font = False
   title_font = Terminus 12
 [keybindings]
-  hide_window = <Shift><Control>a
 [profiles]
   [[default]]
     urgent_bell = True

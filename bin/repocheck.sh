@@ -13,7 +13,7 @@ paths=(
     "oF/addons/np-pixelscript"
     "lab/orca-snippets"
     "oF/apps/np-tools"
-    "scrapbook"
+    "lab/scrapbook"
 )
 
 nothingtocommit="true"

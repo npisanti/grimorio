@@ -14,6 +14,8 @@ cp ~/grimorio/confs/bashrc ~/.bashrc
 cp ~/grimorio/confs/xbindkeysrc ~/.xbindkeysrc 
 cp ~/grimorio/confs/Xresources ~/.Xresources 
 
+cp ~/grimorio/confs/gitconfig ~/.gitconfig 
+
 mkdir -p ~/.local/share/applications/
 cp ~/grimorio/confs/mimeapps.list ~/.local/share/applications/mimeapps.list 
 
