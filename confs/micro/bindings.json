@@ -1,3 +1,4 @@
 {
-    "Alt-/": "lua:comment.comment"
+    "Alt-/": "lua:comment.comment",    
+    "CtrlP": "lua:initlua.csound_run"
 }

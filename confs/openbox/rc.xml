@@ -633,6 +633,15 @@
         <y>0</y>
       </action>
     </keybind>
+	<keybind key="W-Z">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <width>58%</width>
+        <x>20%</x>
+        <y>0</y>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>8</dragThreshold>
