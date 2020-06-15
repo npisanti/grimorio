@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ "$*" == "" ]; then
-    exec ~/np-junkrepo/app_shaderlab/bin/app_shaderlab
-else
-    exec ~/np-junkrepo/app_shaderlab/bin/app_shaderlab "$PWD/$1"
-fi
-
-exit

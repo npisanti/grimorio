@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "please give an argument"
+else
+	
+	ABSOLUTE=$PWD
+	ABSOLUTE+="/$1"
+
+	DEVICE=""
+	if [ -z "$2" ]; then
+		DEVICE+="/dev/video0"
+	else
+		DEVICE+="$2"
+	fi
+
+	exec /home/$USER/tools/raylyeh/raylyeh /home/$USER/tools/rl_tools/shadercam/main.lua "$ABSOLUTE" "$DEVICE"
+
+fi
+
+exit

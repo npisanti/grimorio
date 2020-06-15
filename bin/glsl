@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "please give an argument"
+else
+	
+	ABSOLUTE=$PWD
+	ABSOLUTE+="/$1"
+
+	exec /home/$USER/tools/raylyeh/raylyeh /home/$USER/tools/rl_tools/shader/main.lua "$ABSOLUTE" $2 $3
+fi
+
+exit

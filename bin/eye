@@ -1,4 +1,3 @@
 #!/bin/bash
-pixelscript ~/scrapbook/tools/eye/
-#exec /home/$USER/oF/apps/np-tools/eye/bin/eye "$@"
+rl ~/tools/rl_tools/eye
 exit
