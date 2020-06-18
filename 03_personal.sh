@@ -11,6 +11,9 @@ echo "adding cloudshare DNS to resolv.conf"
 echo "prepend domain-name-servers 1.0.0.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 echo "prepend domain-name-servers 1.1.1.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 
+echo "be sure there is no at-spi2-core"
+sudo apt-get remove at-spi2-core 
+
 echo "installing programs..."
 
 mkdir -p ~/apps
