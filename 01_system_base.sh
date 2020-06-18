@@ -7,7 +7,7 @@ echo "installing updated intel drivers"
 sudo apt-get -t stretch-backports install xserver-xorg-video-intel
 
 echo "installing realtime kernel"
-sudo apt-get install linux-image-4.18.0-0.bpo.3-rt-amd64
+sudo apt-get install linux-image-4.19.0-8-rt-amd64
 
 mkdir ~/apps
 
@@ -18,17 +18,13 @@ echo "installing terminal stuff"
 sudo apt-get -y install terminator tmux cmatrix cowsay fortune nmon neofetch xdotool trash-cli figlet toilet toilet-fonts htop espeak tree
 
 echo "installing coding tools"
-sudo apt-get -y install build-essential swig shellcheck make cloc clang-8 clang-format-8 clang-tools-8 clang-tidy-8 lldb-8 git git-email linux-tools perf-tools-unstable linux-perf valgrind frama-c-base doxygen doxygen-doc gdb
-cd ~/apps
-git clone https://github.com/brendangregg/FlameGraph.git
+sudo apt-get -y install build-essential swig shellcheck make cloc clang-8 clang-format-8 clang-tools-8 clang-tidy-8 lldb-8 git git-email linux-tools perf-tools-unstable linux-perf valgrind frama-c-base doxygen doxygen-doc gdb geany geany-plugins
 
 echo "installing dev libs"
 sudo apt-get -y install libncurses5-dev libncursesw5-dev libportmidi-dev
 
 echo "installing text editors:"
-sudo apt-get -y install geany geany-plugins
-curl https://getmic.ro | bash
-sudo mv micro /usr/local/bin/
+sudo apt-get -y install 
 
 echo "installing essential apps"
 sudo apt-get -y install audacity firefox-esr darktable thunderbird flameshot kdenlive krita imagemagick pdftk mpv cmus sox obs evince calibre wine telegram-desktop filezilla 
@@ -42,23 +38,6 @@ sudo apt-get -y install fonts-cantarell fonts-dejavu fonts-droid-fallback fonts-
 echo "installing codecs"
 sudo apt-get -y install vorbis-tools lame monkeys-audio gstreamer1.0-libav gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly x264 
 
-echo "installing create_ap"
-cd ~/apps
-git clone https://github.com/oblique/create_ap.git
-cd create_ap
-sudo make install
-
-echo "installing youtube-dl" 
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
-
-echo "installing Orca-c" 
-cd ~/apps
-sudo apt-get install libportmidi-dev libncurses5-dev libncursesw5-dev
-git clone https://github.com/hundredrabbits/Orca-c.git
-cd Orca-c
-./tool build --nomouse orca 
-
 echo "installing jack utils"
 sudo apt-get -y install jackd1 qjackctl aconnectgui jack-midi-clock jack-capture
 
@@ -67,11 +46,9 @@ sudo cp ~/grimorio/extra/base/limits.conf /etc/security/limits.conf
 sudo groupadd realtime
 sudo usermod -a -G realtime $USER
 
-
 echo "installing more apps"
 sudo apt-get -y install winbind paulstretch qv4l2 
-sudo apt-get -y install  gimp doxygen-gui universalindentgui 
-
+sudo apt-get -y install gimp doxygen-gui universalindentgui 
 
 echo "setting up xinitrc"
 cp ~/grimorio/extra/xinitrc ~/.xinitrc
@@ -97,10 +74,6 @@ sudo sensors-detect
 
 echo "reconfigure keyboard now, use ctrl+alt+delete to terminate x"
 sudo dpkg-reconfigure keyboard-configuration
-
-echo "adding cloudshare DNS to resolv.conf"
-echo "prepend domain-name-servers 1.0.0.1;" | sudo tee -a /etc/dhcp/dhclient.conf
-echo "prepend domain-name-servers 1.1.1.1;" | sudo tee -a /etc/dhcp/dhclient.conf
 
 echo "adding user to dialout and tty"
 sudo usermod -a -G tty $USER
